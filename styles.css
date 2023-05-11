@@ -26,6 +26,8 @@ body {
     background-size: contain;
     align-items: center;
     text-align: center;
+    width: 10%;
+    height: 10%;
 }
 
 .container {
@@ -81,7 +83,8 @@ var(--branco-principal);
 }
 
 .secundario__imagem {
-    width: 80%;
+    width: 10%;
+    height: 10%;
 }
 
 .secundario {
