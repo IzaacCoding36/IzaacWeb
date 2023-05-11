@@ -84,7 +84,7 @@ var(--branco-principal);
 
 .secundario__imagem {
     width: 100%;
-    height: 100%;
+    height: 40%;
 }
 
 .secundario {
