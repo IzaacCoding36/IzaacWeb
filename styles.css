@@ -53,12 +53,17 @@ body {
 }
 
 .botao_terceiro {
+    background-color: #03064f;
+    border: 2px solid var(--branco-principal);
+}
+
+.botao_quarto {
     background-color: grey;
     border: 2px solid
 var(--branco-principal);
 }
 
-.botao_quarto {
+.botao_quinto {
     background-color: #3e036b;
     border: 2px solid
 var(--branco-principal);
