@@ -8,7 +8,7 @@
 }
 
 body {
-    background-color: var(--cor-de-fundo);
+    background: radial-gradient(farthest-corner at right top,#010921,#00300C,#012106);
     color: var(--branco-principal);
     font-family: var(--fonte-principal);
     font-size: 7px;
@@ -48,7 +48,7 @@ body {
 }
 
 .botao_secundario {
-    background-color: transparent;
+    background-color: #0b061f;
     border: 2px solid var(--branco-principal);
 }
 
@@ -59,7 +59,7 @@ var(--branco-principal);
 }
 
 .botao_quarto {
-    background-color: green;
+    background-color: #3e036b;
     border: 2px solid
 var(--branco-principal);
 }
