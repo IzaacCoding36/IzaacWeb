@@ -11,7 +11,7 @@ body {
     background: radial-gradient(farthest-corner at right top,#000000,#00030C,#001403);
     color: var(--branco-principal);
     font-family: var(--fonte-principal);
-    font-size: 7px;
+    font-size: 9px;
     font-weight: 100;
 }
 
