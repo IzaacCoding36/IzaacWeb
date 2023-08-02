@@ -69,6 +69,11 @@ var(--branco-principal);
 var(--branco-principal);
 }
 
+.botao_sexto {
+    background-color: #d39a00;
+    border: 2px solid var(--branco-principal);
+}
+
 .container__aviso {
     font-size: 12px;
     color: var(--cinza-secundario);
