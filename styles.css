@@ -74,6 +74,11 @@ var(--branco-principal);
     border: 2px solid var(--branco-principal);
 }
 
+.botao_setimo {
+    background-color: #6d4400;
+    border: 2px solid var(--branco-principal);
+}
+
 .container__aviso {
     font-size: 12px;
     color: var(--cinza-secundario);
