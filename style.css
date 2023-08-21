@@ -1,0 +1,142 @@
+/* Necroweb V2 */
+
+html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#001403);
+      background-repeat: no-repeat;
+      font-family:'Poppins';
+      width: 100%; height: 390%; font-size: 20px;}
+
+body {margin: 0px; padding: 0px;}
+
+.Background {width: 100%; height: 100%;}
+
+.Botao_superior {color: white; border: solid 2px; 
+                 height: 7%; width: 7%;
+                 margin: 10px;}
+
+.Titulo {color: lime; background-image: url(img/Background.png); border: solid 2px green;
+         border-radius: 50%;
+         width: 75%; position: relative;
+         top: -150px; font-size: 25px;}
+
+.Projetos_img {width: 75%; height: 75%; position: relative; top: -90px;}
+
+/* A= Apresentações, P= Perfis, S= Sites, T= Títulos, I= Imagens, Te= Textos*/
+
+#A1 {color: white; position: relative;
+     top: -75px;}
+
+#A2 {color: lime; display: block; background: #0a0b64b7; width: 250px; height: 150px;
+     border: solid 2px green; border-radius: 50px;
+     text-decoration: underline;}
+
+#P1 {color: white; text-decoration: none;
+     border: 2px solid white; border-radius: 50px;
+     background-color: #167BF7; 
+     margin-bottom: 1em; display: block;
+     text-align: center; padding: 3px;
+     width: 200px; font-size: 10px; 
+     position: relative; top: -150px;}
+
+#P2 {color: white; text-decoration: none;
+     border: 2px solid white; border-radius: 50px;
+     background-color: #0b061f; 
+     margin-bottom: 1em; display: block;
+     text-align: center; padding: 3px;
+     width: 200px; font-size: 10px;
+     position: relative; top: -150px;}
+
+#P3 {color: white; text-decoration: none;
+     border: 2px solid white; border-radius: 50px;
+     background-color: #03064f; 
+     margin-bottom: 1em; display: block;
+     text-align: center; padding: 3px;
+     width: 200px; font-size: 10px;
+     position: relative; top: -150px;}
+
+#A3 {color: lime; display: block; background: #0a0b64b7; width: 250px; height: 200px;
+     border: solid 2px green; border-radius: 50px;
+     text-decoration: underline;
+     position: relative; top: -100px}
+
+#S1 {color: white; text-decoration: none;
+     border: 2px solid white; border-radius: 50px;
+     background-color: grey; 
+     margin-bottom: 1em; display: block;
+     text-align: center; padding: 3px;
+     width: 200px; font-size: 10px;
+     position: relative; top: -300px;}
+
+#S2 {color: white; text-decoration: none;
+     border: 2px solid white; border-radius: 50px;
+     background-color: #3e036b; 
+     margin-bottom: 1em; display: block;
+     text-align: center; padding: 3px;
+     width: 200px; font-size: 10px;
+     position: relative; top: -300px;}
+
+#S3 {color: white; text-decoration: none;
+     border: 2px solid white; border-radius: 50px;
+     background-color: #d39a00; 
+     margin-bottom: 1em; display: block;
+     text-align: center; padding: 3px;
+     width: 200px; font-size: 10px;
+     position: relative; top: -300px;}
+
+#S4 {color: white; text-decoration: none;
+     border: 2px solid white; border-radius: 50px;
+     background-color: #6d4400; 
+     margin-bottom: 1em; display: block;
+     text-align: center; padding: 3px;
+     width: 200px; font-size: 10px;
+     position: relative; top: -300px;}
+
+#A4 {color: grey; position: relative;
+     top: -275px; font-size: 10px;}
+
+#T1 {color: white; position: relative;
+     top: -150px; text-decoration: underline;}
+
+#I1 {position: relative; top: -150px; width: 70%;
+     height: 70%; border: solid 2px white;}
+
+#Te1 {color: #e7e7e7e7; position: relative;
+      top: -150px;}
+
+.Github {color: white; text-decoration: none;
+     border: 2px solid white; border-radius: 50px;
+     background-color: #047303b7; 
+     margin-bottom: 1em; display: block;
+     text-align: center; padding: 3px;
+     width: 200px; font-size: 10px;
+     position: relative; top: -150px;}
+
+.Dispositivos_lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin: 5em 0;}
+
+#T2 {color: white; position: relative;
+     top: 50px; text-decoration: underline;}
+
+#I2 {position: relative; top: 5px; left: -20px;
+     width: 100%;
+     height: 50%;}
+
+#T3 {color: red; position: relative;
+     top: -15px; left: -20px;}
+
+#T4 {color: purple; position: relative;
+     top: -15px; left: -20px;}
+
+#T5 {color: blue; position: relative;
+     top: -15px; left: -20px;}
+
+#Te2 {color: #e7e7e7e7; position: relative;
+      top: -50px; font-size: 9px;}
+
+/* Proporções Extras */
+
+@media screen and (min-width: 528px){
+   html {height: 1105%;}
+}
