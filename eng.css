@@ -3,13 +3,13 @@
 html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#001403);
       background-repeat: no-repeat;
       font-family:'Poppins';
-      width: 100%; height: 390%; font-size: 20px;}
+      width: 100%; height: 415%; font-size: 20px;}
 
 body {margin: 0px; padding: 0px;}
 
 .Background {width: 100%; height: 100%;}
 
-.Superior_Button {color: white; border: solid 2px; 
+.Superior_Button {color: white; border: solid 2px;
                  height: 7%; width: 7%;
                  margin: 10px;}
 
@@ -132,11 +132,18 @@ body {margin: 0px; padding: 0px;}
 #T5 {color: blue; position: relative;
      top: -15px; left: -20px;}
 
+#I3 {position: relative; top: -100px; width: 25%;
+     height: 25%; border: solid 2px green;
+     border-radius: 50%;}
+
+#T6 {color: green; position: relative;
+     top: -130px; text-decoration: underline;}
+
 #Te2 {color: #e7e7e7e7; position: relative;
-      top: -50px; font-size: 9px;}
+      top: -100px; font-size: 9px;}
 
 /* Extra Proportions */
 
 @media screen and (min-width: 528px){
-   html {height: 1105%;}
+   html {height: 1205%;}
 }
