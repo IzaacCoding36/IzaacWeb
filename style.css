@@ -145,11 +145,11 @@ body {margin: 0px; padding: 0px;}
 /* Proporções Extras */
 
 @media screen and (min-width: 528px){
-   html {height: 1195%;}
+   html {height: 1205%;}
 }
 
 @media screen and (min-width: 900px){
-   html {height: 210%;}
+   html {height: 1210%;}
    .Botao_superior {height: 5%; width: 5%;}
    .Projetos_img {height: 50%; width: 50%;}
    #I1,#I2 {height: 50%; width: 50%;}
