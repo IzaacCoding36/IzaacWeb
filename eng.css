@@ -37,6 +37,9 @@ body {margin: 0px; padding: 0px;}
      width: 200px; font-size: 10px; 
      position: relative; top: -150px;}
 
+#P1:hover {border: 2px solid lime;}
+#P1:active {border: 2px solid lime; background: white; color: black;}
+
 #P2 {color: white; text-decoration: none;
      border: 2px solid white; border-radius: 50px;
      background-color: #0b061f; 
@@ -45,6 +48,9 @@ body {margin: 0px; padding: 0px;}
      width: 200px; font-size: 10px;
      position: relative; top: -150px;}
 
+#P2:hover {border: 2px solid lime;}
+#P2:active {border: 2px solid lime; background: white; color: black;}
+
 #P3 {color: white; text-decoration: none;
      border: 2px solid white; border-radius: 50px;
      background-color: #03064f; 
@@ -52,6 +58,9 @@ body {margin: 0px; padding: 0px;}
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
      position: relative; top: -150px;}
+
+#P3:hover {border: 2px solid lime;}
+#P3:active {border: 2px solid lime; background: white; color: black;}
 
 #A3 {color: lime; display: block; background: #0a0b64b7; width: 250px; height: 225px;
      border: solid 2px green; border-radius: 50px;
@@ -66,6 +75,9 @@ body {margin: 0px; padding: 0px;}
      width: 200px; font-size: 10px;
      position: relative; top: -325px;}
 
+#S1:hover {border: 2px solid lime;}
+#S1:active {border: 2px solid lime; background: white; color: black;}
+
 #S2 {color: white; text-decoration: none;
      border: 2px solid white; border-radius: 50px;
      background-color: #3e036b; 
@@ -73,6 +85,9 @@ body {margin: 0px; padding: 0px;}
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
      position: relative; top: -325px;}
+
+#S2:hover {border: 2px solid lime;}
+#S2:active {border: 2px solid lime; background: white; color: black;}
 
 #S3 {color: white; text-decoration: none;
      border: 2px solid white; border-radius: 50px;
@@ -82,6 +97,9 @@ body {margin: 0px; padding: 0px;}
      width: 200px; font-size: 10px;
      position: relative; top: -325px;}
 
+#S3:hover {border: 2px solid lime;}
+#S3:active {border: 2px solid lime; background: white; color: black;}
+
 #S4 {color: white; text-decoration: none;
      border: 2px solid white; border-radius: 50px;
      background-color: #6d4400; 
@@ -90,6 +108,9 @@ body {margin: 0px; padding: 0px;}
      width: 200px; font-size: 10px;
      position: relative; top: -325px;}
 
+#S4:hover {border: 2px solid lime;}
+#S4:active {border: 2px solid lime; background: white; color: black;}
+
 #S5 {color: white; text-decoration: none;
      border: 2px solid white; border-radius: 50px;
      background-color: green; 
@@ -97,6 +118,9 @@ body {margin: 0px; padding: 0px;}
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
      position: relative; top: -325px;}
+
+#S5:hover {border: 2px solid lime;}
+#S5:active {border: 2px solid lime; background: white; color: black;}
 
 #A4 {color: grey; position: relative;
      top: -275px; font-size: 10px;}
@@ -117,6 +141,9 @@ body {margin: 0px; padding: 0px;}
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
      position: relative; top: -150px;}
+
+.Github:hover {border: 2px solid lime;}
+.Github:active {border: 2px solid lime; background: white; color: black;}
 
 .Devices_list {
     display: flex;
