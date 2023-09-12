@@ -184,7 +184,7 @@ body {margin: 0px; padding: 0px;}
 }
 
 @media screen and (min-width: 900px){
-   html {height: 310%;}
+   html {height: 300%;}
    .Botao_superior {height: 5%; width: 5%;}
    .Projetos_img {height: 50%; width: 50%;}
    #I1,#I2 {height: 50%; width: 50%;}
