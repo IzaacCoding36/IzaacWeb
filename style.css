@@ -3,7 +3,8 @@
 html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#001403);
       background-repeat: no-repeat;
       font-family:'Poppins';
-      width: 100%; height: 425%; font-size: 20px;}
+      display: flex;
+      font-size: 20px;}
 
 body {margin: 0px; padding: 0px;}
 
@@ -179,12 +180,7 @@ body {margin: 0px; padding: 0px;}
 
 /* Proporções Extras */
 
-@media screen and (min-width: 528px){
-   html {height: 1235%;}
-}
-
 @media screen and (min-width: 900px){
-   html {height: 300%;}
    .Botao_superior {height: 5%; width: 5%;}
    .Projetos_img {height: 50%; width: 50%;}
    #I1,#I2 {height: 50%; width: 50%;}
