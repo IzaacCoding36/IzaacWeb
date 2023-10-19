@@ -63,10 +63,10 @@ body {margin: 0px; padding: 0px;}
 #P3:hover {border: 2px solid lime;}
 #P3:active {border: 2px solid lime; background: white; color: black;}
 
-#A3 {color: lime; display: block; background: #0a0b64b7; width: 250px; height: 225px;
+#A3 {color: lime; display: block; background: #0a0b64b7; width: 250px; height: 255px;
      border: solid 2px green; border-radius: 50px;
      text-decoration: underline;
-     position: relative; top: -100px}
+     position: relative; top: -70px}
 
 #S1 {color: white; text-decoration: none;
      border: 2px solid white; border-radius: 50px;
@@ -122,6 +122,17 @@ body {margin: 0px; padding: 0px;}
 
 #S5:hover {border: 2px solid lime;}
 #S5:active {border: 2px solid lime; background: white; color: black;}
+
+#S6 {color: white; text-decoration: none;
+     border: 2px solid white; border-radius: 50px;
+     background-color: #760a0a; 
+     margin-bottom: 1em; display: block;
+     text-align: center; padding: 3px;
+     width: 200px; font-size: 10px;
+     position: relative; top: -325px;}
+
+#S6:hover {border: 2px solid lime;}
+#S6:active {border: 2px solid lime; background: white; color: black;}
 
 #A4 {color: grey; position: relative;
      top: -275px; font-size: 10px;}
