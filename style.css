@@ -210,7 +210,7 @@ body {margin: 0px; padding: 0px;}
 /* Proporções Extras */
 
 @media screen and (min-width: 900px){
-   .Botao_superior {height: 5%; width: 5%;}
+   .Botao_superior {height: 3%; width: 3%;}
    .Projetos_img {height: 50%; width: 50%;}
    #I1,#I2 {height: 50%; width: 50%;}
 }
