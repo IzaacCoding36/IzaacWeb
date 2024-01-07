@@ -8,6 +8,13 @@ html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#
 
 body {margin: 0px; padding: 0px;}
 
+@keyframes glow { 0% {box-shadow: 0px 0px 30px magenta;}
+            25% {box-shadow: 0px 0px 15px purple;}
+            50% {box-shadow: 0px 0px 30px lime;}
+            75% {box-shadow: 0px 0px 15px purple;}
+            100% {box-shadow: 0px 0px 30px magenta;}
+}
+
 .Background {width: 100%; height: 100%;}
 
 .Botao_superior {color: white;
@@ -158,7 +165,8 @@ body {margin: 0px; padding: 0px;}
 
 #I1 {position: relative; top: -150px; width: 70%;
      box-shadow: 0px 0px 15px magenta;
-     height: 70%; border: solid 2px grey;}
+     height: 70%; border: solid 2px grey; 
+     animation-name: glow; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;}
 
 #Te1 {color: #e7e7e7e7; position: relative;
       top: -150px;}
