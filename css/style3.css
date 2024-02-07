@@ -1,0 +1,53 @@
+/* IzaacWeb V3 */
+
+html {background: radial-gradient(farthest-corner at right top,#000000,#000c30,#003208);
+      background-repeat: no-repeat;
+      font-family:'Poppins';
+      display: flex;
+      font-size: 20px;}
+
+body {margin: 0px; padding: 0px;}
+
+.Botao_superior {color: white;
+                 border: solid 2px white;
+                 box-shadow: 0px 0px 5px white;
+                 height: 5%; width: 5%;
+                 position: relative; top: 30px;
+                 margin: 10px;}
+
+.Botao_superior:hover {box-shadow: 0px 0px 15px;}
+
+.Titulo {color: lime; background-color: black;
+         box-shadow: 0px 0px 15px lime;
+         cursor: default;
+         width: 100%; font-size: 25px;}
+
+/* A= Apresentações, P= Perfis, S= Sites, T= Títulos, I= Imagens, Te= Textos*/
+
+#T1 {color: lime; cursor: default; background-color: black; box-shadow: 0px 0px 15px lime;}
+
+#I1 {width: 25%;
+     color: white;
+     box-shadow: 0px 0px 15px magenta;
+     height: 25%; border: solid 2px grey; 
+     border-radius: 100%;}
+
+.Separacao {color: white;}
+
+li {font-size: 15px;}
+
+#Te1 {color: #e7e7e7e7; cursor: default; width: 90%;}
+
+#Te2 {color: #e7e7e7e7; cursor: default;
+      font-size: 10px;}
+
+a {color: #e7e7e7e7;}
+
+a:hover {color: lime;}
+
+/* Proporções Extras */
+
+@media screen and (min-width: 900px){
+   .Botao_superior {height: 2%; width: 2%;}
+   #I1,#I2 {height: 10%; width: 10%;}
+}
