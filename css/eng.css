@@ -165,7 +165,7 @@ body {margin: 0px; padding: 0px;}
      animation-name: glow; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;}
 
 #Te1 {color: #e7e7e7e7; position: relative;
-      top: -150px; cursor: default;}
+      top: -150px; cursor: default; width: 90%;}
 
 .Github {color: white; text-decoration: none;
      border: 2px solid white; border-radius: 50px;
@@ -215,7 +215,7 @@ body {margin: 0px; padding: 0px;}
 
 #Te2 {color: #e7e7e7e7; position: relative;
       top: -100px; cursor: default;
-      font-size: 9px;}
+      font-size: 9px; width: 90%;}
 
 a {color: #e7e7e7e7;}
 
