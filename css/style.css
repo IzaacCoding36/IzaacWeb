@@ -9,10 +9,10 @@ html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#
 body {margin: 0px; padding: 0px;}
 
 @keyframes glow { 0% {box-shadow: 0px 0px 30px magenta;}
-            25% {box-shadow: 0px 0px 15px purple;}
-            50% {box-shadow: 0px 0px 30px lime;}
-            75% {box-shadow: 0px 0px 15px purple;}
-            100% {box-shadow: 0px 0px 30px magenta;}
+                  25% {box-shadow: 0px 0px 15px purple;}
+                  50% {box-shadow: 0px 0px 30px lime;}
+                  75% {box-shadow: 0px 0px 15px purple;}
+                  100% {box-shadow: 0px 0px 30px magenta;}
 }
 
 .Background {width: 100%; height: 100%;}
@@ -21,9 +21,10 @@ body {margin: 0px; padding: 0px;}
                  border: solid 2px white;
                  box-shadow: 0px 0px 5px white;
                  height: 7%; width: 7%;
+                 transition: box-shadow 0.3s;
                  margin: 10px;}
 
-.Botao_superior:hover {box-shadow: 0px 0px 15px;}
+.Botao_superior:hover {box-shadow: 0px 0px 15px; transition: box-shadow 0.3s;}
 
 .Titulo {color: lime; background-image: url(img/Background.png); 
          box-shadow: 0px 0px 15px lime;
@@ -51,9 +52,10 @@ body {margin: 0px; padding: 0px;}
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
+     transition: border 0.3s;
      position: relative; top: -110px;}
 
-#P1:hover {border: 2px solid lime;}
+#P1:hover {border: 2px solid lime; transition: border 0.3s;}
 #P1:active {border: 2px solid lime; background: white; color: black;}
 
 #P2 {color: white; text-decoration: none;
@@ -62,9 +64,10 @@ body {margin: 0px; padding: 0px;}
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
+     transition: border 0.3s;
      position: relative; top: -110px;}
 
-#P2:hover {border: 2px solid lime;}
+#P2:hover {border: 2px solid lime; transition: border 0.3s;}
 #P2:active {border: 2px solid lime; background: white; color: black;}
 
 #A3 {color: lime; display: block; background: #0a0b64b7; width: 250px; height: 290px;
@@ -80,9 +83,10 @@ body {margin: 0px; padding: 0px;}
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
+     transition: border 0.3s;
      position: relative; top: -365px;}
 
-#S1:hover {border: 2px solid lime;}
+#S1:hover {border: 2px solid lime; transition: border 0.3s;}
 #S1:active {border: 2px solid lime; background: white; color: black;}
 
 #S2 {color: white; text-decoration: none;
@@ -91,9 +95,10 @@ body {margin: 0px; padding: 0px;}
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
+     transition: border 0.3s;
      position: relative; top: -365px;}
 
-#S2:hover {border: 2px solid lime;}
+#S2:hover {border: 2px solid lime; transition: border 0.3s;}
 #S2:active {border: 2px solid lime; background: white; color: black;}
 
 #S3 {color: white; text-decoration: none;
@@ -102,9 +107,10 @@ body {margin: 0px; padding: 0px;}
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
+     transition: border 0.3s;
      position: relative; top: -365px;}
 
-#S3:hover {border: 2px solid lime;}
+#S3:hover {border: 2px solid lime; transition: border 0.3s;}
 #S3:active {border: 2px solid lime; background: white; color: black;}
 
 #S4 {color: white; text-decoration: none;
@@ -113,9 +119,10 @@ body {margin: 0px; padding: 0px;}
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
+     transition: border 0.3s;
      position: relative; top: -365px;}
 
-#S4:hover {border: 2px solid lime;}
+#S4:hover {border: 2px solid lime; transition: border 0.3s;}
 #S4:active {border: 2px solid lime; background: white; color: black;}
 
 #S5 {color: white; text-decoration: none;
@@ -124,9 +131,10 @@ body {margin: 0px; padding: 0px;}
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
+     transition: border 0.3s;
      position: relative; top: -365px;}
 
-#S5:hover {border: 2px solid lime;}
+#S5:hover {border: 2px solid lime; transition: border 0.3s;}
 #S5:active {border: 2px solid lime; background: white; color: black;}
 
 #S6 {color: white; text-decoration: none;
@@ -135,9 +143,10 @@ body {margin: 0px; padding: 0px;}
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
+     transition: border 0.3s;
      position: relative; top: -365px;}
 
-#S6:hover {border: 2px solid lime;}
+#S6:hover {border: 2px solid lime; transition: border 0.3s;}
 #S6:active {border: 2px solid lime; background: white; color: black;}
 
 #S7 {color: white; text-decoration: none;
@@ -146,9 +155,10 @@ body {margin: 0px; padding: 0px;}
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      width: 200px; font-size: 10px;
+     transition: border 0.3s;
      position: relative; top: -365px;}
 
-#S7:hover {border: 2px solid lime;}
+#S7:hover {border: 2px solid lime; transition: border 0.3s;}
 #S7:active {border: 2px solid lime; background: white; color: black;}
 
 #A4 {color: grey; position: relative;
@@ -168,21 +178,21 @@ body {margin: 0px; padding: 0px;}
       top: -150px; cursor: default; width: 90%;}
 
 .Github {color: white; text-decoration: none;
-     border: 2px solid white; border-radius: 50px;
-     background-color: #047303b7; 
-     margin-bottom: 1em; display: block;
-     text-align: center; padding: 3px;
-     width: 200px; font-size: 10px;
-     position: relative; top: -150px;}
+         border: 2px solid white; border-radius: 50px;
+         background-color: #047303b7; 
+         margin-bottom: 1em; display: block;
+         text-align: center; padding: 3px;
+         width: 200px; font-size: 10px;
+         transition: border 0.3s;
+         position: relative; top: -150px;}
 
-.Github:hover {border: 2px solid lime; color: white;}
+.Github:hover {border: 2px solid lime; color: white; transition: border 0.3s;}
 .Github:active {border: 2px solid lime; background: white; color: black;}
 
-.Dispositivos_lista {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin: 5em 0;}
+.Dispositivos_lista {display: flex;
+                     justify-content: center;
+                     list-style-type: none;
+                     margin: 5em 0;}
 
 #T2 {color: white; position: relative;
      top: 50px; cursor: default; 
@@ -217,9 +227,9 @@ body {margin: 0px; padding: 0px;}
       top: -100px; cursor: default;
       font-size: 9px; width: 90%;}
 
-a {color: #e7e7e7e7;}
+a {color: #e7e7e7e7; transition: color 0.3s;}
 
-a:hover {color: lime;}
+a:hover {color: lime; transition: color 0.3s;}
 
 /* Proporções Extras */
 

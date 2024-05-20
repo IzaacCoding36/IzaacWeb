@@ -51,11 +51,10 @@ ul {margin: 0;}
            visibility: hidden;
            overflow-y: hidden;}
 
-    #nav.active #menu {
-        display: block;
-        visibility: visible;
-        height: calc(100vh - 30px);
-        overflow-y: auto;}
+    #nav.active #menu {display: block;
+                       visibility: visible;
+                       height: calc(100vh - 30px);
+                       overflow-y: auto;}
 
     #menu a {padding: 1rem 0;
              margin: 0.5rem;

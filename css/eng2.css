@@ -10,18 +10,19 @@ html {background: radial-gradient(farthest-corner at right top,#000000,#000c30,#
 body {margin: 0px; padding: 0px; width: 100%;}
 
 .Superior_Button {color: white;
-                 border: solid 2px white;
-                 box-shadow: 0px 0px 5px white;
-                 height: 5%; width: 5%;
-                 position: relative; top: 30px;
-                 margin: 10px;}
+                  border: solid 2px white;
+                  box-shadow: 0px 0px 5px white;
+                  height: 5%; width: 5%;
+                  position: relative; top: 30px;
+                  transition: box-shadow 0.3s;
+                  margin: 10px;}
 
-.Superior_Button:hover {box-shadow: 0px 0px 15px;}
+.Superior_Button:hover {box-shadow: 0px 0px 15px; transition: box-shadow 0.3s;}
 
 .Title {color: lime; background-color: black;
-         box-shadow: 0px 0px 15px lime;
-         cursor: default;
-         width: 100%; font-size: 25px;}
+        box-shadow: 0px 0px 15px lime;
+        cursor: default;
+        width: 100%; font-size: 25px;}
 
 /* A= Presentations, P= Profiles, S= Websites, T= Títles, I= Images, Te= Texts */
 
@@ -42,9 +43,9 @@ li {font-size: 15px;}
 #Te2 {color: #e7e7e7e7; cursor: default;
       font-size: 10px; width: 90%;}
 
-a {color: #e7e7e7e7;}
+a {color: #e7e7e7e7; transition: color 0.3s;}
 
-a:hover {color: lime;}
+a:hover {color: lime; transition: color 0.3s;}
 
 /* Extra Proportions */
 

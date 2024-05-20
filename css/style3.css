@@ -14,9 +14,10 @@ body {margin: 0px; padding: 0px; width: 100%;}
                  box-shadow: 0px 0px 5px white;
                  height: 5%; width: 5%;
                  position: relative; top: 30px;
+                 transition: box-shadow 0.3s;
                  margin: 10px;}
 
-.Botao_superior:hover {box-shadow: 0px 0px 15px;}
+.Botao_superior:hover {box-shadow: 0px 0px 15px; transition: box-shadow 0.3s;}
 
 .Titulo {color: lime; background-color: black;
          box-shadow: 0px 0px 15px lime;
@@ -42,9 +43,9 @@ li {font-size: 15px;}
 #Te2 {color: #e7e7e7e7; cursor: default;
       font-size: 10px; width: 90%;}
 
-a {color: #e7e7e7e7;}
+a {color: #e7e7e7e7; transition: color 0.3s;}
 
-a:hover {color: lime;}
+a:hover {color: lime; transition: color 0.3s;}
 
 /* Proporções Extras */
 
