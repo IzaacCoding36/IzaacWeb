@@ -1,4 +1,4 @@
-html {background: #00030C; cursor: default; color: #e7e7e7e7; font-family:'Poppins';}
+html {background: #00030C; cursor: default; color: #e7e7e7e7; font-family:'Poppins', sans-serif; font-size: 10px;}
 
 h1 {color: lime;}
 h2{color: lime;}
@@ -7,3 +7,7 @@ a {color: blue; text-decoration: none; transition: color 0.3s;}
 
 a:hover {color: lime; transition: color 0.3s;}
 a:active {color: green;}
+
+@media screen and (min-width: 600px){
+    html {font-size: 16px;}
+}

@@ -3,7 +3,7 @@
 html {background: radial-gradient(farthest-corner at right top,#000000,#000c30,#003208);
       background-repeat: no-repeat;
       background-color: #000c30;
-      font-family:'Poppins';
+      font-family:'Poppins', sans-serif;
       display: flex;
       font-size: 20px;}
 
