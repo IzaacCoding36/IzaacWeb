@@ -17,6 +17,8 @@ body {margin: 0px; padding: 0px; width: 100%;}
                   transition: box-shadow 0.3s;
                   margin: 10px;}
 
+.Options {text-align: center;}
+
 .Superior_Button:hover {box-shadow: 0px 0px 15px; transition: box-shadow 0.3s;}
 
 .Title {color: lime; background-color: black;
