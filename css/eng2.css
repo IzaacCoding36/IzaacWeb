@@ -36,7 +36,9 @@ body {margin: 0px; padding: 0px; width: 100%;}
 
 .Separation {color: white;}
 
-li {font-size: 15px;}
+li {font-size: 15px; text-align: left;}
+
+.Alura {font-size: 10px; text-decoration: none;}
 
 #Te1 {color: #e7e7e7e7; cursor: default; width: 90%;}
 
@@ -51,5 +53,11 @@ a:hover {color: lime; transition: color 0.3s;}
 
 @media screen and (min-width: 900px){
    .Superior_Button {height: 2%; width: 2%;}
+   .Titulo {font-size: 30px;}
+   .Alura {font-size: 15px;}
+   #T1 {font-size: 25px;}
+   li,#Te1 {font-size: 20px; text-align: center;}
    #I1,#I2 {height: 10%; width: 10%;}
+   #Te2 {font-size: 15px;}
+   #menu {font-weight: bold;}
 }

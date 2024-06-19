@@ -8,11 +8,11 @@ html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#
 
 body {margin: 0px; padding: 0px;}
 
-@keyframes glow { 0% {box-shadow: 0px 0px 30px magenta;}
+@keyframes glow { 0% {box-shadow: 0px 0px 15px magenta;}
                   25% {box-shadow: 0px 0px 15px purple;}
-                  50% {box-shadow: 0px 0px 30px lime;}
+                  50% {box-shadow: 0px 0px 15px lime;}
                   75% {box-shadow: 0px 0px 15px purple;}
-                  100% {box-shadow: 0px 0px 30px magenta;}
+                  100% {box-shadow: 0px 0px 15px magenta;}
 }
 
 .Background {width: 100%; height: 100%;}
@@ -26,7 +26,7 @@ body {margin: 0px; padding: 0px;}
 
 .Botao_superior:hover {box-shadow: 0px 0px 15px; transition: box-shadow 0.3s;}
 
-.Titulo {color: lime; background-image: url(img/Background.png); 
+.Titulo {color: lime; background-color: black;
          box-shadow: 0px 0px 15px lime;
          border-radius: 50%;
          cursor: default;
@@ -51,6 +51,7 @@ body {margin: 0px; padding: 0px;}
      background-color: #0b061f; 
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
+     font-weight: bold;
      width: 200px; font-size: 10px;
      transition: border 0.3s;
      position: relative; top: -110px;}
@@ -63,6 +64,7 @@ body {margin: 0px; padding: 0px;}
      background-color: #03064f; 
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
+     font-weight: bold;
      width: 200px; font-size: 10px;
      transition: border 0.3s;
      position: relative; top: -110px;}
@@ -82,6 +84,7 @@ body {margin: 0px; padding: 0px;}
      background-color: grey; 
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
+     font-weight: bold;
      width: 200px; font-size: 10px;
      transition: border 0.3s;
      position: relative; top: -365px;}
@@ -94,6 +97,7 @@ body {margin: 0px; padding: 0px;}
      background-color: #3e036b; 
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
+     font-weight: bold;
      width: 200px; font-size: 10px;
      transition: border 0.3s;
      position: relative; top: -365px;}
@@ -106,6 +110,7 @@ body {margin: 0px; padding: 0px;}
      background-color: teal;
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
+     font-weight: bold;
      width: 200px; font-size: 10px;
      transition: border 0.3s;
      position: relative; top: -365px;}
@@ -118,6 +123,7 @@ body {margin: 0px; padding: 0px;}
      background-color: green; 
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
+     font-weight: bold;
      width: 200px; font-size: 10px;
      transition: border 0.3s;
      position: relative; top: -365px;}
@@ -130,6 +136,7 @@ body {margin: 0px; padding: 0px;}
      background-color: #412d0a; 
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
+     font-weight: bold;
      width: 200px; font-size: 10px;
      transition: border 0.3s;
      position: relative; top: -365px;}
@@ -142,6 +149,7 @@ body {margin: 0px; padding: 0px;}
      background-color: purple; 
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
+     font-weight: bold;
      width: 200px; font-size: 10px;
      transition: border 0.3s;
      position: relative; top: -365px;}
@@ -154,6 +162,7 @@ body {margin: 0px; padding: 0px;}
      background-color: orange; 
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
+     font-weight: bold;
      width: 200px; font-size: 10px;
      transition: border 0.3s;
      position: relative; top: -365px;}
@@ -167,6 +176,7 @@ body {margin: 0px; padding: 0px;}
 
 #T1 {color: white; position: relative;
      top: -150px; cursor: default;
+     text-shadow: 0px 0px 15px cyan;
      text-decoration: underline;}
 
 #I1 {position: relative; top: -150px; width: 70%;
@@ -182,6 +192,7 @@ body {margin: 0px; padding: 0px;}
          background-color: #047303b7; 
          margin-bottom: 1em; display: block;
          text-align: center; padding: 3px;
+         font-weight: bold;
          width: 200px; font-size: 10px;
          transition: border 0.3s;
          position: relative; top: -150px;}
@@ -196,6 +207,7 @@ body {margin: 0px; padding: 0px;}
 
 #T2 {color: white; position: relative;
      top: 50px; cursor: default; 
+     text-shadow: 0px 0px 15px cyan;
      text-decoration: underline;}
 
 #I2 {position: relative; top: 5px; left: -20px;
@@ -204,14 +216,17 @@ body {margin: 0px; padding: 0px;}
 
 #T3 {color: red; position: relative;
      top: -15px; cursor: default;
+     text-shadow: 0px 0px 15px orange;
      left: -20px;}
 
-#T4 {color: purple; position: relative;
+#T4 {color: yellow; position: relative;
      top: -15px; cursor: default;
+     text-shadow: 0px 0px 15px red;
      left: -20px;}
 
 #T5 {color: blue; position: relative;
      top: -15px; cursor: default; 
+     text-shadow: 0px 0px 15px cyan;
      left: -20px;}
 
 #I3 {position: relative; top: -100px; width: 25%;
@@ -235,6 +250,19 @@ a:hover {color: lime; transition: color 0.3s;}
 
 @media screen and (min-width: 900px){
    .Botao_superior {height: 3%; width: 3%;}
+   .Titulo {font-size: 30px; top: -450px;}
    .Projetos_img {height: 50%; width: 50%;}
+   .Github {font-size: 15px; width: 300px;}
+   #S1,#S2,#S3,#S4,#S5,#S6,#S7 {font-size: 12px; top: -410px;}
+   #P1,#P2 {font-size: 12px; top: -135px;}
+   #A1 {font-size: 22px;}
+   #A3 {font-size: 22px; width: 300px; height: 325px;}
+   #A2 {font-size: 22px; width: 300px; height: 125px}
+   #T1,#T2 {font-size: 35px; font-weight: bold;}
+   #A4 {font-size: 15px;}
+   #Te1,#T3,#T4,#T5,#T6 {font-size: 18px;}
    #I1,#I2 {height: 50%; width: 50%;}
+   #I3 {height: 15%; width: 15%;}
+   #Te2 {font-size: 14px;}
+   #menu a {font-weight: bold;}
 }
