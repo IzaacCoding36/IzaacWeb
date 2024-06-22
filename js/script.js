@@ -1,3 +1,5 @@
+// IzaacWeb V3 - Menu //
+
 const btnMobile = document.getElementById('btn-mobile');
 
 function toggleMenu(event) {

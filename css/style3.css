@@ -1,4 +1,4 @@
-/* IzaacWeb V3 */
+/* IzaacWeb V3 - Portfolio */
 
 html {background: radial-gradient(farthest-corner at right top,#000000,#000c30,#003208);
       background-repeat: no-repeat;
@@ -6,6 +6,12 @@ html {background: radial-gradient(farthest-corner at right top,#000000,#000c30,#
       font-family:'Poppins', sans-serif;
       display: flex;
       font-size: 20px;}
+
+#horas {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#minutos {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#segundos {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#periodo {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#separacao {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
 
 body {margin: 0px; padding: 0px; width: 100%;}
 

@@ -15,6 +15,12 @@ body {margin: 0px; padding: 0px;}
                   100% {box-shadow: 0px 0px 15px magenta;}
 }
 
+#horas {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#minutos {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#segundos {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#periodo {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#separacao {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+
 .Background {width: 100%; height: 100%;}
 
 .Botao_superior {color: white;
