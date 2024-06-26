@@ -32,7 +32,7 @@ body {margin: 0px; padding: 0px;}
 
 .Botao_superior:hover {box-shadow: 0px 0px 15px; transition: box-shadow 0.3s;}
 
-.Titulo {color: lime; background-color: black;
+.Titulo {color: lime; background-color: #000000aa;
          box-shadow: 0px 0px 15px lime;
          border-radius: 50%;
          cursor: default;
