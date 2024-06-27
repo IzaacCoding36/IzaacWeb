@@ -187,7 +187,7 @@ body {margin: 0px; padding: 0px;}
 
 #I1 {position: relative; top: -150px; width: 70%;
      box-shadow: 0px 0px 15px magenta;
-     border-radius: 50px;
+     border-radius: 20px;
      height: 70%; border: solid 2px grey;
      animation-name: glow; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;}
 
@@ -268,7 +268,7 @@ a:hover {color: lime; transition: color 0.3s;}
    #T1,#T2 {font-size: 35px; font-weight: bold;}
    #A4 {font-size: 15px;}
    #Te1,#T3,#T4,#T5,#T6 {font-size: 18px;}
-   #I1,#I2 {height: 50%; width: 50%;}
+   #I1,#I2 {height: 50%; width: 50%; border-radius: 50px;}
    #I3 {height: 15%; width: 15%;}
    #Te2 {font-size: 14px;}
    #menu a {font-weight: bold;}
