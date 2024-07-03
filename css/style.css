@@ -41,6 +41,28 @@ body {margin: 0px; padding: 0px;}
 
 .Projetos_img {width: 75%; height: 75%; position: relative; top: -90px;}
 
+.Github {color: white; text-decoration: none;
+         border: 2px solid white; border-radius: 50px;
+         background-color: #047303b7; 
+         margin-bottom: 1em; display: block;
+         text-align: center; padding: 3px;
+         font-weight: bold;
+         width: 200px; font-size: 10px;
+         transition: border 0.3s;
+         position: relative; top: -150px;}
+
+.Github:hover {border: 2px solid lime; color: white; transition: border 0.3s;}
+.Github:active {border: 2px solid lime; background: white; color: black;}
+
+.Dispositivos_lista {display: flex;
+                     justify-content: center;
+                     list-style-type: none;
+                     margin: 5em 0;}
+
+a {color: #e7e7e7e7; transition: color 0.3s;}
+
+a:hover {color: lime; transition: color 0.3s;}
+
 /* A= Apresentações, P= Perfis, S= Sites, T= Títulos, I= Imagens, Te= Textos */
 
 #A1 {color: white; position: relative;
@@ -194,24 +216,6 @@ body {margin: 0px; padding: 0px;}
 #Te1 {color: #e7e7e7e7; position: relative;
       top: -150px; cursor: default; width: 90%;}
 
-.Github {color: white; text-decoration: none;
-         border: 2px solid white; border-radius: 50px;
-         background-color: #047303b7; 
-         margin-bottom: 1em; display: block;
-         text-align: center; padding: 3px;
-         font-weight: bold;
-         width: 200px; font-size: 10px;
-         transition: border 0.3s;
-         position: relative; top: -150px;}
-
-.Github:hover {border: 2px solid lime; color: white; transition: border 0.3s;}
-.Github:active {border: 2px solid lime; background: white; color: black;}
-
-.Dispositivos_lista {display: flex;
-                     justify-content: center;
-                     list-style-type: none;
-                     margin: 5em 0;}
-
 #T2 {color: white; position: relative;
      top: 50px; cursor: default; 
      text-shadow: 0px 0px 15px cyan;
@@ -249,10 +253,6 @@ body {margin: 0px; padding: 0px;}
       top: -100px; cursor: default;
       font-size: 9px; width: 90%;}
 
-a {color: #e7e7e7e7; transition: color 0.3s;}
-
-a:hover {color: lime; transition: color 0.3s;}
-
 /* Proporções Extras */
 
 @media screen and (min-width: 900px){
@@ -268,7 +268,8 @@ a:hover {color: lime; transition: color 0.3s;}
    #T1,#T2 {font-size: 35px; font-weight: bold;}
    #A4 {font-size: 15px;}
    #Te1,#T3,#T4,#T5,#T6 {font-size: 18px;}
-   #I1,#I2 {height: 50%; width: 50%; border-radius: 50px;}
+   #I1,#I2 {height: 50%; width: 50%;}
+   #I1 {border-radius: 50px;}
    #I3 {height: 15%; width: 15%;}
    #Te2 {font-size: 14px;}
    #menu a {font-weight: bold;}

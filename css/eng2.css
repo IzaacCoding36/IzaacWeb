@@ -32,30 +32,31 @@ body {margin: 0px; padding: 0px; width: 100%;}
         cursor: default;
         width: 100%; font-size: 25px;}
 
-/* A= Presentations, P= Profiles, S= Websites, T= Títles, I= Images, Te= Texts */
+.Separation {color: #e7e7e7e7; box-shadow: 0px 0px 3px cyan;}
+
+li {font-size: 15px; text-align: left; padding: 10px;}
+
+strong {text-shadow: 0px 0px 3px blue;}
+
+.Alura {font-size: 10px; text-decoration: none;}
+
+a {color: #e7e7e7e7; transition: color 0.3s;}
+
+a:hover {color: lime; transition: color 0.3s;}
+
+/* T= Títles, I= Images, Te= Texts */
 
 #T1 {color: lime; cursor: default; background-color: black; box-shadow: 0px 0px 15px lime; font-size: 20px;}
 
 #I1 {width: 25%;
-     color: white;
      box-shadow: 0px 0px 15px magenta;
      height: 25%; border: solid 2px grey; 
      border-radius: 100%;}
-
-.Separation {color: white;}
-
-li {font-size: 15px; text-align: left;}
-
-.Alura {font-size: 10px; text-decoration: none;}
 
 #Te1 {color: #e7e7e7e7; cursor: default; width: 90%;}
 
 #Te2 {color: #e7e7e7e7; cursor: default;
       font-size: 10px; width: 90%;}
-
-a {color: #e7e7e7e7; transition: color 0.3s;}
-
-a:hover {color: lime; transition: color 0.3s;}
 
 /* Extra Proportions */
 
