@@ -8,18 +8,16 @@ html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#
 
 body {margin: 0px; padding: 0px;}
 
+a {color: #e7e7e7e7; transition: color 0.3s;}
+
+a:hover {color: lime; transition: color 0.3s;}
+
 @keyframes glow { 0% {box-shadow: 0px 0px 15px magenta;}
                   25% {box-shadow: 0px 0px 15px purple;}
                   50% {box-shadow: 0px 0px 15px lime;}
                   75% {box-shadow: 0px 0px 15px purple;}
                   100% {box-shadow: 0px 0px 15px magenta;}
 }
-
-#hours {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#minutes {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#seconds {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#period {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#separation {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
 
 .Background {width: 100%; height: 100%;}
 
@@ -59,9 +57,11 @@ body {margin: 0px; padding: 0px;}
                list-style-type: none;
                margin: 5em 0;}
 
-a {color: #e7e7e7e7; transition: color 0.3s;}
-
-a:hover {color: lime; transition: color 0.3s;}
+#hours {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#minutes {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#seconds {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#period {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#separation {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
 
 /* A= Presentations, P= Profiles, S= Websites, T= Títles, I= Images, Te= Texts */
 

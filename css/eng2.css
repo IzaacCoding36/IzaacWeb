@@ -7,13 +7,15 @@ html {background: radial-gradient(farthest-corner at right top,#000000,#000c30,#
       display: flex;
       font-size: 20px;}
 
-#hours {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#minutes {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#seconds {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#period {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#separation {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-
 body {margin: 0px; padding: 0px; width: 100%;}
+
+li {font-size: 15px;}
+
+strong {text-shadow: 0px 0px 3px blue;}
+
+a {color: #e7e7e7e7; transition: color 0.3s;}
+
+a:hover {color: lime; transition: color 0.3s;}
 
 .Superior_Button {color: white;
                   border: solid 2px white;
@@ -34,17 +36,15 @@ body {margin: 0px; padding: 0px; width: 100%;}
 
 .Separation {color: #e7e7e7e7; box-shadow: 0px 0px 3px cyan;}
 
-li {font-size: 15px;}
-
 .List {font-size: 15px; text-align: left; padding: 10px;}
-
-strong {text-shadow: 0px 0px 3px blue;}
 
 .Alura {font-size: 10px; text-decoration: none;}
 
-a {color: #e7e7e7e7; transition: color 0.3s;}
-
-a:hover {color: lime; transition: color 0.3s;}
+#hours {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#minutes {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#seconds {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#period {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+#separation {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
 
 /* T= Títles, I= Images, Te= Texts */
 
