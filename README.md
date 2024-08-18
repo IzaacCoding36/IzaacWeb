@@ -1,6 +1,8 @@
 # IzaacWeb
 Este repositório foi criado para demonstrar o meu próprio site principal: A _**IzaacWeb**_
 
-Aqui, você pode ver alguns dos meus projetos, e o meu novo portfólio, onde eu falo um pouco sobre mim e o que eu faço.
+Aqui, você pode ver alguns dos meus projetos, e o meu portifólio, onde eu falo sobre mim e o que eu faço.
 
-![](https://media.tenor.com/nq-mZmaKK4UAAAAi/halo-infinite.gif)
+Seja bem-vindo, aproveite para deixar sugestões, dicas, ideias e mais na aba de discussões, e agradeço a sua atenção!
+
+![](https://c.tenor.com/RSIhGRFGGCgAAAAd/tenor.gif)
