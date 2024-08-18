@@ -18,7 +18,7 @@ a {color: #e7e7e7e7; transition: color 0.3s;}
 a:hover {color: lime; transition: color 0.3s;}
 
 .Superior_Button {color: white;
-                  border: solid 2px white;
+                  border: outset 2px white;
                   box-shadow: 0px 0px 5px white;
                   height: 5%; width: 5%;
                   position: relative; top: 30px;
@@ -39,6 +39,10 @@ a:hover {color: lime; transition: color 0.3s;}
 .List {font-size: 15px; text-align: left; padding: 10px;}
 
 .Alura {font-size: 10px; text-decoration: none;}
+
+.Emblem {float: right; height: 25px; width: 25px; padding-left: 50px; position: absolute;}
+
+.Emblem2 {float: right; height: 25px; width: 25px; padding-left: 15px; position: absolute;}
 
 #hours {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
 #minutes {color: white; width: 0px; text-shadow: 0px 0px 15px cyan; cursor: default;}
