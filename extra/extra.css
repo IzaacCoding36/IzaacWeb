@@ -1,6 +1,6 @@
 /* IzaacWeb V3 extra */
 
-html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#001403); cursor: default; color: #e7e7e7e7; font-family:'Poppins', sans-serif; font-size: 13px;}
+html {background: linear-gradient(90deg, #030012 0%, #001c03 50%, #030012 100%); cursor: default; color: #e7e7e7e7; font-family:'Poppins', sans-serif; font-size: 13px;}
 
 h1 {color: lime; font-style: italic;}
 h2 {color: lime; font-style: italic;}
