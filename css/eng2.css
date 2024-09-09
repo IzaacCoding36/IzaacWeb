@@ -5,6 +5,7 @@ html {background: radial-gradient(farthest-corner at right top,#000000,#000c30,#
       background-color: #000c30;
       font-family:'Poppins', sans-serif;
       display: flex;
+      transition: filter 2s ease;
       font-size: 20px;}
 
 body {margin: 0px; padding: 0px; width: 100%;}
@@ -17,17 +18,45 @@ a {color: #e7e7e7e7; transition: color 0.3s;}
 
 a:hover {color: lime; transition: color 0.3s;}
 
-.Superior_Button {color: white;
-                  border: outset 2px white;
-                  box-shadow: 0px 0px 5px white;
-                  height: 5%; width: 5%;
-                  position: relative; top: 30px;
-                  transition: box-shadow 0.3s;
-                  margin: 10px;}
-
 .Options {text-align: center;}
 
-.Superior_Button:hover {box-shadow: 0px 0px 15px; transition: box-shadow 0.3s;}
+.dropbtn {background-color: black;
+          color: white;
+          padding: 5px;
+          font-size: 13px;
+          position: relative;
+          top: 90px;
+          font-weight: bold;
+          box-shadow: 0px 0px 5px white;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          border: outset 2px white;}
+
+.dropdown {position: relative;
+           display: inline-block;
+           cursor: default;}
+
+.dropdown-content {display: none;
+                   position: absolute;
+                   top: 120px;
+                   background-color: black;
+                   min-width: 100px;
+                   box-shadow: 0px 0px 5px white;
+                   z-index: 1;}
+
+.dropdown-content a {color: white;
+                     padding: 1px 1px;
+                     font-size: 13px;
+                     font-weight: bold;
+                     text-decoration: none;
+                     border: solid 1px white;
+                     display: block;
+                     transition: background-color 0.3s, box-shadow 0.3s;}
+
+.dropdown-content a:hover {background-color: darkgreen; box-shadow: 0px 0px 10px white; transition: background-color 0.3s, box-shadow 0.3s;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: darkgreen; box-shadow: 0px 0px 10px white; transition: background-color 0.3s, box-shadow 0.3s;}
 
 .Title {color: lime; background-color: black;
         box-shadow: 0px 0px 15px lime;
@@ -56,8 +85,12 @@ a:hover {color: lime; transition: color 0.3s;}
 
 #I1 {width: 25%;
      box-shadow: 0px 0px 15px magenta;
-     height: 25%; border: solid 2px grey; 
+     height: 25%; border: solid 2px grey;
+     position: relative; top: 25px;
+     transition: filter 1s; 
      border-radius: 100%;}
+
+#I1:hover {filter: brightness(1.2); transition: filter 1s;}
 
 #Te1 {color: #e7e7e7e7; cursor: default; width: 90%;}
 
@@ -67,7 +100,6 @@ a:hover {color: lime; transition: color 0.3s;}
 /* Extra Proportions */
 
 @media screen and (min-width: 900px){
-   .Superior_Button {height: 2%; width: 2%;}
    .Titulo {font-size: 30px;}
    .Alura {font-size: 15px;}
    #T1 {font-size: 25px;}
