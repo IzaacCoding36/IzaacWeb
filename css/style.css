@@ -6,7 +6,7 @@ html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#
       font-family:'Poppins', sans-serif;
       display: flex;
       filter: none;
-      transition: filter 2s ease;
+      transition: filter 2s ease, background-color 2s;
       font-size: 20px;}
 
 body {margin: 0px; padding: 0px;}

@@ -2,10 +2,10 @@
 
 html {background: radial-gradient(farthest-corner at right top,#000000,#000c30,#003208);
       background-repeat: no-repeat;
-      background-color: #000c30;
+      background-color: #001403;
       font-family:'Poppins', sans-serif;
       display: flex;
-      transition: filter 2s ease;
+      transition: filter 2s ease, background-color 2s;
       font-size: 20px;}
 
 body {margin: 0px; padding: 0px; width: 100%;}
