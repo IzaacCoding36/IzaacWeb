@@ -2,9 +2,10 @@
 
 html {background: radial-gradient(farthest-corner at right top,#000000,#000c30,#003208);
       background-repeat: no-repeat;
-      background-color: #001403;
+      background-color: #683f02;
       font-family:'Poppins', sans-serif;
       display: flex;
+      filter: hue-rotate(270deg);
       transition: filter 2s ease, background-color 2s;
       font-size: 20px;}
 

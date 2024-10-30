@@ -1,10 +1,11 @@
 /* IzaacWeb V3 extra */
 
 html {background: linear-gradient(90deg, #030012 0%, #001c03 50%, #030012 100%);
-      background-color: #001403;
-      cursor: default; 
-      color: #e7e7e7e7; 
-      font-family:'Poppins', 
+      background-color: #683f02;
+      cursor: default;
+      filter: hue-rotate(270deg);
+      color: #e7e7e7e7;
+      font-family:'Poppins',
       sans-serif; font-size: 13px;}
 
 h1 {color: lime; font-style: italic;}
