@@ -15,11 +15,6 @@ document.querySelector('.filtro3').addEventListener('click', () => {
     document.querySelector('html').style.setProperty('background-color', '#262626ff');
 });
 
-document.querySelector('.filtro4').addEventListener('click', () => {
-    document.querySelector('html').style.setProperty('filter', 'hue-rotate(270deg)');
-    document.querySelector('html').style.setProperty('background-color', '#683f02');
-});
-
 document.querySelector('.pt-br').addEventListener('click', () => {
     alert("Você já está utilizando esta linguagem.");
 });
