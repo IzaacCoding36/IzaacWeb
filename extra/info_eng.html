@@ -9,7 +9,8 @@
   <meta name="description" content="Info about the IzaacWeb website.">
   <meta name="keywords" content="Development, Info.">
   <meta name="viewport" content="width=device-width, initial-scale= 1.0">
-  <link rel="stylesheet" href="extra.css">
+  <link rel="stylesheet" href="css/extra.css">
+  <link rel="stylesheet" href="css/menu2.css">
   <link rel="shortcut icon" type="Image/jpg" href="img/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,7 +28,38 @@
 </head>
 <body>
   <center>
+    <header id="header">
+      <p id="logo">Izaac Web</p>
+      <nav id="nav">
+        <buttton id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hambuguer"></span>
+        </buttton>
+        <ul id="menu" role="menu">
+          <li><a href="https://izaacweb.vercel.app/eng.html">Main page</a></li>
+          <li><a class="here">Info</a></li>
+          <li><a href="https://www.privacypolicies.com/live/16e91d15-f967-41a3-be67-329c6c180384">Privacy Policy</a></li>
+          <li><a href="https://izaacweb.vercel.app/portfolio_eng.html">Portfolio</a></li>
+          <li><a href="contato_eng.html">Contacts</a></li>
+        </ul>
+      </nav>
+    </header>
     <h1>Information about Izaac Web</h1>
+    <div class="dropdown">
+      <button class="dropbtn">Languages</button>
+      <div class="dropdown-content">
+        <a href="info.html">Brazillian Portuguese</a>
+        <a class="eng">English</a>
+        <a class="morelang">More languages</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">Filters</button>
+      <div class="dropdown-content">
+        <a class="filter">Normal</a>
+        <a class="filter2">Sepia</a>
+        <a class="filter3">Gray</a>
+      </div>
+    </div>
     <hr>
     <p>IzaacWeb is a website where I present my developed projects and my portfolio.</p>
     <p>Check the IzaacWeb wiki: <a href="https://github.com/IzaacCoding36/IzaacWeb/wiki">link</a></p>
@@ -40,15 +72,15 @@
     <hr>
     <h2>Versions</h2>
     <hr>
-    <p><strong> Current Version: </strong> IzaacWeb V3.6.04</p>
-    <p><strong> The website was updated in: </strong> 05/nov/2024</p>
+    <p><strong> Current Version: </strong> IzaacWeb V3.7.0</p>
+    <p><strong> The website was updated in: </strong> 15/nov/2024</p>
     <p><strong> The website was developed and published in: </strong> 11/may/2023</p>
     <hr>
-    <p><strong> Update log: </strong>Halloween themed update removed, structure of image files redistributed and informations have been updated</p>
+    <p><strong> Update log: </strong>IzaacWeb V3.7.0: Updated general buttons, new adapted styles, updated information and contact pages, updated mobile menu, restructured and updated files, updated information, updated websites, optimizations, error and bug fixes.</p>
     <hr>
     <p>®2024 IzaacWeb, <a href="https://github.com/IzaacCoding36">@IzaacCoding36</a>. All rights reserved. Content subject to availability.</p>
-    <hr>
-    <h4><a href="https://izaacweb.vercel.app/eng.html">Return</a></h4>
   </center>
 </body>
+<script src="./js/menu2.js"></script>
+<script src="./js/buttons2.js"></script>
 </html>

@@ -1,0 +1,97 @@
+/* IzaacWeb V3 - Menu */
+
+ul {margin: 0;}
+
+#logo {font-size: 10px;
+       font-weight: bold;
+       color: lime; 
+       width: 100px;
+       box-shadow: 0px 0px 15px lime;
+       border-radius: 50%;
+       font-style: italic;
+       cursor: default;}
+
+#header {box-sizing: border-box;
+         height: 40px;
+         top: 0px;
+         right: 0px;
+         width: 100%;
+         padding: 1rem;
+         display: flex;
+         box-shadow: 0px 0px 3px lime;
+         align-items: center;
+         justify-content: space-between;
+         background: #001403ff;
+         position: fixed;
+         z-index: 2;}
+
+#menu {display: flex;
+       list-style: none;
+       gap: .5rem;}
+
+#menu a {display: block;
+         font-size: 15px;
+         color: #e7e7e7e7;
+         text-decoration: none;
+         transition: color 0.3s;
+         font-weight: bold;
+         padding: .5rem;}
+
+#menu a:hover {color: lime; transition: color 0.3s;}
+
+#btn-mobile {display: none;
+             color: lime;
+             border: .1rem solid black;
+             padding: .1rem;}
+
+@media (max-width: 600px) {
+    #btn-mobile {display: block;}
+
+    #menu {position: absolute;
+           width: 100%;
+           top: 40px;
+           right: 0;
+           display: block;
+           background-color: #313131c0;
+           height: 0;
+           z-index: 1000;
+           transition: .6s;
+           visibility: hidden;
+           overflow-y: hidden;}
+
+    #nav.active #menu {display: block;
+                       visibility: visible;
+                       height: calc(150vh - 30px);
+                       overflow-y: auto;}
+
+    #menu a {padding: 1.5rem 0;
+             margin: 0.5rem;
+             font-size: 15px;
+             text-decoration: none;
+             box-shadow: inset 0px 0px 3px white;
+             border-bottom: 2px solid #AFBFC0;}
+
+    #btn-mobile {display: flex;
+                 padding: .5rem 1rem;
+                 font-size: 1rem;
+                 border: none;
+                 cursor: pointer;
+                 gap: .5rem;}
+
+    #hambuguer {border-top: 2px solid; width: 20px;}
+
+    #hambuguer::before, #hambuguer::after {content: '';
+                                           display: block;
+                                           width: 20px;
+                                           height: 2px;
+                                           background-color: currentColor;
+                                           margin-top: 5px;
+                                           transition: .3s;
+                                           position: relative;}
+
+    #nav.active #hambuguer {border-top-color: transparent;}
+
+    #nav.active #hambuguer::before {transform: rotate(135deg);}
+
+    #nav.active #hambuguer::after {transform: rotate(-135deg); top: -7px;}
+}

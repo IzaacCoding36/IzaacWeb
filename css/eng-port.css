@@ -23,24 +23,24 @@ a:hover {color: lime; transition: color 0.3s;}
 .dropbtn {background-color: black;
           color: white;
           padding: 5px;
-          font-size: 13px;
           position: relative;
           top: 90px;
+          font-size: 13px;
           font-weight: bold;
-          box-shadow: 0px 0px 5px white;
+          box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
           transition: background-color 0.3s, box-shadow 0.3s;
-          border: outset 2px white;}
-
+          border: outset 2px yellowgreen;}
+   
 .dropdown {position: relative;
            display: inline-block;
            cursor: default;}
 
 .dropdown-content {display: none;
                    position: absolute;
-                   top: 120px;
+                   top: 122px;
                    background-color: black;
                    min-width: 100px;
-                   box-shadow: 0px 0px 5px white;
+                   box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
                    z-index: 1;}
 
 .dropdown-content a {color: white;
@@ -48,14 +48,14 @@ a:hover {color: lime; transition: color 0.3s;}
                      font-size: 13px;
                      font-weight: bold;
                      text-decoration: none;
-                     border: solid 1px white;
+                     border: solid 1px yellowgreen;
                      display: block;
                      transition: background-color 0.3s, box-shadow 0.3s;}
 
 .dropdown-content a:hover {background-color: darkgreen; box-shadow: 0px 0px 10px white; transition: background-color 0.3s, box-shadow 0.3s;}
 
 .dropdown:hover .dropdown-content {display: block;}
-
+   
 .dropdown:hover .dropbtn {background-color: darkgreen; box-shadow: 0px 0px 10px white; transition: background-color 0.3s, box-shadow 0.3s;}
 
 .Title {color: lime; background-color: black;

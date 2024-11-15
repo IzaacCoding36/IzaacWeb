@@ -29,6 +29,7 @@ ul {margin: 0;}
 
 #menu a {display: block;
          font-size: 15px;
+         font-weight: bold;
          text-decoration: none;
          padding: .5rem;}
 
@@ -54,13 +55,14 @@ ul {margin: 0;}
 
     #nav.active #menu {display: block;
                        visibility: visible;
-                       height: calc(100vh - 30px);
+                       height: calc(150vh - 30px);
                        overflow-y: auto;}
 
     #menu a {padding: 1rem 0;
              margin: 0.5rem;
              font-size: 15px;
              text-decoration: none;
+             box-shadow: inset 0px 0px 3px white;
              border-bottom: 2px solid #AFBFC0;}
 
     #btn-mobile {display: flex;

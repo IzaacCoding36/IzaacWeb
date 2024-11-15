@@ -25,33 +25,33 @@ a:hover {color: lime; transition: color 0.3s;}
 .Background {width: 100%; height: 100%;}
 
 .dropbtn {background-color: black;
-          color: white;
-          padding: 7px;
-          font-size: 16px;
-          font-weight: bold;
-          box-shadow: 0px 0px 5px white;
-          transition: background-color 0.3s, box-shadow 0.3s;
-          border: outset 2px white;}
+     color: white;
+     padding: 7px;
+     font-size: 16px;
+     font-weight: bold;
+     box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
+     transition: background-color 0.3s, box-shadow 0.3s;
+     border: outset 2px yellowgreen;}
 
 .dropdown {position: relative;
-           display: inline-block;
-           cursor: default;}
+      display: inline-block;
+      cursor: default;}
 
 .dropdown-content {display: none;
-                   position: absolute;
-                   background-color: black;
-                   min-width: 100px;
-                   box-shadow: 0px 0px 5px white;
-                   z-index: 1;}
+              position: absolute;
+              background-color: black;
+              min-width: 100px;
+              box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
+              z-index: 1;}
 
 .dropdown-content a {color: white;
-                     padding: 1px 1px;
-                     font-size: 15px;
-                     font-weight: bold;
-                     text-decoration: none;
-                     border: solid 1px white;
-                     display: block;
-                     transition: background-color 0.3s, box-shadow 0.3s;}
+                padding: 1px 1px;
+                font-size: 15px;
+                font-weight: bold;
+                text-decoration: none;
+                border: solid 1px yellowgreen;
+                display: block;
+                transition: background-color 0.3s, box-shadow 0.3s;}
 
 .dropdown-content a:hover {background-color: darkgreen; box-shadow: 0px 0px 10px white; transition: background-color 0.3s, box-shadow 0.3s;}
 
@@ -70,16 +70,17 @@ a:hover {color: lime; transition: color 0.3s;}
 .Projects_img {width: 75%; height: 75%; position: relative; top: -50px;}
 
 .Github {color: white; text-decoration: none;
-         border: 2px outset white; border-radius: 50px;
-         background-color: #047303b7; 
+         border: 2px outset yellowgreen; border-radius: 50px;
+         background-color: black;
          margin-bottom: 1em; display: block;
          text-align: center; padding: 3px;
          font-weight: bold;
+         box-shadow: 0px 2px 5px green, -2px 0px 5px lime;
          width: 200px; font-size: 10px;
-         transition: border 0.3s;
+         transition: border 0.3s, background-color 0.3s;
          position: relative; top: -150px;}
 
-.Github:hover {border: 2px outset lime; color: white; transition: border 0.3s;}
+.Github:hover {border: 2px outset lime; color: white; background-color: green; transition: border 0.3s, background-color 0.3s;}
 .Github:active {border: 2px outset lime; background: white; color: black;}
 
 .Devices_list {display: flex;
@@ -105,127 +106,136 @@ a:hover {color: lime; transition: color 0.3s;}
      box-shadow: 0px 0px 15px lime;}
 
 #P1 {color: white; text-decoration: none;
-     border: 2px outset white; border-radius: 50px;
-     background-color: #0b061f; 
+     border: 2px outset yellowgreen; border-radius: 50px;
+     background-color: black; 
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      font-weight: bold;
+     box-shadow: 0px 2px 5px #0b061f, -2px 0px 5px #0b061f;
      width: 200px; font-size: 10px;
-     transition: border 0.3s;
+     transition: border 0.3s, background-color 0.3s;
      position: relative; top: -110px;}
 
-#P1:hover {border: 2px outset lime; transition: border 0.3s;}
+#P1:hover {border: 2px outset lime; background-color: #0b061f; transition: border 0.3s, background-color 0.3s;}
 #P1:active {border: 2px outset lime; background: white; color: black;}
 
 #P2 {color: white; text-decoration: none;
-     border: 2px outset white; border-radius: 50px;
-     background-color: #03064f; 
+     border: 2px outset yellowgreen; border-radius: 50px;
+     background-color: black;
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      font-weight: bold;
+     box-shadow: 0px 2px 5px #03064f, -2px 0px 5px blue;
      width: 200px; font-size: 10px;
-     transition: border 0.3s;
+     transition: border 0.3s, background-color 0.3s;
      position: relative; top: -110px;}
 
-#P2:hover {border: 2px outset lime; transition: border 0.3s;}
+#P2:hover {border: 2px outset lime; background-color: #03064f; transition: border 0.3s, background-color 0.3s;}
 #P2:active {border: 2px outset lime; background: white; color: black;}
 
 #A3 {color: lime; display: block; background: #0a0b64b7; width: 250px; height: 290px;
-     box-shadow: 0px 0px 15px lime;
+     box-shadow: 0px 0px 15px lime; 
      border-radius: 50px;
      cursor: default;
      padding: 5px;
      position: relative; top: -75px;}
 
 #S1 {color: white; text-decoration: none;
-     border: 2px outset white; border-radius: 50px;
-     background-color: grey; 
+     border: 2px outset yellowgreen; border-radius: 50px;
+     background-color: black;
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      font-weight: bold;
+     box-shadow: 0px 2px 5px grey, -2px 0px 5px white;
      width: 200px; font-size: 10px;
-     transition: border 0.3s;
+     transition: border 0.3s, background-color 0.3s;
      position: relative; top: -365px;}
 
-#S1:hover {border: 2px outset lime; transition: border 0.3s;}
+#S1:hover {border: 2px outset lime; background-color: grey; transition: border 0.3s, background-color 0.3s;}
 #S1:active {border: 2px outset lime; background: white; color: black;}
 
 #S2 {color: white; text-decoration: none;
-     border: 2px outset white; border-radius: 50px;
-     background-color: #3e036b; 
+     border: 2px outset yellowgreen; border-radius: 50px;
+     background-color: black;
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      font-weight: bold;
+     box-shadow: 0px 2px 5px #3e036b, -2px 0px 5px purple;
      width: 200px; font-size: 10px;
-     transition: border 0.3s;
+     transition: border 0.3s, background-color 0.3s;
      position: relative; top: -365px;}
 
-#S2:hover {border: 2px outset lime; transition: border 0.3s;}
+#S2:hover {border: 2px outset lime; background-color: #3e036b; transition: border 0.3s, background-color 0.3s;}
 #S2:active {border: 2px outset lime; background: white; color: black;}
 
 #S3 {color: white; text-decoration: none;
-     border: 2px outset white; border-radius: 50px;
-     background-color: teal; 
+     border: 2px outset yellowgreen; border-radius: 50px;
+     background-color: black;
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      font-weight: bold;
+     box-shadow: 0px 2px 5px teal, -2px 0px 5px cyan;
      width: 200px; font-size: 10px;
-     transition: border 0.3s;
+     transition: border 0.3s, background-color 0.3s;
      position: relative; top: -365px;}
 
-#S3:hover {border: 2px outset lime; transition: border 0.3s;}
+#S3:hover {border: 2px outset lime; background-color: teal; transition: border 0.3s, background-color 0.3s;}
 #S3:active {border: 2px outset lime; background: white; color: black;}
 
 #S4 {color: white; text-decoration: none;
-     border: 2px outset white; border-radius: 50px;
-     background-color: green; 
+     border: 2px outset yellowgreen; border-radius: 50px;
+     background-color: black;
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      font-weight: bold;
+     box-shadow: 0px 2px 5px green, -2px 0px 5px lime;
      width: 200px; font-size: 10px;
-     transition: border 0.3s;
+     transition: border 0.3s, background-color 0.3s;
      position: relative; top: -365px;}
 
-#S4:hover {border: 2px outset lime; transition: border 0.3s;}
+#S4:hover {border: 2px outset lime; background-color: green; transition: border 0.3s, background-color 0.3s;}
 #S4:active {border: 2px outset lime; background: white; color: black;}
 
 #S5 {color: white; text-decoration: none;
-     border: 2px outset white; border-radius: 50px;
-     background-color: crimson; 
+     border: 2px outset yellowgreen; border-radius: 50px;
+     background-color: black;
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      font-weight: bold;
+     box-shadow: 0px 2px 5px crimson, -2px 0px 5px red;
      width: 200px; font-size: 10px;
-     transition: border 0.3s;
+     transition: border 0.3s, background-color 0.3s;
      position: relative; top: -365px;}
 
-#S5:hover {border: 2px outset lime; transition: border 0.3s;}
+#S5:hover {border: 2px outset lime; background-color: crimson; transition: border 0.3s, background-color 0.3s;}
 #S5:active {border: 2px outset lime; background: white; color: black;}
 
 #S6 {color: white; text-decoration: none;
-     border: 2px outset white; border-radius: 50px;
-     background-color: purple; 
+     border: 2px outset yellowgreen; border-radius: 50px;
+     background-color: black; 
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      font-weight: bold;
+     box-shadow: 0px 2px 5px purple, -2px 0px 5px magenta;
      width: 200px; font-size: 10px;
-     transition: border 0.3s;
+     transition: border 0.3s, background-color 0.3s;
      position: relative; top: -365px;}
 
-#S6:hover {border: 2px outset lime; transition: border 0.3s;}
+#S6:hover {border: 2px outset lime; background-color: purple; transition: border 0.3s, background-color 0.3s;}
 #S6:active {border: 2px outset lime; background: white; color: black;}
 
 #S7 {color: white; text-decoration: none;
-     border: 2px outset white; border-radius: 50px;
-     background-color: orange; 
+     border: 2px outset yellowgreen; border-radius: 50px;
+     background-color: black;
      margin-bottom: 1em; display: block;
      text-align: center; padding: 3px;
      font-weight: bold;
+     box-shadow: 0px 2px 5px orange, -2px 0px 5px yellow;
      width: 200px; font-size: 10px;
-     transition: border 0.3s;
+     transition: border 0.3s, background-color 0.3s, color 0.3s;
      position: relative; top: -365px;}
 
-#S7:hover {border: 2px outset lime; transition: border 0.3s;}
+#S7:hover {border: 2px outset lime; background-color: orange; color: black; transition: border 0.3s, background-color 0.3s, color 0.3s;}
 #S7:active {border: 2px outset lime; background: white; color: black;}
 
 #A4 {color: grey; position: relative;
@@ -281,9 +291,8 @@ a:hover {color: lime; transition: color 0.3s;}
 
 #I3:hover {filter: brightness(1.2); transition: filter 1s;}
 
-#T6 {color: green; position: relative;
-     top: -130px; cursor: default;
-     text-decoration: underline;}
+#T6 {color: #0ab10a; position: relative;
+     top: -130px; cursor: default;}
 
 #Te2 {color: #e7e7e7e7; position: relative;
       top: -100px; cursor: default;

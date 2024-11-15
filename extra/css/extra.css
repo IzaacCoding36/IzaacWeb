@@ -1,0 +1,61 @@
+/* IzaacWeb V3 extra */
+
+html {background: linear-gradient(90deg, #030012 0%, #001c03 50%, #030012 100%);
+      background-color: #001403;
+      cursor: default; 
+      color: #e7e7e7e7; 
+      font-family:'Poppins', sans-serif;
+      transition: filter 1s ease;
+      font-size: 13px;}
+
+h1 {color: lime; font-style: italic; padding-top: 50px;}
+h2 {color: lime; font-style: italic;}
+
+hr {box-shadow: 0px 0px 5px cyan;}
+
+a {color: blue; 
+   text-decoration: none; 
+   transition: color 0.3s;}
+
+a:hover {color: lime; transition: color 0.3s;}
+a:active {color: green;}
+
+.dropbtn {background-color: black;
+          color: white;
+          padding: 5px;
+          position: relative;
+          font-size: 13px;
+          font-weight: bold;
+          box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
+          transition: background-color 0.3s, box-shadow 0.3s;
+          border: outset 2px yellowgreen;}
+   
+.dropdown {position: relative;
+           display: inline-block;
+           cursor: default;}
+
+.dropdown-content {display: none;
+                   position: absolute;
+                   background-color: black;
+                   min-width: 100px;
+                   box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
+                   z-index: 1;}
+
+.dropdown-content a {color: white;
+                     padding: 1px 1px;
+                     font-size: 13px;
+                     font-weight: bold;
+                     text-decoration: none;
+                     border: solid 1px yellowgreen;
+                     display: block;
+                     transition: background-color 0.3s, box-shadow 0.3s;}
+
+.dropdown-content a:hover {background-color: darkgreen; box-shadow: 0px 0px 10px white; transition: background-color 0.3s, box-shadow 0.3s;}
+
+.dropdown:hover .dropdown-content {display: block;}
+   
+.dropdown:hover .dropbtn {background-color: darkgreen; box-shadow: 0px 0px 10px white; transition: background-color 0.3s, box-shadow 0.3s;}
+
+@media screen and (min-width: 600px){
+    html {font-size: 17px;}
+}
