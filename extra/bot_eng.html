@@ -1,4 +1,4 @@
-<!-- IzaacWeb V4 Contacts -->
+<!-- IzaacWeb V4 - Terminal Bot -->
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -6,10 +6,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="edge">
   <meta name="author" content="IzaacCoding36">
-  <meta name="description" content="Contacts">
-  <meta name="keywords" content="Contacts">
+  <meta name="description" content="IzaacWeb Terminal Bot: A place with various funcionalities to help you.">
+  <meta name="keywords" content="Terminal Bot, Bot, Funcionalities, Password, Encryption, Decryption, RPG, Checkup, Generator, Chat.">
   <meta name="viewport" content="width=device-width, initial-scale= 1.0">
   <link rel="stylesheet" href="css/extra.css">
+  <link rel="stylesheet" href="css/bot-style.css">
   <link rel="stylesheet" href="css/menu2.css">
   <link rel="shortcut icon" type="Image/jpg" href="img/favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,7 +25,7 @@
   </script>
   <script defer src="/_vercel/insights/script.js"></script>
   <base href="index.html">
-  <title>Izaac Web - Contacts</title>
+  <title>Izaac Web - Terminal Bot</title>
 </head>
 <body>
   <center>
@@ -35,20 +36,20 @@
           <span id="hambuguer"></span>
         </buttton>
         <ul id="menu" role="menu">
-          <li><a href="https://izaacweb.vercel.app/eng.html">Main page</a></li>
-          <li><a href="bot_eng.html">Terminal Bot</a></li>
+          <li><a href="https://izaacweb.vercel.app">Main Page</a></li>
+          <li><a class="here">Terminal Bot</a></li>
           <li><a href="info_eng.html">Info</a></li>
           <li><a href="https://www.privacypolicies.com/live/16e91d15-f967-41a3-be67-329c6c180384">Privacy Policy</a></li>
           <li><a href="https://izaacweb.vercel.app/portfolio_eng.html">Portfolio</a></li>
-          <li><a class="here">Contacts</a></li>
+          <li><a href="contato.html">Contact</a></li>
         </ul>
       </nav>
     </header>
-    <h1>Contact</h1>
+    <h1>IzaacWeb Terminal Bot</h1>
     <div class="dropdown">
       <button class="dropbtn">Languages</button>
       <div class="dropdown-content">
-        <a href="contato.html">Brazillian Portuguese</a>
+        <a href="bot.html">Brazillian Portuguese</a>
         <a class="eng">English</a>
         <a class="morelang">More languages</a>
       </div>
@@ -61,14 +62,31 @@
         <a class="filter3">Gray</a>
       </div>
     </div>
-    <hr>
-    <p>For any questions or suggestions about the IzaacWeb website, please contact me via email:</p>
-    <p><strong>izaaccoding36@gmail.com</strong></p>
-    <hr>
-    <p>Or through the Github repository discussions menu:</p>
-    <h4><a href="https://github.com/IzaacCoding36/IzaacWeb/discussions">Discussions</a></h4>
+    <div class="bot-container" id="botContainer">
+        <div class="bot-message" id="botMessage"></div>
+        <div class="input-container">
+            <input type="text" class="bot-input" id="botInput" placeholder="Type your response here..." onkeypress="handleKeyPress(event)">
+            <button class="bot-button" onclick="handleEnterPress()">Enter</button>
+        </div>
+        <div class="button-container">
+            <button class="bot-button" onclick="resetPage()">Restart</button>
+        </div>
+    </div>
+    <span id="hours">00</span>
+    <span id="separation">:</span>
+    <span id="minutes">00</span>
+    <span id="separation">:</span>
+    <span id="seconds">00</span>
+    <span id="period">AM</span>
   </center>
 </body>
-<script src="./js/menu2.js"></script>
-<script src="./js/eng/buttons2.js"></script>
+  <script src="js/menu2.js"></script>
+  <script src="js/eng/buttons2.js"></script>
+  <script src="js/eng/hours2.js"></script>
+  <script src="bot/eng/bot-utilities.js"></script>
+  <script src="bot/eng/module-rpg.js"></script>
+  <script src="bot/eng/module-encryption.js"></script>
+  <script src="bot/eng/module-passwordGenerator.js"></script>
+  <script src="bot/eng/module-websiteCheckup.js"></script>
+  <script src="bot/eng/terminal-bot.js"></script>
 </html>

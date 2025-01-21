@@ -1,4 +1,4 @@
-// IzaacWeb V3 - Horas //
+// IzaacWeb V4 - Horas //
 
 function displayTime(){
     var dateTime = new Date();

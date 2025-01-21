@@ -1,4 +1,4 @@
-// IzaacWeb V3 - Buttons //
+// IzaacWeb V4 - Buttons //
 
 document.querySelector('.filter').addEventListener('click', () => {
     document.querySelector('html').style.setProperty('filter', 'none');

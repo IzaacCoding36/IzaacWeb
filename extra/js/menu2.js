@@ -1,4 +1,4 @@
-// IzaacWeb V3 - Menu //
+// IzaacWeb V4 - Menu //
 
 const btnMobile = document.getElementById('btn-mobile');
 
