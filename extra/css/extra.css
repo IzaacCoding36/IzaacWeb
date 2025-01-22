@@ -57,5 +57,5 @@ a:active {color: green;}
 .dropdown:hover .dropbtn {background-color: darkgreen; box-shadow: 0px 0px 10px white; transition: background-color 0.3s, box-shadow 0.3s;}
 
 @media screen and (min-width: 600px){
-    html {font-size: 17px;}
+    html {font-size: 15px;}
 }

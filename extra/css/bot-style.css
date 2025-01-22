@@ -7,11 +7,12 @@ body {display: flex;
       margin: 0;
       color: #66ff66;}
 
-.bot-container {width: 90%;
+.bot-container {width: 80%;
                 font-family: 'Courier New', Courier, monospace;
                 max-width: 700px;
                 padding: 20px;
-                margin: 8px;
+                margin-top: 8px;
+                margin-bottom: 8px;
                 border: 2px outset #66ff66;
                 border-radius: 10px;
                 background-color: #2c2c3e55;

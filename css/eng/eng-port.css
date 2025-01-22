@@ -89,7 +89,8 @@ a:hover {color: lime; transition: color 0.3s;}
      box-shadow: 0px 0px 15px magenta;
      height: 25%; border: solid 2px grey;
      position: relative; top: 25px;
-     transition: filter 1s; 
+     transition: filter 1s;
+     z-index: -1;
      border-radius: 100%;}
 
 #I1:hover {filter: brightness(1.2); transition: filter 1s;}
