@@ -38,7 +38,7 @@ ul {margin: 0;}
              border: .1rem solid black;
              padding: .1rem;}
 
-@media (max-width: 600px) {
+@media (max-width: 850px) {
     #btn-mobile {display: block;}
 
     #menu {position: absolute;
