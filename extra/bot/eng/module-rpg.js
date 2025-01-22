@@ -8,14 +8,15 @@ function playMusic(src) {
         currentMusic.currentTime = 0;
     }
     currentMusic = new Audio(src);
+    currentMusic.loop = true;
     currentMusic.play();
 }
 
 function terminalRPG() {
+    playMusic('audios/Starting-Song.mp3');
     typeText("Loading Terminal RPG...");
     setTimeout(() => {
         clearText();
-        playMusic('audios/Starting-Song.mp3');
         typeText("Welcome to the Terminal RPG! Please select your starting class:\n(1) Knight\n(2) Archer\n(3) Mage");
         currentRPGState = 'chooseClass';
     }, 2000);
@@ -141,7 +142,7 @@ function battleBoss2(input) {
         typeText(`Uncertain of what could happen next, you focus on the dark abomination and use your ${weapon} to attack it.\n\nThe dark abomination flew into the air and dodged your attack. You could only kill it by being next to it, so you waited for an opportunity to attack the dark abomination.\n\nThen you decided to run to attract the dark abomination closer to you, and the abomination actually followed you and got closer. While running, you took the opportunity to turn around and attack the dark abomination with your ${weapon}.\n\nYou finally attacked it, your attack pierced it but had no effect, it was like attacking a ghost.\n\nBut somehow, your ${weapon} absorbed your enemy, like it was energy. At first, you had no clue what was happening, but soon you understood what happened. The abomination was inside your ${weapon}, so you basically had control over it and its energy now.\n\nBoss ELIMINATED!! Congrats, ${userName}!\n\nYour ${weapon} became a Dark ${weapon}!\n\nAfter some time exploring the woods, you gave yourself some time to build a place to call "home", and now you live peacefully in the woods, with everything you've achieved so far, you are happy, and in peace.\n\nTHE END`);
     } else {
         document.querySelector('html').style.setProperty('filter', 'hue-rotate(240deg)');
-        playMusic('audios/Final-Boss-Death1.mp3');
+        playMusic('audios/Final-Boss-Death2.mp3');
         typeText(`Uncertain of what could happen next, you became scared of the dark abomination that was right in front of you, and then it suddenly grabbed you and everything turned dark.\n\nYou died.`);
         showTryAgainButton();
     }

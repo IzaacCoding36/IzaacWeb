@@ -8,14 +8,15 @@ function playMusic(src) {
         currentMusic.currentTime = 0;
     }
     currentMusic = new Audio(src);
+    currentMusic.loop = true;
     currentMusic.play();
 }
 
 function terminalRPG() {
+    playMusic('audios/Starting-Song.mp3');
     typeText("Carregando Terminal RPG...");
     setTimeout(() => {
         clearText();
-        playMusic('audios/Starting-Song.mp3');
         typeText("Bem-vindo ao Terminal RPG! Por favor, selecione sua classe inicial:\n(1) Cavaleiro\n(2) Arqueiro\n(3) Mago");
         currentRPGState = 'chooseClass';
     }, 2000);
@@ -142,7 +143,7 @@ function battleBoss2(input) {
         typeText(`Inseguro sobre o que poderia acontecer a seguir, você se concentra na abominação escura e usa sua arma para atacá-la.\n\nA abominação escura voou para o ar e desviou do seu ataque. Você só poderia matá-la estando próximo dela, então você esperou por uma oportunidade para atacar a abominação escura.\n\nAssim você decidiu correr para atrair a abominação escura para mais perto de você, e a abominação realmente seguiu você e se aproximou. Enquanto corria, você aproveitou a oportunidade para se virar e atacar a abominação escura com sua arma.\n\nVocê finalmente a atacou, seu ataque a perfurou, mas não teve efeito, era como atacar um fantasma.\n\nMas de alguma forma, sua arma absorveu seu inimigo, como se fosse energia. A princípio, você não tinha ideia do que estava acontecendo, mas logo entendeu o que aconteceu. A abominação estava dentro da sua arma, então você basicamente tinha controle sobre ela e sua energia agora.\n\nChefe ELIMINADO!! Parabéns, ${userName}!\n\nSua arma se tornou ${weapon} das Sombras!\n\nDepois de algum tempo explorando a floresta, você se deu um tempo para construir um lugar para chamar de "lar", e agora você vive pacificamente na floresta, com tudo o que conquistou até agora, você está feliz e em paz.\n\nFIM`);
     } else {
         document.querySelector('html').style.setProperty('filter', 'hue-rotate(240deg)');
-        playMusic('audios/Final-Boss-Death1.mp3');
+        playMusic('audios/Final-Boss-Death2.mp3');
         typeText(`Inseguro sobre o que poderia acontecer a seguir, você ficou com medo da abominação escura que estava bem na sua frente, e então ela agarrou você e tudo escureceu.\n\nVocê morreu.`);
         showTryAgainButton();
     }
