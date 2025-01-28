@@ -49,6 +49,7 @@ body {display: flex;
             border: 1px outset #66ff66;
             border-radius: 5px;
             background-color: #1a1a2d;
+            box-shadow: 0 0 10px rgba(102, 255, 102, 0.5);
             transition: background-color 1s;
             color: #66ff66;}
 
