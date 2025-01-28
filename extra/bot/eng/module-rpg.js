@@ -73,7 +73,7 @@ function chooseClass(input) {
     }
     playMusic('audios/Wolf-Encounter.mp3');
     clearText();
-    typeText(`You have chosen the ${type} class.\n\nYour adventure begins in a world where both wonder and chaos coexist.\n\nYou are the only one who can survive and experience all of this.\n\nAs you explore the forest, you keep hearing noises around you.\n\nPrepared for any threat, you see your first enemy approaching.\n\nA wild wolf charges at you. Prepare to battle. Type 'a' to attack.`);
+    typeText(`You have chosen the ${type} class.\n\nYour adventure begins in a world where both wonder and chaos coexist.\n\nYou are the only one who can survive and experience all of this.\n\nAs you explore the forest, you keep hearing noises around you.\n\nPrepared for any threat, you see your first enemy approaching.\n\nA wild wolf charges at you. Prepare to battle. Type 'a' to attack. (chance of success: 50%)`);
     currentRPGState = 'battleBeast';
 }
 
@@ -107,11 +107,11 @@ function battleBeast(input) {
                 showTryAgainButton();
                 currentRPGState = '';
             } else {
-                typeText(`You missed the attack and the wild wolf bit you. You lost 10 HP. Now you have ${hp} HP left.\n\nType 'a' to attack again.`);
+                typeText(`You missed the attack and the wild wolf bit you. You lost 10 HP. Now you have ${hp} HP left.\n\nType 'a' to attack again. (chance of success: 50%)`);
             }
         }
     } else {
-        typeText("Invalid input. Press 'a' to attack.");
+        typeText("Invalid input. Press 'a' to attack. (chance of success: 50%)");
     }
 }
 
@@ -123,7 +123,7 @@ function findShinyWeapon(input) {
         document.querySelector('html').style.setProperty('background-color', '#01158a');
         playMusic('audios/Final-Boss-Encounter1.mp3');
         clearText();
-        typeText(`You followed the strange light and then...\n\nWow!\n\nYou found a ${weapon}! + 15 DMG\n\nYour damage has increased to ${attack}.\n\nAfter acquiring your new ${weapon}, you proceed deeper into the forest, and it starts getting darker.\n\nYou wonder: Is it already night? Something feels very strange. Suddenly, you see a very big tree fall in the distance. You decide to investigate.\n\nYou look at the fallen tree and a huge dark abomination emerges in front of you. Your ${weapon} emits the light you saw before, weakening the abomination\n\n|| !! BOSS BATTLE !! ||\n\nGet ready to fight and type 'a' to attack.`);
+        typeText(`You followed the strange light and then...\n\nWow!\n\nYou found a ${weapon}! + 15 DMG\n\nYour damage has increased to ${attack}.\n\nAfter acquiring your new ${weapon}, you proceed deeper into the forest, and it starts getting darker.\n\nYou wonder: Is it already night? Something feels very strange. Suddenly, you see a very big tree fall in the distance. You decide to investigate.\n\nYou look at the fallen tree and a huge dark abomination emerges in front of you. Your ${weapon} emits the light you saw before, weakening the abomination\n\n|| !! BOSS BATTLE !! ||\n\nGet ready to fight and type 'a' to attack. (chance of success: 40%)`);
         currentRPGState = 'battleBoss';
     } else {
         ignoreLight(input);
@@ -135,7 +135,7 @@ function ignoreLight(input) {
     document.querySelector('html').style.setProperty('background-color', '#67018a');
     playMusic('audios/Final-Boss-Encounter2.mp3');
     clearText();
-    typeText(`You decide to ignore it and continue your adventure.\n\nYou proceed deeper into the forest, and it starts getting darker.\n\nYou wonder: Is it already night? Something feels very strange. Suddenly, you see a very big tree fall in the distance. You decide to investigate.\n\nYou look at the fallen tree and a huge dark abomination emerges in front of you.\n\n|| !! BOSS BATTLE !! ||\n\nGet ready to fight and type 'a' to attack.`);
+    typeText(`You decide to ignore it and continue your adventure.\n\nYou proceed deeper into the forest, and it starts getting darker.\n\nYou wonder: Is it already night? Something feels very strange. Suddenly, you see a very big tree fall in the distance. You decide to investigate.\n\nYou look at the fallen tree and a huge dark abomination emerges in front of you.\n\n|| !! BOSS BATTLE !! ||\n\nGet ready to fight and type 'a' to attack. (chance of success: 30%)`);
     currentRPGState = 'battleBoss2';
 }
 
@@ -168,11 +168,11 @@ function battleBoss(input) {
                 showTryAgainButton();
                 currentRPGState = '';
             } else {
-                typeText(`You missed the attack and the dark abomination hit you. You lost 25 HP. Now you have ${hp} HP left.\n\nType 'a' to attack again.`);
+                typeText(`You missed the attack and the dark abomination hit you. You lost 25 HP. Now you have ${hp} HP left.\n\nType 'a' to attack again. (chance of success: 40%)`);
             }
         }
     } else {
-        typeText("Invalid input. Type 'a' to attack.");
+        typeText("Invalid input. Type 'a' to attack. (chance of success: 40%)");
     }
 }
 
@@ -205,11 +205,11 @@ function battleBoss2(input) {
                 showTryAgainButton();
                 currentRPGState = '';
             } else {
-                typeText(`You missed the attack and the dark abomination hit you. You lost 25 HP. Now you have ${hp} HP left.\n\nType 'a' to attack again.`);
+                typeText(`You missed the attack and the dark abomination hit you. You lost 25 HP. Now you have ${hp} HP left.\n\nType 'a' to attack again. (chance of success: 30%)`);
             }
         }
     } else {
-        typeText("Invalid input. Type 'a' to attack.");
+        typeText("Invalid input. Type 'a' to attack. (chance of success: 30%)");
     }
 }
 

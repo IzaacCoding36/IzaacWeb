@@ -74,7 +74,7 @@ function chooseClass(input) {
 
     playMusic('audios/Wolf-Encounter.mp3');
     clearText();
-    typeText(`Você escolheu a classe ${type}.\n\nSua aventura começa em um mundo onde maravilhas e caos coexistem.\n\nVocê é o único que pode sobreviver e experimentar tudo isso.\n\nEnquanto você explora a floresta, você ouve ruídos ao seu redor.\n\nPreparado para qualquer ameaça, você vê seu primeiro inimigo se aproximando.\n\nUm lobo selvagem corre na sua direção. Prepare-se para a batalha. Digite 'a' para atacar.`);
+    typeText(`Você escolheu a classe ${type}.\n\nSua aventura começa em um mundo onde maravilhas e caos coexistem.\n\nVocê é o único que pode sobreviver e experimentar tudo isso.\n\nEnquanto você explora a floresta, você ouve ruídos ao seu redor.\n\nPreparado para qualquer ameaça, você vê seu primeiro inimigo se aproximando.\n\nUm lobo selvagem corre na sua direção. Prepare-se para a batalha. Digite 'a' para atacar. (chance de acerto: 50%)`);
     currentRPGState = 'battleBeast';
 }
 
@@ -116,11 +116,11 @@ function battleBeast(input) {
                 showTryAgainButton();
                 currentRPGState = '';
             } else {
-                typeText(`Você errou o ataque e o lobo selvagem te mordeu. Você perdeu 10 HP. Agora você tem ${hp} HP.\n\nDigite 'a' para atacar novamente.`);
+                typeText(`Você errou o ataque e o lobo selvagem te mordeu. Você perdeu 10 HP. Agora você tem ${hp} HP.\n\nDigite 'a' para atacar novamente. (chance de acerto: 50%)`);
             }
         }
     } else {
-        typeText("Entrada inválida. Digite 'a' para atacar.");
+        typeText("Entrada inválida. Digite 'a' para atacar. (chance de acerto: 50%)");
     }
 }
 
@@ -133,7 +133,7 @@ function findShinyWeapon(input) {
         document.querySelector('html').style.setProperty('background-color', '#01158a');
         playMusic('audios/Final-Boss-Encounter1.mp3');
         clearText();
-        typeText(`Você seguiu a luz estranha e então...\n\nUau!\n\nVocê encontrou ${article} ${weapon}! + 15 DAN\n\nSeu dano aumentou para ${attack}.\n\nAssim, você continua explorando mais fundo na floresta, e tudo começa a escurecer.\n\nVocê se pergunta: Já é noite? Algo parece muito estranho. De repente, você vê uma árvore muito grande cair à distância. Você decide investigar.\n\nVocê olha para a árvore caída e uma enorme abominação escura emerge à sua frente. ${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${weapon} emite a luz que você viu antes, enfraquecendo a abominação\n\n|| !! BATALHA DE CHEFE !! ||\n\nPrepare-se para lutar e digite 'a' para atacar.`);
+        typeText(`Você seguiu a luz estranha e então...\n\nUau!\n\nVocê encontrou ${article} ${weapon}! + 15 DAN\n\nSeu dano aumentou para ${attack}.\n\nAssim, você continua explorando mais fundo na floresta, e tudo começa a escurecer.\n\nVocê se pergunta: Já é noite? Algo parece muito estranho. De repente, você vê uma árvore muito grande cair à distância. Você decide investigar.\n\nVocê olha para a árvore caída e uma enorme abominação escura emerge à sua frente. ${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${weapon} emite a luz que você viu antes, enfraquecendo a abominação\n\n|| !! BATALHA DE CHEFE !! ||\n\nPrepare-se para lutar e digite 'a' para atacar. (chance de acerto: 40%)`);
         currentRPGState = 'battleBoss';
     } else {
         ignoreLight(input);
@@ -146,7 +146,7 @@ function ignoreLight(input) {
     document.querySelector('html').style.setProperty('background-color', '#67018a');
     playMusic('audios/Final-Boss-Encounter2.mp3');
     clearText();
-    typeText(`Você decide ignorá-la e continuar sua aventura.\n\nVocê continua mais fundo na floresta, e começa a escurecer.\n\nVocê se pergunta: Já é noite? Algo parece muito estranho. De repente, você vê uma árvore muito grande cair à distância. Você decide investigar.\n\nVocê olha para a árvore caída e uma enorme abominação escura emerge à sua frente.\n\n|| !! BATALHA DE CHEFE !! ||\n\nPrepare-se para lutar e digite 'a' para atacar.`);
+    typeText(`Você decide ignorá-la e continuar sua aventura.\n\nVocê continua mais fundo na floresta, e começa a escurecer.\n\nVocê se pergunta: Já é noite? Algo parece muito estranho. De repente, você vê uma árvore muito grande cair à distância. Você decide investigar.\n\nVocê olha para a árvore caída e uma enorme abominação escura emerge à sua frente.\n\n|| !! BATALHA DE CHEFE !! ||\n\nPrepare-se para lutar e digite 'a' para atacar. (chance de acerto: 30%)`);
     currentRPGState = 'battleBoss2';
 }
 
@@ -180,11 +180,11 @@ function battleBoss(input) {
                 showTryAgainButton();
                 currentRPGState = '';
             } else {
-                typeText(`Você errou o ataque e a abominação escura te atingiu. Você perdeu 25 HP. Agora você tem ${hp} HP.\n\nDigite 'a' para atacar novamente.`);
+                typeText(`Você errou o ataque e a abominação escura te atingiu. Você perdeu 25 HP. Agora você tem ${hp} HP.\n\nDigite 'a' para atacar novamente. (chance de acerto: 40%)`);
             }
         }
     } else {
-        typeText("Entrada inválida. Digite 'a' para atacar.");
+        typeText("Entrada inválida. Digite 'a' para atacar. (chance de acerto: 40%)");
     }
 }
 
@@ -218,11 +218,11 @@ function battleBoss2(input) {
                 showTryAgainButton();
                 currentRPGState = '';
             } else {
-                typeText(`Você errou o ataque e a abominação escura te atingiu. Você perdeu 25 HP. Agora você tem ${hp} HP.\n\nDigite 'a' para atacar novamente.`);
+                typeText(`Você errou o ataque e a abominação escura te atingiu. Você perdeu 25 HP. Agora você tem ${hp} HP.\n\nDigite 'a' para atacar novamente. (chance de acerto: 30%)`);
             }
         }
     } else {
-        typeText("Entrada inválida. Digite 'a' para atacar.");
+        typeText("Entrada inválida. Digite 'a' para atacar. (chance de acerto: 30%)");
     }
 }
 
