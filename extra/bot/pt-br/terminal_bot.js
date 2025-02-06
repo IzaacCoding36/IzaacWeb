@@ -73,7 +73,7 @@ function greetUser() {
 
     if (hours < 12) {
         greeting = "Bom Dia";
-    } else if (hours < 17) {
+    } else if (hours < 19) {
         greeting = "Boa Tarde";
     } else {
         greeting = "Boa Noite";
