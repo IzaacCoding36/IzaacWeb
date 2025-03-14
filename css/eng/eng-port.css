@@ -18,6 +18,11 @@ a {color: #e7e7e7e7; transition: color 0.3s;}
 
 a:hover {color: lime; transition: color 0.3s;}
 
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 5px cyan; }
+    50% { box-shadow: 0 0 15px cyan; }
+}
+
 .Options {text-align: center;}
 
 .dropbtn {background-color: black;
@@ -63,7 +68,7 @@ a:hover {color: lime; transition: color 0.3s;}
         cursor: default;
         width: 100%; font-size: 25px;}
 
-.Separation {color: #e7e7e7e7; box-shadow: 0px 0px 3px cyan;}
+.Separation {box-shadow: 0px 0px 5px cyan; background: linear-gradient(to right, transparent, cyan, transparent); border: none; height: 1px; animation: pulse 2s infinite;}
 
 .List {font-size: 15px; text-align: left; padding: 10px;}
 

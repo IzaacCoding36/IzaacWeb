@@ -35,9 +35,22 @@ ul {margin: 0;}
          text-decoration: none;
          transition: color 0.3s;
          font-weight: bold;
+         transition: all 0.3s ease;
+         position: relative;
          padding: .5rem;}
 
-#menu a:hover {color: lime; transition: color 0.3s;}
+#menu a:hover {color: lime; text-shadow: 0 0 5px lime; transition: color 0.3s;}
+
+#menu a::after {content: '';
+                position: absolute;
+                width: 0;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background: lime;
+                transition: width 0.3s ease;}
+
+#menu a:hover::after {width: 100%;}
 
 #btn-mobile {display: none;
              color: lime;
