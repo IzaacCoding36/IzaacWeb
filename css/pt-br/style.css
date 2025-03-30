@@ -61,6 +61,7 @@ a:hover {color: lime; transition: color 0.3s;}
 
 .Titulo {color: lime; background-color: #000000aa;
          box-shadow: 0px 0px 15px lime;
+         text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
          border-radius: 50%;
          font-style: italic;
          cursor: default;
@@ -99,11 +100,14 @@ a:hover {color: lime; transition: color 0.3s;}
 #A1 {color: white; position: relative;
      top: -75px; cursor: default;}
 
-#A2 {color: lime; display: block; background: #0a0b64b7; width: 250px; height: 110px;
+#A2 {color: lime; display: block; background: #2c2c3e55; width: 250px; height: 110px;
      border-radius: 50px;
      cursor: default;
      padding: 5px;
-     box-shadow: 0px 0px 15px lime;}
+     border-top: 2px outset lime;
+     border-bottom: 2px outset lime;
+     text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
+     box-shadow: 0px 0px 50px  rgba(102, 255, 102, 0.5);}
 
 #P1 {color: white; text-decoration: none;
      border: 2px outset yellowgreen; border-radius: 50px;
@@ -133,8 +137,11 @@ a:hover {color: lime; transition: color 0.3s;}
 #P2:hover {border: 2px outset lime; background-color: #03064f; transition: border 0.3s, background-color 0.3s;}
 #P2:active {border: 2px outset lime; background: white; color: black;}
 
-#A3 {color: lime; display: block; background: #0a0b64b7; width: 250px; height: 290px;
-     box-shadow: 0px 0px 15px lime; 
+#A3 {color: lime; display: block; background: #2c2c3e55; width: 250px; height: 290px;
+     box-shadow: 0px 0px 50px  rgba(102, 255, 102, 0.5);
+     border-top: 2px outset lime;
+     border-bottom: 2px outset lime;
+     text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
      border-radius: 50px;
      cursor: default;
      padding: 5px;
@@ -260,7 +267,7 @@ a:hover {color: lime; transition: color 0.3s;}
       top: -150px; cursor: default; width: 90%;}
 
 #T2 {color: white; position: relative;
-     top: 50px; cursor: default; 
+     top: 50px; cursor: default;
      text-shadow: 0px 0px 15px cyan;
      text-decoration: underline;}
 
@@ -275,7 +282,7 @@ a:hover {color: lime; transition: color 0.3s;}
 
 #T4 {color: yellow; position: relative;
      top: -15px; cursor: default;
-     text-shadow: 0px 0px 15px red;
+     text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red;
      left: -20px;}
 
 #T5 {color: blue; position: relative;
@@ -292,6 +299,7 @@ a:hover {color: lime; transition: color 0.3s;}
 #I3:hover {filter: brightness(1.2); transition: filter 1s;}
 
 #T6 {color: #0ab10a; position: relative;
+     text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
      top: -130px; cursor: default;}
 
 #Te2 {color: #e7e7e7e7; position: relative;

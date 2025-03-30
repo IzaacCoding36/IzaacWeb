@@ -65,6 +65,8 @@ a:hover {color: lime; transition: color 0.3s;}
 
 .Title {color: lime; background-color: black;
         box-shadow: 0px 0px 15px lime;
+        text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
+        padding: 3px;
         cursor: default;
         width: 100%; font-size: 25px;}
 
@@ -88,7 +90,8 @@ a:hover {color: lime; transition: color 0.3s;}
 
 /* T= Títles, I= Images, Te= Texts */
 
-#T1 {color: lime; cursor: default; background-color: black; box-shadow: 0px 0px 15px lime; font-size: 20px;}
+#T1 {color: lime; cursor: default; background-color: black; box-shadow: 0px 0px 15px lime; font-size: 20px; text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
+     padding: 3px;}
 
 #I1 {width: 25%;
      box-shadow: 0px 0px 15px magenta;
