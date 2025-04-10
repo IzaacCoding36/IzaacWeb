@@ -4,11 +4,13 @@ ul {margin: 0;}
 
 #logo {font-size: 10px;
        font-weight: bold;
+       background-color: black;
        color: lime; 
        width: 100px;
        box-shadow: 0px 0px 15px lime;
        text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
        padding: 3px;
+       z-index: 3;
        border-radius: 50%;
        font-style: italic;
        cursor: default;}
@@ -21,7 +23,7 @@ ul {margin: 0;}
          box-shadow: 0px 0px 3px lime;
          align-items: center;
          justify-content: space-between;
-         background: #001403ff;
+         background: linear-gradient(90deg, darkgreen 0%, #001403ff 50%, #001403ff 100%);
          position: fixed;
          z-index: 2;}
 
@@ -78,11 +80,13 @@ ul {margin: 0;}
                        overflow-y: auto;}
 
     #menu a {padding: 1rem 0;
-             margin: 0.5rem;
              font-size: 15px;
              text-decoration: none;
-             box-shadow: inset 0px 0px 3px white;
-             border-bottom: 2px solid #AFBFC0;}
+             box-shadow: 0px 0px 5px black; background: linear-gradient(to right, transparent, black, transparent);
+             border-top: 2px outset cyan;
+             border-bottom: 2px outset cyan;}
+
+    #menu a:hover {border-top: 2px outset lime; border-bottom: 2px outset lime;}
 
     #btn-mobile {display: flex;
                  padding: .5rem 1rem;
