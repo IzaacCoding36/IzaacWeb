@@ -42,7 +42,7 @@ a:active {color: green;}
           font-size: 13px;
           font-weight: bold;
           box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-          transition: background-color 0.3s, box-shadow 0.3s;
+          transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
           border: outset 2px yellowgreen;}
    
 .dropdown {position: relative;
@@ -63,13 +63,13 @@ a:active {color: green;}
                      text-decoration: none;
                      border: solid 1px yellowgreen;
                      display: block;
-                     transition: background-color 0.3s, box-shadow 0.3s;}
+                     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
 
-.dropdown-content a:hover {background-color: darkgreen; box-shadow: 0px 0px 10px white; transition: background-color 0.3s, box-shadow 0.3s;}
+.dropdown-content a:hover {background-color: yellowgreen; box-shadow: 0px 0px 10px yellowgreen; color: black; transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
 
 .dropdown:hover .dropdown-content {display: block;}
-   
-.dropdown:hover .dropbtn {background-color: darkgreen; box-shadow: 0px 0px 10px white; transition: background-color 0.3s, box-shadow 0.3s;}
+  
+.dropdown:hover .dropbtn {background-color: yellowgreen; box-shadow: 0px 0px 10px yellowgreen; color: black; transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
 
 @media screen and (min-width: 600px){
     html {font-size: 15px;}

@@ -59,7 +59,7 @@ ul {margin: 0;}
              border: .1rem solid black;
              padding: .1rem;}
 
-@media (max-width: 850px) {
+@media (max-width: 900px) {
     #btn-mobile {display: block;}
 
     #menu {position: absolute;
@@ -83,8 +83,8 @@ ul {margin: 0;}
              font-size: 15px;
              text-decoration: none;
              box-shadow: 0px 0px 5px black; background: linear-gradient(to right, transparent, black, transparent);
-             border-top: 2px outset cyan;
-             border-bottom: 2px outset cyan;}
+             border-top: 2px outset teal;
+             border-bottom: 2px outset teal;}
 
     #menu a:hover {border-top: 2px outset lime; border-bottom: 2px outset lime;}
 
