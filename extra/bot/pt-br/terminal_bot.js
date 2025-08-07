@@ -100,7 +100,7 @@ function processInputCore(input) {
 
     switch (step) {
         case 1:
-            if (['sim', 's', 'yes', 'y'].includes(input.toLowerCase())) {
+            if (['sim', 's'].includes(input.toLowerCase())) {
                 explainFunctionalities();
             } else {
                 askForAction();
