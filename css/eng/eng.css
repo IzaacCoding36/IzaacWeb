@@ -1,65 +1,305 @@
-/* IzaacWeb V4 */
+/* IzaacWeb V4 - Modernized English Version */
 
-html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#001403);
-      background-repeat: no-repeat;
-      background-color: #001403;
-      font-family:'Poppins', sans-serif;
-      display: flex;
-      filter: none;
-      transition: filter 2s ease, background-color 2s;
-      font-size: 20px;}
-
-body {margin: 0px; padding: 0px;}
-
-button {background: none;}
-
-a {color: #e7e7e7e7; transition: color 0.3s;}
-
-a:hover {color: lime; transition: color 0.3s;}
-
-@keyframes glow { 0% {box-shadow: 0px 0px 15px magenta;}
-                  25% {box-shadow: 0px 0px 15px purple;}
-                  50% {box-shadow: 0px 0px 15px lime;}
-                  75% {box-shadow: 0px 0px 15px purple;}
-                  100% {box-shadow: 0px 0px 15px magenta;}
+:root {
+  /* Color Palette */
+  --primary-green: #001403;
+  --accent-lime: lime;
+  --accent-yellow: yellow;
+  --accent-yellowgreen: yellowgreen;
+  --text-primary: #e7e7e7;
+  --text-secondary: white;
+  --background-black: #000000;
+  --background-dark: #00030C;
+  --shadow-primary: rgba(102, 255, 102, 0.5);
+  --shadow-cyan: cyan;
+  --shadow-magenta: magenta;
+  --shadow-purple: purple;
+  
+  /* Content card colors */
+  --bg-card: rgba(0, 255, 0, 0.05);
+  --bg-card-hover: rgba(0, 255, 0, 0.1);
+  --glow-primary: 0 0 10px lime;
+  --glow-secondary: 0 0 15px #66ff66;
+  
+  /* Typography */
+  --font-family: 'Poppins', sans-serif;
+  --font-size-base: 20px;
+  --font-size-small: 10px;
+  --font-size-medium: 13px;
+  --font-size-large: 25px;
+  
+  /* Spacing */
+  --spacing-xs: 3px;
+  --spacing-sm: 5px;
+  --spacing-md: 10px;
+  --spacing-lg: 15px;
+  --spacing-xl: 20px;
+  
+  /* Transitions */
+  --transition-fast: 0.3s;
+  --transition-medium: 1s;
+  --transition-slow: 2s;
+  
+  /* Border Radius */
+  --radius-small: 20px;
+  --radius-medium: 50px;
+  --radius-large: 50%;
 }
 
-.Background {width: 100%; height: 300px; filter: hue-rotate(270deg); box-shadow: 0px 0px 50px #004646;}
+html {
+  background: radial-gradient(farthest-corner at right top, var(--background-black), var(--background-dark), var(--primary-green));
+  background-repeat: no-repeat;
+  background-color: var(--primary-green);
+  font-family: var(--font-family);
+  display: flex;
+  filter: none;
+  transition: filter var(--transition-slow) ease, background-color var(--transition-slow);
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+}
 
-.dropbtn {background-color: black;
-          color: white;
-          padding: 7px;
-          font-size: 14px;
-          font-weight: bold;
-          box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-          transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-          border: outset 2px yellowgreen;}
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
 
-.dropdown {position: relative;
-           display: inline-block;
-           cursor: default;}
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 
-.dropdown-content {display: none;
-                   position: absolute;
-                   background-color: black;
-                   min-width: 100px;
-                   box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-                   z-index: 1;}
+a {
+  color: var(--text-primary);
+  transition: color var(--transition-fast);
+  text-decoration: none;
+}
 
-.dropdown-content a {color: white;
-                     padding: 1px 1px;
-                     font-size: 13px;
-                     font-weight: bold;
-                     text-decoration: none;
-                     border: solid 1px yellowgreen;
-                     display: block;
-                     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
+a:hover {
+  color: var(--accent-lime);
+  transition: color var(--transition-fast);
+}
 
-.dropdown-content a:hover {background-color: yellowgreen; box-shadow: 0px 0px 10px yellowgreen; color: black; transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
+@keyframes glow {
+  0% { box-shadow: 0px 0px var(--spacing-lg) var(--shadow-magenta); }
+  25% { box-shadow: 0px 0px var(--spacing-lg) var(--shadow-purple); }
+  50% { box-shadow: 0px 0px var(--spacing-lg) var(--accent-lime); }
+  75% { box-shadow: 0px 0px var(--spacing-lg) var(--shadow-purple); }
+  100% { box-shadow: 0px 0px var(--spacing-lg) var(--shadow-magenta); }
+}
 
-.dropdown:hover .dropdown-content {display: block;}
-  
-.dropdown:hover .dropbtn {background-color: yellowgreen; box-shadow: 0px 0px 10px yellowgreen; color: black; transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Content Sections - Modern Card Design */
+.content-section {
+  background: var(--bg-card);
+  border: 1px solid var(--accent-lime);
+  border-radius: var(--spacing-md);
+  padding: var(--spacing-xl);
+  margin: var(--spacing-xl) auto;
+  max-width: 900px;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(5px);
+  position: relative;
+  overflow: hidden;
+  animation: slideInUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.content-section:nth-child(even) {
+  animation-delay: 0.1s;
+}
+
+.content-section:nth-child(odd) {
+  animation-delay: 0.2s;
+}
+
+.content-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.content-section:hover {
+  background: var(--bg-card-hover);
+  box-shadow: var(--glow-primary);
+  transform: translateY(-5px);
+  border-color: #66ff66;
+}
+
+.content-section:hover::before {
+  left: 100%;
+}
+
+/* Enhanced Link Containers */
+.links-container,
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.links-container a,
+.projects-container a {
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid var(--accent-lime);
+  border-radius: var(--spacing-sm);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.links-container a::before,
+.projects-container a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.2), transparent);
+  transition: left var(--transition-fast);
+}
+
+.links-container a:hover,
+.projects-container a:hover {
+  background: rgba(0, 255, 0, 0.1);
+  box-shadow: 0 0 var(--spacing-lg) var(--shadow-primary);
+  transform: translateY(-2px);
+}
+
+.links-container a:hover::before,
+.projects-container a:hover::before {
+  left: 100%;
+}
+
+/* Footer Section */
+.footer-section {
+  text-align: center;
+  border-color: var(--shadow-cyan);
+}
+
+.footer-section:hover {
+  border-color: var(--shadow-cyan);
+  box-shadow: 0 0 var(--spacing-lg) var(--shadow-cyan);
+}
+
+.Background {
+  width: 100%;
+  height: 300px;
+  filter: hue-rotate(270deg);
+  box-shadow: 0px 0px 50px #004646;
+  object-fit: cover;
+}
+
+/* Enhanced Dropdown Styles */
+.dropbtn {
+  background: linear-gradient(135deg, var(--background-black), #1a1a1a);
+  color: var(--text-secondary);
+  padding: var(--spacing-md);
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: var(--glow-primary), -2px 0px var(--spacing-sm) var(--accent-yellow);
+  transition: all var(--transition-fast);
+  border: 2px outset var(--accent-yellowgreen);
+  border-radius: var(--spacing-sm);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.dropbtn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(154, 205, 50, 0.3), transparent);
+  transition: left var(--transition-fast);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: default;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: linear-gradient(135deg, var(--background-black), #1a1a1a);
+  min-width: 160px;
+  box-shadow: var(--glow-primary), -2px 0px var(--spacing-sm) var(--accent-yellow);
+  z-index: 1000;
+  border-radius: var(--spacing-sm);
+  overflow: hidden;
+  border: 1px solid var(--accent-yellowgreen);
+}
+
+.dropdown-content a {
+  color: var(--text-secondary);
+  padding: var(--spacing-md);
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(154, 205, 50, 0.3);
+  display: block;
+  transition: all var(--transition-fast);
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background: var(--accent-yellowgreen);
+  color: var(--background-black);
+  text-shadow: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: fadeIn 0.3s ease;
+}
+
+.dropdown:hover .dropbtn {
+  background: linear-gradient(135deg, var(--accent-yellowgreen), #9acd32);
+  color: var(--background-black);
+  text-shadow: none;
+}
+
+.dropdown:hover .dropbtn::before {
+  left: 100%;
+}
 
 .Title {color: lime; background-color: #000000aa;
         box-shadow: 0px 0px 15px lime;
@@ -266,4 +506,57 @@ a:hover {color: lime; transition: color 0.3s;}
    #I3 {height: 15%; width: 15%;}
    #Te2 {font-size: 14px;}
    #menu a {font-weight: bold;}
+}
+
+/* Responsive Design for Content Sections */
+@media screen and (max-width: 768px) {
+  .content-section {
+    padding: var(--spacing-md);
+    margin: var(--spacing-md) auto;
+    max-width: 95%;
+  }
+  
+  .links-container,
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .links-container a,
+  .projects-container a {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content-section {
+    padding: var(--spacing-sm);
+    margin: var(--spacing-sm) auto;
+  }
+  
+  .links-container a,
+  .projects-container a {
+    width: 90%;
+    padding: var(--spacing-sm);
+  }
+}
+
+/* Focus and accessibility improvements */
+a:focus, button:focus {
+  outline: 2px solid var(--accent-lime);
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
 }

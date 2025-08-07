@@ -253,9 +253,10 @@ body {
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .bot-container {
-    width: 95%;
+    width: 90%;
+    max-width: 450px;
     padding: var(--bot-spacing-md);
-    margin: var(--bot-spacing-xs);
+    margin: var(--bot-spacing-sm) auto;
   }
   
   .bot-title {
@@ -302,6 +303,8 @@ body {
   }
   
   .bot-container {
+    width: 95%;
+    max-width: 380px;
     padding: var(--bot-spacing-md);
   }
   
