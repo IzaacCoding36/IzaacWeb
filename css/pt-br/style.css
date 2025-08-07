@@ -446,9 +446,9 @@ a:hover {
   display: block;
   background: #2c2c3e55;
   width: 90%;
-  max-width: 400px;
+  max-width: 450px;
   height: auto;
-  min-height: 120px;
+  min-height: 150px;
   border-radius: var(--radius-medium);
   cursor: default;
   padding: var(--spacing-lg);
@@ -514,9 +514,9 @@ a:hover {
   display: block;
   background: #2c2c3e55;
   width: 90%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
-  min-height: 200px;
+  min-height: 250px;
   box-shadow: 0px 0px 50px var(--shadow-primary);
   border-top: 2px outset var(--accent-lime);
   border-bottom: 2px outset var(--accent-lime);
@@ -827,8 +827,16 @@ a:hover {
   
   #A2, #A3 {
     width: 95%;
-    max-width: 300px;
+    max-width: 320px;
     font-size: 14px;
+  }
+  
+  #A2 {
+    min-height: 130px;
+  }
+  
+  #A3 {
+    min-height: 220px;
   }
   
   #A1 {
@@ -906,8 +914,16 @@ a:hover {
   }
   
   #A2, #A3 {
-    max-width: 350px;
+    max-width: 380px;
     font-size: 16px;
+  }
+  
+  #A2 {
+    min-height: 140px;
+  }
+  
+  #A3 {
+    min-height: 230px;
   }
   
   #T1 {
@@ -1053,7 +1069,17 @@ a:hover {
   }
   
   #A2, #A3 {
-    width: 350px;
+    width: 400px;
+  }
+  
+  #A2 {
+    max-width: 450px;
+    min-height: 150px;
+  }
+  
+  #A3 {
+    max-width: 500px;
+    min-height: 250px;
   }
   
   .Github {

@@ -27,14 +27,21 @@
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   margin: 0;
   color: var(--bot-primary);
-  padding: var(--bot-spacing-sm);
+  padding: 0;
+  padding-top: 80px; /* Space for fixed header */
   box-sizing: border-box;
+  min-height: 100vh;
+}
+
+center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  padding: var(--bot-spacing-sm);
 }
 
 .bot-container {

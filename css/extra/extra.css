@@ -66,7 +66,8 @@ html {
 
 body {
   margin: 0;
-  padding: var(--spacing-sm);
+  padding: 0;
+  padding-top: 80px; /* Space for fixed header */
   min-height: 100vh;
   transition: filter 1s ease;
 }
@@ -75,7 +76,7 @@ body {
 h1 {
   color: var(--lime-bright);
   font-style: italic;
-  padding-top: var(--spacing-xl);
+  padding-top: var(--spacing-md);
   text-shadow: var(--glow-primary);
   transition: text-shadow var(--transition-smooth);
   font-size: var(--font-size-xl);
@@ -327,11 +328,12 @@ strong {
 
 @media screen and (max-width: 768px) {
   body {
-    padding: var(--spacing-xs);
+    padding: 0;
+    padding-top: 70px; /* Reduced for mobile */
   }
   
   h1 {
-    padding-top: var(--spacing-lg);
+    padding-top: var(--spacing-sm);
     font-size: var(--font-size-lg);
   }
   
