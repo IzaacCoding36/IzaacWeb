@@ -117,7 +117,8 @@ a:hover {
   border-radius: var(--spacing-md);
   padding: var(--spacing-xl);
   margin: var(--spacing-xl) auto;
-  max-width: 900px;
+  max-width: 1200px;
+  width: 95%;
   transition: all var(--transition-fast);
   backdrop-filter: blur(5px);
   position: relative;
@@ -676,21 +677,24 @@ a:hover {
 #I2 {
   position: relative;
   top: 5px;
-  left: -20px;
-  width: 100%;
+  width: 80px;
+  height: 80px;
   background-color: #e7e7e711;
   transition: filter var(--transition-medium), transform var(--transition-fast);
-  height: 50%;
   box-shadow: 0px 0px 2px #efefefef;
   border-radius: var(--spacing-xs);
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
 }
 
 #T3, #T4, #T5 {
   position: relative;
-  top: -15px;
+  top: 0;
   cursor: default;
-  left: -20px;
   font-weight: bold;
+  text-align: center;
+  margin: var(--spacing-sm) 0;
 }
 
 #T3 {
@@ -710,33 +714,36 @@ a:hover {
 
 #I3 {
   position: relative;
-  top: -100px;
-  width: 25%;
+  top: 0;
+  width: 120px;
+  height: 120px;
   box-shadow: 0px 0px var(--spacing-lg) var(--shadow-magenta);
-  height: 25%;
   border: solid 2px green;
   transition: filter var(--transition-medium), transform var(--transition-fast);
   border-radius: var(--radius-large);
+  margin: var(--spacing-xl) auto;
+  display: block;
 }
 
 #T6 {
   color: #0ab10a;
   text-shadow: 0 0 var(--spacing-sm) green, 0 0 var(--spacing-md) green, 0 0 var(--spacing-lg) green;
   position: relative;
-  top: -130px;
+  top: 0;
   cursor: default;
   text-align: center;
   font-weight: bold;
+  margin: var(--spacing-md) 0;
 }
 
 #Te2 {
   color: var(--text-primary);
   position: relative;
-  top: -100px;
+  top: 0;
   cursor: default;
   font-size: 9px;
   width: 90%;
-  margin: 0 auto;
+  margin: var(--spacing-lg) auto 0 auto;
   text-align: center;
   line-height: 1.4;
 }
@@ -846,6 +853,16 @@ a:hover {
     gap: 1rem;
   }
   
+  #I2 {
+    width: 60px;
+    height: 60px;
+  }
+  
+  #I3 {
+    width: 80px;
+    height: 80px;
+  }
+  
   #Te2 {
     width: 95%;
     font-size: 12px;
@@ -903,6 +920,16 @@ a:hover {
   
   .Dispositivos_lista {
     gap: 1.5rem;
+  }
+  
+  #I2 {
+    width: 70px;
+    height: 70px;
+  }
+  
+  #I3 {
+    width: 100px;
+    height: 100px;
   }
 }
 
