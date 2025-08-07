@@ -301,75 +301,181 @@ a:hover {
   left: 100%;
 }
 
-.Title {color: lime; background-color: #000000aa;
-        box-shadow: 0px 0px 15px lime;
-        text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
-        border-radius: 50%;
-        font-style: italic;
-        cursor: default;
-        width: 75%; position: relative;
-        top: -250px; font-size: 25px;}
+/* Main Title */
+.Title {
+  color: var(--accent-lime);
+  background-color: #000000aa;
+  box-shadow: 0px 0px var(--spacing-lg) var(--accent-lime);
+  text-shadow: 0 0 var(--spacing-sm) green, 0 0 var(--spacing-md) green, 0 0 var(--spacing-lg) green;
+  border-radius: var(--radius-large);
+  font-style: italic;
+  cursor: default;
+  width: 75%;
+  max-width: 600px;
+  position: relative;
+  top: -80px;
+  font-size: var(--font-size-large);
+  animation: glow 3s ease-in-out infinite;
+  text-align: center;
+  padding: var(--spacing-md);
+  margin: var(--spacing-xl) auto;
+}
 
-.Projects_img {width: 75%; height: 75%; position: relative; top: -50px;}
+.Projects_img {
+  width: 75%;
+  max-width: 600px;
+  height: auto;
+  position: relative;
+  top: -20px;
+  border-radius: var(--radius-small);
+  transition: transform var(--transition-fast);
+  margin: var(--spacing-md) auto;
+  display: block;
+}
 
-.Github {color: white; text-decoration: none;
-         border: 2px outset yellowgreen; border-radius: 50px;
-         background-color: black;
-         margin-bottom: 1em; display: block;
-         text-align: center; padding: 3px;
-         font-weight: bold;
-         box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-         width: 200px; font-size: 10px;
-         transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-         position: relative; top: -150px;}
+.Projects_img:hover {
+  transform: scale(1.02);
+}
 
-.Github:hover {color: black; background-color: yellowgreen; box-shadow: 0px 0px 10px yellowgreen; transition: background-color 0.3s, color 0.3, box-shadow 0.3;}
-.Github:active {color: black; background-color: yellowgreen; box-shadow: 0px 0px 10px yellowgreen; transition: background-color 0.3s, color 0.3, box-shadow 0.3;}
+/* Github Button */
+.Github {
+  color: var(--text-secondary);
+  text-decoration: none;
+  border: 2px outset var(--accent-yellowgreen);
+  border-radius: var(--radius-medium);
+  background-color: var(--background-black);
+  margin: var(--spacing-lg) auto;
+  display: block;
+  text-align: center;
+  padding: var(--spacing-md);
+  font-weight: bold;
+  box-shadow: 0px 2px var(--spacing-sm) var(--accent-lime), -2px 0px var(--spacing-sm) var(--accent-yellow);
+  width: 90%;
+  max-width: 250px;
+  font-size: 14px;
+  transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+}
+
+.Github:hover {
+  color: var(--background-black);
+  background-color: var(--accent-yellowgreen);
+  box-shadow: 0px 0px var(--spacing-md) var(--accent-yellowgreen);
+  transform: translateY(-2px);
+  transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.Github:active {
+  color: var(--background-black);
+  background-color: var(--accent-yellowgreen);
+  box-shadow: 0px 0px var(--spacing-md) var(--accent-yellowgreen);
+  transform: translateY(0);
+}
 
 .Devices_list {display: flex;
                justify-content: center;
                list-style-type: none;
                margin: 5em 0;}
 
-#hours {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#minutes {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#seconds {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#period {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#separation {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
+/* Clock Display */
+.clock-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  position: relative;
+  top: -100px;
+}
+
+#hours, #minutes, #seconds, #period, #separation {
+  color: var(--text-secondary);
+  text-shadow: 0px 0px var(--spacing-lg) var(--shadow-cyan);
+  cursor: default;
+  font-weight: bold;
+  font-size: 1.2em;
+}
 
 /* A= Presentations, P= Profiles, S= Websites, T= Títles, I= Images, Te= Texts */
 
-#A1 {color: white; position: relative;
-     top: -75px; cursor: default;}
+/* Content Section Styles */
+#A1 {
+  color: var(--text-secondary);
+  position: relative;
+  top: -30px;
+  cursor: default;
+  text-align: center;
+  padding: var(--spacing-sm);
+  font-size: 18px;
+  font-weight: bold;
+}
 
-#A2 {color: lime; display: block; background: #2c2c3e55; width: 250px; height: 135px;
-     border-radius: 50px;
-     cursor: default;
-     padding: 5px;
-     border-top: 2px outset lime;
-     border-bottom: 2px outset lime;
-     text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
-     box-shadow: 0px 0px 50px  rgba(102, 255, 102, 0.5);}
+#A2 {
+  color: var(--accent-lime);
+  display: block;
+  background: #2c2c3e55;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  min-height: 120px;
+  border-radius: var(--radius-medium);
+  cursor: default;
+  padding: var(--spacing-lg);
+  border-top: 2px outset var(--accent-lime);
+  border-bottom: 2px outset var(--accent-lime);
+  text-shadow: 0 0 var(--spacing-sm) green, 0 0 var(--spacing-md) green, 0 0 var(--spacing-lg) green;
+  box-shadow: 0px 0px 50px var(--shadow-primary);
+  margin: var(--spacing-xl) auto;
+  text-align: center;
+  transition: transform var(--transition-fast);
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
+}
 
-#P1,#P2,#P3 {color: white; text-decoration: none;
-             border: 2px outset yellowgreen; border-radius: 50px;
-             background-color: black;
-             margin-bottom: 1em; display: block;
-             text-align: center; padding: 3px;
-             font-weight: bold;
-             box-shadow: 0px 2px 5px black, -2px 0px 5px black;
-             width: 200px; font-size: 10px;
-             transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;
-             position: relative; top: -135px;}
+#A2:hover {
+  transform: translateY(-2px);
+}
 
-#P1:hover {border: 2px outset #0b061f; background-color: #0b061f; box-shadow: 0px 2px 5px #0b061f, -2px 0px 5px #0b061f; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#P1:active {border: 2px outset #0b061f; background-color: #0b061f; box-shadow: 0px 2px 5px #0b061f, -2px 0px 5px #0b061f; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
+/* Profile Links */
+#P1, #P2, #P3 {
+  color: var(--text-secondary);
+  text-decoration: none;
+  border: 2px outset var(--accent-yellowgreen);
+  border-radius: var(--radius-medium);
+  background-color: var(--background-black);
+  margin: var(--spacing-sm) auto;
+  display: block;
+  text-align: center;
+  padding: var(--spacing-md);
+  font-weight: bold;
+  box-shadow: 0px 2px var(--spacing-sm) var(--background-black), -2px 0px var(--spacing-sm) var(--background-black);
+  width: 90%;
+  max-width: 200px;
+  font-size: 14px;
+  transition: border var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+}
 
-#P2:hover {border: 2px outset #03064f; background-color: #03064f; box-shadow: 0px 2px 5px #03064f, -2px 0px 5px blue; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#P2:active {border: 2px outset #03064f; background-color: #03064f; box-shadow: 0px 2px 5px #03064f, -2px 0px 5px blue; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
+#P1:hover, #P1:focus {
+  border: 2px outset #0b061f;
+  background-color: #0b061f;
+  box-shadow: 0px 2px var(--spacing-sm) #0b061f, -2px 0px var(--spacing-sm) #0b061f;
+  transform: translateY(-2px);
+}
 
-#P3:hover {border: 2px outset darkslateblue; background-color: darkslateblue; box-shadow: 0px 2px 5px darkslateblue, -2px 0px 5px blue; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#P3:active {border: 2px outset darkslateblue; background-color: darkslateblue; box-shadow: 0px 2px 5px darkslateblue, -2px 0px 5px blue; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
+#P2:hover, #P2:focus {
+  border: 2px outset #03064f;
+  background-color: #03064f;
+  box-shadow: 0px 2px var(--spacing-sm) #03064f, -2px 0px var(--spacing-sm) blue;
+  transform: translateY(-2px);
+}
+
+#P3:hover, #P3:focus {
+  border: 2px outset darkslateblue;
+  background-color: darkslateblue;
+  box-shadow: 0px 2px var(--spacing-sm) darkslateblue, -2px 0px var(--spacing-sm) blue;
+  transform: translateY(-2px);
+}
 
 #A3 {color: lime; display: block; background: #2c2c3e55; width: 250px; height: 275px;
      box-shadow: 0px 0px 50px  rgba(102, 255, 102, 0.5);

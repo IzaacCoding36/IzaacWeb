@@ -311,21 +311,26 @@ a:hover {
   font-style: italic;
   cursor: default;
   width: 75%;
+  max-width: 600px;
   position: relative;
-  top: -250px;
+  top: -80px;
   font-size: var(--font-size-large);
   animation: glow 3s ease-in-out infinite;
   text-align: center;
   padding: var(--spacing-md);
+  margin: var(--spacing-xl) auto;
 }
 
 .Projetos_img {
   width: 75%;
-  height: 75%;
+  max-width: 600px;
+  height: auto;
   position: relative;
-  top: -50px;
+  top: -20px;
   border-radius: var(--radius-small);
   transition: transform var(--transition-fast);
+  margin: var(--spacing-md) auto;
+  display: block;
 }
 
 .Projetos_img:hover {
@@ -339,17 +344,17 @@ a:hover {
   border: 2px outset var(--accent-yellowgreen);
   border-radius: var(--radius-medium);
   background-color: var(--background-black);
-  margin-bottom: 1em;
+  margin: var(--spacing-lg) auto;
   display: block;
   text-align: center;
-  padding: var(--spacing-xs);
+  padding: var(--spacing-md);
   font-weight: bold;
   box-shadow: 0px 2px var(--spacing-sm) var(--accent-lime), -2px 0px var(--spacing-sm) var(--accent-yellow);
-  width: 200px;
-  font-size: var(--font-size-small);
+  width: 90%;
+  max-width: 250px;
+  font-size: 14px;
   transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   position: relative;
-  top: -150px;
 }
 
 .Github:hover {
@@ -427,19 +432,22 @@ a:hover {
 #A1 {
   color: var(--text-secondary);
   position: relative;
-  top: -75px;
+  top: -30px;
   cursor: default;
   text-align: center;
   padding: var(--spacing-sm);
+  font-size: 18px;
+  font-weight: bold;
 }
 
 #A2 {
   color: var(--accent-lime);
   display: block;
   background: #2c2c3e55;
-  width: 250px;
+  width: 90%;
+  max-width: 400px;
   height: auto;
-  min-height: 135px;
+  min-height: 120px;
   border-radius: var(--radius-medium);
   cursor: default;
   padding: var(--spacing-lg);
@@ -450,6 +458,9 @@ a:hover {
   margin: var(--spacing-xl) auto;
   text-align: center;
   transition: transform var(--transition-fast);
+  position: relative;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 #A2:hover {
@@ -463,19 +474,17 @@ a:hover {
   border: 2px outset var(--accent-yellowgreen);
   border-radius: var(--radius-medium);
   background-color: var(--background-black);
-  margin-bottom: 1em;
+  margin: var(--spacing-sm) auto;
   display: block;
   text-align: center;
-  padding: var(--spacing-xs);
+  padding: var(--spacing-md);
   font-weight: bold;
   box-shadow: 0px 2px var(--spacing-sm) var(--background-black), -2px 0px var(--spacing-sm) var(--background-black);
-  width: 200px;
-  font-size: var(--font-size-small);
+  width: 90%;
+  max-width: 200px;
+  font-size: 14px;
   transition: border var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   position: relative;
-  top: -100px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #P1:hover, #P1:focus {
@@ -503,9 +512,10 @@ a:hover {
   color: var(--accent-lime);
   display: block;
   background: #2c2c3e55;
-  width: 250px;
+  width: 90%;
+  max-width: 400px;
   height: auto;
-  min-height: 275px;
+  min-height: 200px;
   box-shadow: 0px 0px 50px var(--shadow-primary);
   border-top: 2px outset var(--accent-lime);
   border-bottom: 2px outset var(--accent-lime);
@@ -514,10 +524,11 @@ a:hover {
   cursor: default;
   padding: var(--spacing-lg);
   position: relative;
-  top: -40px;
   margin: var(--spacing-xl) auto;
   text-align: center;
   transition: transform var(--transition-fast);
+  font-size: 16px;
+  font-weight: bold;
 }
 
 #A3:hover {
@@ -531,19 +542,17 @@ a:hover {
   border: 2px outset var(--accent-yellowgreen);
   border-radius: var(--radius-medium);
   background-color: var(--background-black);
-  margin-bottom: 1em;
+  margin: var(--spacing-sm) auto;
   display: block;
   text-align: center;
-  padding: var(--spacing-xs);
+  padding: var(--spacing-md);
   font-weight: bold;
   box-shadow: 0px 2px var(--spacing-sm) var(--background-black), -2px 0px var(--spacing-sm) var(--background-black);
-  width: 200px;
-  font-size: var(--font-size-small);
+  width: 90%;
+  max-width: 200px;
+  font-size: 14px;
   transition: color var(--transition-fast), border var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   position: relative;
-  top: -310px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 #S1:hover, #S1:focus {
@@ -601,35 +610,38 @@ a:hover {
 #A4 {
   color: grey;
   position: relative;
-  top: -275px;
-  font-size: var(--font-size-small);
+  font-size: 12px;
   cursor: default;
   text-align: center;
   padding: var(--spacing-sm);
   font-style: italic;
+  margin-top: var(--spacing-md);
 }
 
 #T1 {
   color: var(--text-secondary);
   position: relative;
-  top: -150px;
   cursor: default;
   text-shadow: 0px 0px var(--spacing-lg) var(--shadow-cyan);
   text-decoration: underline;
   text-align: center;
   font-weight: bold;
+  font-size: 24px;
+  margin: var(--spacing-lg) 0;
 }
 
 #I1 {
   position: relative;
-  top: -150px;
-  width: 70%;
+  width: 80%;
+  max-width: 500px;
+  height: auto;
   box-shadow: 0px 0px var(--spacing-lg) var(--shadow-magenta);
   border-radius: var(--radius-small);
-  height: 70%;
   border: solid 2px grey;
   transition: filter var(--transition-medium), transform var(--transition-fast);
   animation: glow 4s ease-in-out 1.5s infinite;
+  margin: var(--spacing-lg) auto;
+  display: block;
 }
 
 #I1:hover, #I2:hover, #I3:hover {
@@ -641,13 +653,13 @@ a:hover {
 #Te1 {
   color: var(--text-primary);
   position: relative;
-  top: -150px;
   cursor: default;
   width: 90%;
-  margin: 0 auto;
+  margin: var(--spacing-lg) auto;
   text-align: center;
   line-height: 1.6;
   padding: var(--spacing-md);
+  font-size: 16px;
 }
 
 #T2 {
@@ -778,36 +790,55 @@ a:hover {
   
   .Titulo {
     font-size: 18px;
-    top: -150px;
-    width: 90%;
+    top: -60px;
+    width: 95%;
   }
   
   .Projetos_img {
-    width: 90%;
-    height: auto;
+    width: 95%;
+    top: -10px;
   }
   
   .Github {
     font-size: 12px;
-    width: 180px;
+    width: 95%;
+    max-width: 200px;
     padding: var(--spacing-sm);
   }
   
   #S1, #S2, #S3, #S4, #S5, #S6, #S7 {
-    font-size: 10px;
-    width: 180px;
-    top: -280px;
+    font-size: 12px;
+    width: 95%;
+    max-width: 180px;
   }
   
   #P1, #P2, #P3 {
-    font-size: 10px;
-    width: 180px;
-    top: -100px;
+    font-size: 12px;
+    width: 95%;
+    max-width: 180px;
   }
   
   #A2, #A3 {
-    width: 90%;
-    max-width: 280px;
+    width: 95%;
+    max-width: 300px;
+    font-size: 14px;
+  }
+  
+  #A1 {
+    font-size: 16px;
+    top: -20px;
+  }
+  
+  #T1 {
+    font-size: 20px;
+  }
+  
+  #I1 {
+    width: 95%;
+  }
+  
+  #Te1 {
+    font-size: 14px;
   }
   
   .Dispositivos_lista {
@@ -815,59 +846,59 @@ a:hover {
     gap: 1rem;
   }
   
-  #I1, #I2 {
-    width: 90%;
-  }
-  
-  #Te1, #Te2 {
+  #Te2 {
     width: 95%;
-    font-size: 14px;
+    font-size: 12px;
   }
 }
 
 /* Tablets */
 @media screen and (min-width: 601px) and (max-width: 899px) {
   .Background {
-    height: 400px;
+    height: 300px;
   }
   
   .Titulo {
     font-size: 22px;
-    top: -300px;
+    top: -70px;
   }
   
   .Projetos_img {
-    width: 80%;
-    height: auto;
+    width: 85%;
+    top: -15px;
   }
   
   .Github {
     font-size: 13px;
-    width: 220px;
+    max-width: 220px;
   }
   
   #S1, #S2, #S3, #S4, #S5, #S6, #S7 {
-    font-size: 11px;
-    width: 220px;
-    top: -320px;
+    font-size: 13px;
+    max-width: 220px;
   }
   
   #P1, #P2, #P3 {
-    font-size: 11px;
-    width: 220px;
-    top: -140px;
+    font-size: 13px;
+    max-width: 220px;
   }
   
   #A1 {
     font-size: 18px;
+    top: -25px;
   }
   
   #A2, #A3 {
-    width: 280px;
+    max-width: 350px;
+    font-size: 16px;
   }
   
-  #T1, #T2 {
-    font-size: 28px;
+  #T1 {
+    font-size: 26px;
+  }
+  
+  #Te1 {
+    font-size: 16px;
   }
   
   .Dispositivos_lista {
@@ -878,75 +909,77 @@ a:hover {
 /* Desktop - Large screens */
 @media screen and (min-width: 900px) {
   .Background {
-    height: 550px;
+    height: 400px;
   }
   
   .Titulo {
     font-size: 30px;
-    top: -450px;
+    top: -80px;
   }
   
   .Projetos_img {
-    height: 50%;
-    width: 50%;
+    width: 60%;
+    top: -20px;
   }
   
   .Github {
     font-size: 15px;
-    width: 300px;
+    max-width: 300px;
   }
   
   #S1, #S2, #S3, #S4, #S5, #S6, #S7 {
-    font-size: 12px;
-    top: -395px;
-    width: 220px;
+    font-size: 14px;
+    max-width: 220px;
   }
   
   #P1, #P2, #P3 {
-    font-size: 12px;
-    top: -170px;
-    width: 220px;
+    font-size: 14px;
+    max-width: 220px;
   }
   
   #A1 {
-    font-size: 22px;
+    font-size: 20px;
+    top: -30px;
   }
   
   #A3 {
-    font-size: 22px;
-    width: 300px;
-    min-height: 300px;
+    font-size: 18px;
+    max-width: 400px;
+    min-height: 220px;
   }
   
   #A2 {
-    font-size: 22px;
-    width: 300px;
-    min-height: 150px;
+    font-size: 18px;
+    max-width: 400px;
+    min-height: 140px;
   }
   
-  #T1, #T2 {
-    font-size: 35px;
+  #T1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  #T2 {
+    font-size: 32px;
     font-weight: bold;
   }
   
   #A4 {
-    font-size: 15px;
+    font-size: 14px;
   }
   
   #Te1, #T3, #T4, #T5, #T6 {
     font-size: 18px;
   }
   
-  #I1, #I2 {
-    height: 50%;
-    width: 50%;
-  }
-  
   #I1 {
+    width: 60%;
+    max-width: 500px;
     border-radius: 50px;
   }
   
   #I2 {
+    width: 60%;
     border-radius: var(--radius-small);
   }
   
