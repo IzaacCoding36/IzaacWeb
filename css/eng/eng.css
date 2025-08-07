@@ -477,174 +477,522 @@ a:hover {
   transform: translateY(-2px);
 }
 
-#A3 {color: lime; display: block; background: #2c2c3e55; width: 250px; height: 275px;
-     box-shadow: 0px 0px 50px  rgba(102, 255, 102, 0.5);
-     border-top: 2px outset lime;
-     border-bottom: 2px outset lime;
-     text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
-     border-radius: 50px;
-     cursor: default;
-     padding: 5px;
-     position: relative; top: -75px;}
-
-#S1,#S2,#S3,#S5,#S6 {color: white; text-decoration: none;
-                     border: 2px outset yellowgreen; border-radius: 50px;
-                     background-color: black;
-                     margin-bottom: 1em; display: block;
-                     text-align: center; padding: 3px;
-                     font-weight: bold;
-                     box-shadow: 0px 2px 5px black, -2px 0px 5px black;
-                     width: 200px; font-size: 10px;
-                     transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;
-                     position: relative; top: -345px;}
-
-#S4,#S7 {color: white; text-decoration: none;
-         border: 2px outset yellowgreen; border-radius: 50px;
-         background-color: black;
-         margin-bottom: 1em; display: block;
-         text-align: center; padding: 3px;
-         font-weight: bold;
-         box-shadow: 0px 2px 5px black, -2px 0px 5px black;
-         width: 200px; font-size: 10px;
-         transition: color 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;
-         position: relative; top: -345px;}
-
-#S1:hover {border: 2px outset grey; background-color: grey; box-shadow: 0px 2px 5px grey, -2px 0px 5px white; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S1:active {border: 2px outset grey; background-color: grey; box-shadow: 0px 2px 5px grey, -2px 0px 5px white; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S2:hover {border: 2px outset #3e036b; background-color: #3e036b; box-shadow: 0px 2px 5px #3e036b, -2px 0px 5px purple; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S2:active {border: 2px outset #3e036b; background-color: #3e036b; box-shadow: 0px 2px 5px #3e036b, -2px 0px 5px purple; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S3:hover {border: 2px outset teal; background-color: teal; box-shadow: 0px 2px 5px teal, -2px 0px 5px cyan; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S3:active {border: 2px outset teal; background-color: teal; box-shadow: 0px 2px 5px teal, -2px 0px 5px cyan; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S4:hover {color: black; border: 2px outset yellowgreen; background-color: yellowgreen; box-shadow: 0px 2px 5px yellowgreen, -2px 0px 5px lime; transition: color 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S4:active {color: black; border: 2px outset yellowgreen; background-color: yellowgreen; box-shadow: 0px 2px 5px yellowgreen, -2px 0px 5px lime; transition: color 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S5:hover {border: 2px outset crimson; background-color: crimson; box-shadow: 0px 2px 5px crimson, -2px 0px 5px red; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S5:active {border: 2px outset crimson; background-color: crimson; box-shadow: 0px 2px 5px crimson, -2px 0px 5px red; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S6:hover {border: 2px outset purple; background-color: purple; box-shadow: 0px 2px 5px purple, -2px 0px 5px magenta; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S6:active {border: 2px outset purple; background-color: purple; box-shadow: 0px 2px 5px purple, -2px 0px 5px magenta; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S7:hover {color: black; border: 2px outset orange; background-color: orange; box-shadow: 0px 2px 5px orange, -2px 0px 5px yellow; transition: color 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S7:active {color: black; border: 2px outset orange; background-color: orange; box-shadow: 0px 2px 5px orange, -2px 0px 5px yellow; transition: color 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#A4 {color: grey; position: relative;
-     top: -275px; cursor: default;
-     font-size: 10px;}
-
-#T1 {color: white; position: relative;
-     top: -150px; cursor: default;
-     text-shadow: 0px 0px 15px cyan;
-     text-decoration: underline;}
-
-#I1 {position: relative; top: -150px; width: 70%;
-     box-shadow: 0px 0px 15px magenta;
-     border-radius: 20px;
-     height: 70%; border: solid 2px grey;
-     transition: filter 1s;
-     animation-name: glow; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;}
-
-#I1:hover,#I2:hover,#I3:hover {filter: brightness(1.2); transition: filter 1s;}
-
-#Te1 {color: #e7e7e7e7; position: relative;
-      top: -150px; cursor: default; width: 90%;}
-
-#T2 {color: white; position: relative;
-     top: 50px; cursor: default;
-     text-shadow: 0px 0px 15px cyan;
-     text-decoration: underline;}
-
-#I2 {position: relative; top: 5px; left: -20px;
-     width: 100%;
-     background-color: #e7e7e711;
-     transition: filter 1s;
-     height: 50%; box-shadow: 0px 0px 2px #efefefef;}
-
-#T3 {color: red; position: relative;
-     top: -15px; cursor: default;
-     text-shadow: 0px 0px 15px orange;
-     left: -20px;}
-
-#T4 {color: yellow; position: relative;
-     top: -15px; cursor: default;
-     text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red;
-     left: -20px;}
-
-#T5 {color: blue; position: relative;
-     top: -15px; cursor: default;
-     text-shadow: 0px 0px 15px cyan;
-     left: -20px;}
-
-#I3 {position: relative; top: -100px; width: 25%;
-     box-shadow: 0px 0px 15px magenta;
-     height: 25%; border: solid 2px green;
-     transition: filter 1s;
-     border-radius: 50%;}
-
-#T6 {color: #0ab10a; position: relative;
-     text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
-     top: -130px; cursor: default;}
-
-#Te2 {color: #e7e7e7e7; position: relative;
-      top: -100px; cursor: default;
-      font-size: 9px; width: 90%;}
-
-/* Extra Proportions */
-
-@media screen and (min-width: 900px){
-   .Background {height: 550px;}
-   .Title {font-size: 30px; top: -450px;}
-   .Projects_img {height: 50%; width: 50%;}
-   .Github {font-size: 15px; width: 300px;}
-   #S1,#S2,#S3,#S4,#S5,#S6,#S7 {font-size: 12px; top: -395px;}
-   #P1,#P2,#P3 {font-size: 12px; top: -170px;}
-   #A1 {font-size: 22px;}
-   #A3 {font-size: 22px; width: 300px; height: 300px;}
-   #A2 {font-size: 22px; width: 300px; height: 150px}
-   #T1,#T2 {font-size: 35px; font-weight: bold;}
-   #A4 {font-size: 15px;}
-   #Te1,#T3,#T4,#T5,#T6 {font-size: 18px;}
-   #I1,#I2 {height: 50%; width: 50%;}
-   #I1 {border-radius: 50px;}
-   #I2 {border-radius: 20px;}
-   #I3 {height: 15%; width: 15%;}
-   #Te2 {font-size: 14px;}
-   #menu a {font-weight: bold;}
+#A3 {
+  color: var(--accent-lime);
+  display: block;
+  background: #2c2c3e55;
+  width: 90%;
+  max-width: 400px;
+  height: auto;
+  min-height: 200px;
+  box-shadow: 0px 0px 50px var(--shadow-primary);
+  border-top: 2px outset var(--accent-lime);
+  border-bottom: 2px outset var(--accent-lime);
+  text-shadow: 0 0 var(--spacing-sm) green, 0 0 var(--spacing-md) green, 0 0 var(--spacing-lg) green;
+  border-radius: var(--radius-medium);
+  cursor: default;
+  padding: var(--spacing-lg);
+  position: relative;
+  margin: var(--spacing-xl) auto;
+  text-align: center;
+  transition: transform var(--transition-fast);
+  font-size: 16px;
+  font-weight: bold;
 }
 
-/* Responsive Design for Content Sections */
-@media screen and (max-width: 768px) {
-  .content-section {
-    padding: var(--spacing-md);
-    margin: var(--spacing-md) auto;
-    max-width: 95%;
+#A3:hover {
+  transform: translateY(-2px);
+}
+
+/* Project Site Links */
+#S1, #S2, #S3, #S4, #S5, #S6, #S7 {
+  color: var(--text-secondary);
+  text-decoration: none;
+  border: 2px outset var(--accent-yellowgreen);
+  border-radius: var(--radius-medium);
+  background-color: var(--background-black);
+  margin: var(--spacing-sm) auto;
+  display: block;
+  text-align: center;
+  padding: var(--spacing-md);
+  font-weight: bold;
+  box-shadow: 0px 2px var(--spacing-sm) var(--background-black), -2px 0px var(--spacing-sm) var(--background-black);
+  width: 90%;
+  max-width: 200px;
+  font-size: 14px;
+  transition: color var(--transition-fast), border var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
+  position: relative;
+}
+
+#S1:hover, #S1:focus {
+  border: 2px outset grey;
+  background-color: grey;
+  box-shadow: 0px 2px var(--spacing-sm) grey, -2px 0px var(--spacing-sm) white;
+  transform: translateY(-2px);
+}
+
+#S2:hover, #S2:focus {
+  border: 2px outset #3e036b;
+  background-color: #3e036b;
+  box-shadow: 0px 2px var(--spacing-sm) #3e036b, -2px 0px var(--spacing-sm) purple;
+  transform: translateY(-2px);
+}
+
+#S3:hover, #S3:focus {
+  border: 2px outset teal;
+  background-color: teal;
+  box-shadow: 0px 2px var(--spacing-sm) teal, -2px 0px var(--spacing-sm) cyan;
+  transform: translateY(-2px);
+}
+
+#S4:hover, #S4:focus {
+  color: var(--background-black);
+  border: 2px outset var(--accent-yellowgreen);
+  background-color: var(--accent-yellowgreen);
+  box-shadow: 0px 2px var(--spacing-sm) var(--accent-yellowgreen), -2px 0px var(--spacing-sm) var(--accent-lime);
+  transform: translateY(-2px);
+}
+
+#S5:hover, #S5:focus {
+  border: 2px outset crimson;
+  background-color: crimson;
+  box-shadow: 0px 2px var(--spacing-sm) crimson, -2px 0px var(--spacing-sm) red;
+  transform: translateY(-2px);
+}
+
+#S6:hover, #S6:focus {
+  border: 2px outset purple;
+  background-color: purple;
+  box-shadow: 0px 2px var(--spacing-sm) purple, -2px 0px var(--spacing-sm) magenta;
+  transform: translateY(-2px);
+}
+
+#S7:hover, #S7:focus {
+  color: var(--background-black);
+  border: 2px outset orange;
+  background-color: orange;
+  box-shadow: 0px 2px var(--spacing-sm) orange, -2px 0px var(--spacing-sm) yellow;
+  transform: translateY(-2px);
+}
+
+/* Additional Content Styles */
+#A4 {
+  color: grey;
+  position: relative;
+  font-size: 12px;
+  cursor: default;
+  text-align: center;
+  padding: var(--spacing-sm);
+  font-style: italic;
+  margin-top: var(--spacing-md);
+}
+
+#T1 {
+  color: var(--text-secondary);
+  position: relative;
+  cursor: default;
+  text-shadow: 0px 0px var(--spacing-lg) var(--shadow-cyan);
+  text-decoration: underline;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+  margin: var(--spacing-lg) 0;
+}
+
+#I1 {
+  position: relative;
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  box-shadow: 0px 0px var(--spacing-lg) var(--shadow-magenta);
+  border-radius: var(--radius-small);
+  border: solid 2px grey;
+  transition: filter var(--transition-medium), transform var(--transition-fast);
+  animation: glow 4s ease-in-out 1.5s infinite;
+  margin: var(--spacing-lg) auto;
+  display: block;
+}
+
+#I1:hover, #I2:hover, #I3:hover {
+  filter: brightness(1.2);
+  transform: scale(1.02);
+  transition: filter var(--transition-medium), transform var(--transition-fast);
+}
+
+#Te1 {
+  color: var(--text-primary);
+  position: relative;
+  cursor: default;
+  width: 90%;
+  margin: var(--spacing-lg) auto;
+  text-align: center;
+  line-height: 1.6;
+  padding: var(--spacing-md);
+  font-size: 16px;
+}
+
+/* Device List */
+.Devices_list {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 5em 0;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.Devices_list li {
+  text-align: center;
+  transition: transform var(--transition-fast);
+}
+
+.Devices_list li:hover {
+  transform: translateY(-5px);
+}
+
+#T2 {
+  color: var(--text-secondary);
+  position: relative;
+  top: 50px;
+  cursor: default;
+  text-shadow: 0px 0px var(--spacing-lg) var(--shadow-cyan);
+  text-decoration: underline;
+  text-align: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#I2 {
+  position: relative;
+  top: 5px;
+  left: -20px;
+  width: 100%;
+  background-color: #e7e7e711;
+  transition: filter var(--transition-medium), transform var(--transition-fast);
+  height: 50%;
+  box-shadow: 0px 0px 2px #efefefef;
+  border-radius: var(--spacing-xs);
+}
+
+#T3, #T4, #T5 {
+  position: relative;
+  top: -15px;
+  cursor: default;
+  left: -20px;
+  font-weight: bold;
+}
+
+#T3 {
+  color: red;
+  text-shadow: 0px 0px var(--spacing-lg) orange;
+}
+
+#T4 {
+  color: var(--accent-yellow);
+  text-shadow: 0 0 var(--spacing-sm) red, 0 0 var(--spacing-md) red, 0 0 var(--spacing-lg) red;
+}
+
+#T5 {
+  color: blue;
+  text-shadow: 0px 0px var(--spacing-lg) var(--shadow-cyan);
+}
+
+#I3 {
+  position: relative;
+  top: -100px;
+  width: 25%;
+  box-shadow: 0px 0px var(--spacing-lg) var(--shadow-magenta);
+  height: 25%;
+  border: solid 2px green;
+  transition: filter var(--transition-medium), transform var(--transition-fast);
+  border-radius: var(--radius-large);
+}
+
+#T6 {
+  color: #0ab10a;
+  text-shadow: 0 0 var(--spacing-sm) green, 0 0 var(--spacing-md) green, 0 0 var(--spacing-lg) green;
+  position: relative;
+  top: -130px;
+  cursor: default;
+  text-align: center;
+  font-weight: bold;
+}
+
+#Te2 {
+  color: var(--text-primary);
+  position: relative;
+  top: -100px;
+  cursor: default;
+  font-size: 9px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+
+/* Mobile First - Small screens */
+@media screen and (max-width: 600px) {
+  :root {
+    --font-size-base: 16px;
+    --font-size-large: 20px;
   }
   
-  .links-container,
-  .projects-container {
+  .Background {
+    height: 200px;
+  }
+  
+  .Title {
+    font-size: 18px;
+    top: -60px;
+    width: 95%;
+  }
+  
+  .Projects_img {
+    width: 95%;
+    top: -10px;
+  }
+  
+  .Github {
+    font-size: 12px;
+    width: 95%;
+    max-width: 200px;
+    padding: var(--spacing-sm);
+  }
+  
+  #S1, #S2, #S3, #S4, #S5, #S6, #S7 {
+    font-size: 12px;
+    width: 95%;
+    max-width: 180px;
+  }
+  
+  #P1, #P2, #P3 {
+    font-size: 12px;
+    width: 95%;
+    max-width: 180px;
+  }
+  
+  #A2, #A3 {
+    width: 95%;
+    max-width: 300px;
+    font-size: 14px;
+  }
+  
+  #A1 {
+    font-size: 16px;
+    top: -20px;
+  }
+  
+  #T1 {
+    font-size: 20px;
+  }
+  
+  #I1 {
+    width: 95%;
+  }
+  
+  #Te1 {
+    font-size: 14px;
+  }
+  
+  .Devices_list {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
   }
   
-  .links-container a,
-  .projects-container a {
-    width: 80%;
-    text-align: center;
+  #Te2 {
+    width: 95%;
+    font-size: 12px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .content-section {
-    padding: var(--spacing-sm);
-    margin: var(--spacing-sm) auto;
+/* Tablets */
+@media screen and (min-width: 601px) and (max-width: 899px) {
+  .Background {
+    height: 300px;
   }
   
-  .links-container a,
-  .projects-container a {
-    width: 90%;
-    padding: var(--spacing-sm);
+  .Title {
+    font-size: 22px;
+    top: -70px;
+  }
+  
+  .Projects_img {
+    width: 85%;
+    top: -15px;
+  }
+  
+  .Github {
+    font-size: 13px;
+    max-width: 220px;
+  }
+  
+  #S1, #S2, #S3, #S4, #S5, #S6, #S7 {
+    font-size: 13px;
+    max-width: 220px;
+  }
+  
+  #P1, #P2, #P3 {
+    font-size: 13px;
+    max-width: 220px;
+  }
+  
+  #A1 {
+    font-size: 18px;
+    top: -25px;
+  }
+  
+  #A2, #A3 {
+    max-width: 350px;
+    font-size: 16px;
+  }
+  
+  #T1 {
+    font-size: 26px;
+  }
+  
+  #Te1 {
+    font-size: 16px;
+  }
+  
+  .Devices_list {
+    gap: 1.5rem;
+  }
+}
+
+/* Desktop - Large screens */
+@media screen and (min-width: 900px) {
+  .Background {
+    height: 400px;
+  }
+  
+  .Title {
+    font-size: 30px;
+    top: -80px;
+  }
+  
+  .Projects_img {
+    width: 60%;
+    top: -20px;
+  }
+  
+  .Github {
+    font-size: 15px;
+    max-width: 300px;
+  }
+  
+  #S1, #S2, #S3, #S4, #S5, #S6, #S7 {
+    font-size: 14px;
+    max-width: 220px;
+  }
+  
+  #P1, #P2, #P3 {
+    font-size: 14px;
+    max-width: 220px;
+  }
+  
+  #A1 {
+    font-size: 20px;
+    top: -30px;
+  }
+  
+  #A3 {
+    font-size: 18px;
+    max-width: 400px;
+    min-height: 220px;
+  }
+  
+  #A2 {
+    font-size: 18px;
+    max-width: 400px;
+    min-height: 140px;
+  }
+  
+  #T1 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  #T2 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  #A4 {
+    font-size: 14px;
+  }
+  
+  #Te1, #T3, #T4, #T5, #T6 {
+    font-size: 18px;
+  }
+  
+  #I1 {
+    width: 60%;
+    max-width: 500px;
+    border-radius: 50px;
+  }
+  
+  #I2 {
+    width: 60%;
+    border-radius: var(--radius-small);
+  }
+  
+  #I3 {
+    height: 15%;
+    width: 15%;
+  }
+  
+  #Te2 {
+    font-size: 14px;
+  }
+  
+  #menu a {
+    font-weight: bold;
+  }
+  
+  .Devices_list {
+    gap: 3rem;
+  }
+}
+
+/* Extra large screens */
+@media screen and (min-width: 1200px) {
+  :root {
+    --font-size-base: 22px;
+    --font-size-large: 35px;
+  }
+  
+  .Background {
+    height: 600px;
+  }
+  
+  .Title {
+    font-size: 40px;
+    top: -500px;
+  }
+  
+  #T1, #T2 {
+    font-size: 40px;
+  }
+  
+  .Projects_img {
+    width: 40%;
+  }
+  
+  #A2, #A3 {
+    width: 350px;
+  }
+  
+  .Github {
+    width: 350px;
+    font-size: 16px;
+  }
+  
+  #S1, #S2, #S3, #S4, #S5, #S6, #S7,
+  #P1, #P2, #P3 {
+    width: 250px;
+    font-size: 14px;
   }
 }
 
