@@ -53,8 +53,12 @@ function resetPage() {
     }
 }
 
-// Add visual feedback for user actions
+// Add visual feedback for user actions (only shows last input)
 function addUserMessage(message) {
+    // Remove any existing user messages to show only the latest
+    const existingUserMessages = document.querySelectorAll('.user-message');
+    existingUserMessages.forEach(msg => msg.remove());
+    
     const userMsg = document.createElement('div');
     userMsg.className = 'user-message';
     userMsg.style.cssText = `

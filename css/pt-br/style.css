@@ -329,7 +329,7 @@ a:hover {
   font-size: var(--font-size-small);
   transition: border var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   position: relative;
-  top: -135px;
+  top: -100px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -370,7 +370,7 @@ a:hover {
   cursor: default;
   padding: var(--spacing-lg);
   position: relative;
-  top: -75px;
+  top: -40px;
   margin: var(--spacing-xl) auto;
   text-align: center;
   transition: transform var(--transition-fast);
@@ -397,7 +397,7 @@ a:hover {
   font-size: var(--font-size-small);
   transition: color var(--transition-fast), border var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   position: relative;
-  top: -345px;
+  top: -310px;
   margin-left: auto;
   margin-right: auto;
 }

@@ -192,16 +192,13 @@ a:focus {
 .Titulo {
   color: var(--accent-lime);
   background-color: var(--background-black);
-  box-shadow: 0px 0px var(--spacing-lg) var(--accent-lime);
-  text-shadow: 0 0 var(--spacing-sm) green, 0 0 var(--spacing-md) green, 0 0 var(--spacing-lg) green;
   cursor: default;
   width: 100%;
   font-size: var(--font-size-large);
   text-align: center;
   padding: var(--spacing-md);
   border-radius: var(--radius-medium);
-  margin: var(--spacing-xl) 0;
-  animation: pulse 3s infinite;
+  margin: 120px 0 var(--spacing-xl) 0;
 }
 
 .Separacao {
