@@ -20,6 +20,7 @@
   --font-size-small: 10px;
   --font-size-medium: 15px;
   --font-size-large: 25px;
+  --font-size-xlarge: 30px;
   
   /* Spacing */
   --spacing-xs: 3px;
@@ -384,6 +385,122 @@ h2 {
   
   #Te2 {
     font-size: 12px;
+  }
+}
+
+/* Mobile-first responsive design */
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .Titulo {
+    font-size: 18px;
+    margin: 100px auto var(--spacing-md) auto;
+    padding: var(--spacing-xs);
+  }
+  
+  .dropbtn {
+    font-size: 10px;
+    padding: var(--spacing-xs);
+    top: 80px;
+  }
+  
+  .dropdown-content {
+    top: 110px;
+  }
+  
+  .dropdown-content a {
+    font-size: 10px;
+    padding: 2px;
+  }
+  
+  #T1 {
+    font-size: 16px;
+    margin: var(--spacing-md) 0;
+  }
+  
+  #I1 {
+    width: 50%;
+    min-width: 100px;
+  }
+  
+  li, #Te1 {
+    font-size: 12px;
+    text-align: center;
+    padding: var(--spacing-xs);
+  }
+  
+  #Te2 {
+    font-size: 8px;
+  }
+  
+  .Lista {
+    font-size: 11px;
+    padding: var(--spacing-xs);
+  }
+  
+  .clock-container {
+    font-size: 12px;
+    padding: var(--spacing-xs);
+  }
+  
+  .Emblem, .Emblem2, .Emblem3 {
+    height: 18px;
+    width: 18px;
+    padding-left: var(--spacing-sm);
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  .Titulo {
+    font-size: 20px;
+    margin: 110px auto var(--spacing-lg) auto;
+  }
+  
+  .dropbtn {
+    font-size: 11px;
+    top: 90px;
+  }
+  
+  .dropdown-content {
+    top: 120px;
+  }
+  
+  .dropdown-content a {
+    font-size: 11px;
+  }
+  
+  #T1 {
+    font-size: 18px;
+  }
+  
+  #I1 {
+    width: 35%;
+    min-width: 120px;
+  }
+  
+  li, #Te1 {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  #Te2 {
+    font-size: 9px;
+  }
+  
+  .Lista {
+    font-size: 12px;
+    padding: var(--spacing-sm);
+  }
+  
+  .clock-container {
+    font-size: 14px;
+  }
+  
+  .Emblem, .Emblem2, .Emblem3 {
+    height: 20px;
+    width: 20px;
   }
 }
 
