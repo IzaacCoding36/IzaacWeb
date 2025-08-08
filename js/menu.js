@@ -15,5 +15,8 @@ function toggleMenu(event) {
   }
 }
 
-btnMobile.addEventListener('click', toggleMenu);
-btnMobile.addEventListener('touchstart', toggleMenu);
+// Add listeners only if the button exists on the page
+if (btnMobile) {
+  btnMobile.addEventListener('click', toggleMenu);
+  btnMobile.addEventListener('touchstart', toggleMenu);
+}

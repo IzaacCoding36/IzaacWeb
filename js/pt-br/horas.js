@@ -1,14 +1,18 @@
 // IzaacWeb V5 - Horas //
 
-function displayTime(){
-    var dateTime = new Date();
-    var hrs = dateTime.getHours();
-    var min = dateTime.getMinutes();
-    var sec = dateTime.getSeconds();
-    var session = document.getElementById('periodo');
+function displayTime() {
+    const dateTime = new Date();
+    const hrs = dateTime.getHours();
+    const min = dateTime.getMinutes();
+    const sec = dateTime.getSeconds();
 
-    document.getElementById('horas').innerHTML = hrs;
-    document.getElementById('minutos').innerHTML = min;
-    document.getElementById('segundos').innerHTML = sec;
+    const pad = (n) => String(n).padStart(2, '0');
+    const elH = document.getElementById('horas');
+    const elM = document.getElementById('minutos');
+    const elS = document.getElementById('segundos');
+    if (elH) elH.innerHTML = pad(hrs);
+    if (elM) elM.innerHTML = pad(min);
+    if (elS) elS.innerHTML = pad(sec);
 }
-setInterval(displayTime, 10);
+setInterval(displayTime, 1000);
+displayTime();

@@ -137,12 +137,14 @@ function battleBeast(input) {
 
 function findShinyWeapon(input) {
     const { article, pronoun } = getArticleAndPronoun(weapon);
-    if (input.toLowerCase() === 's' || input.toLowerCase() === 'sim' || input.toLowerCase() === 'claro' || input.toLowerCase() === 'com certeza' || input.toLowerCase() === 'óbvio' || input.toLowerCase() === 'óbvio que sim' || input.toLowerCase() === 'claro que sim' || input.toLowerCase() === 'yes') {
+    const answer = input.toLowerCase();
+    const isYes = ['s', 'sim', 'claro', 'com certeza', 'óbvio', 'óbvio que sim', 'claro que sim', 'yes'].includes(answer);
+    if (isYes) {
         attack += 15;
         weapon = weapon + " Brilhante"
         document.querySelector('html').style.setProperty('filter', 'hue-rotate(160deg)');
         document.querySelector('html').style.setProperty('background-color', '#0e001e');
-        playMusic('audios/Path1.mp3');
+        playMusic('/extra/audios/Path1.mp3');
         clearText();
         typeText(`Você seguiu a luz estranha e então...\n\nUau!\n\nVocê encontrou ${article} ${weapon}! + 15 DMG\n\nSeu dano aumentou para ${attack}.\n\nDepois de adquirir ${pronoun} ${weapon}, você avança mais fundo na floresta e começa a escurecer.\n\nVocê se pergunta: já é noite? Algo parece muito estranho. De repente, você vê uma árvore muito grande caindo ao longe. Você deseja investigar a árvore caída? (s/n)`);
         currentRPGState = 'investigateTree';
@@ -163,17 +165,19 @@ function ignoreLight(input) {
 
 function investigateTree(input) {
     const { pronoun } = getArticleAndPronoun(weapon);
-    if (input.toLowerCase() === 's' & attack >= 30 || input.toLowerCase() === 'sim' & attack >= 30 || input.toLowerCase() === 'claro' & attack >= 30 || input.toLowerCase() === 'com certeza' & attack >= 30 || input.toLowerCase() === 'óbvio' & attack >= 30 || input.toLowerCase() === 'óbvio que sim' & attack >= 30 || input.toLowerCase() === 'yes' & attack >= 30) {
+    const answer = input.toLowerCase();
+    const isYes = ['s', 'sim', 'claro', 'com certeza', 'óbvio', 'óbvio que sim', 'claro que sim', 'yes'].includes(answer);
+    if (isYes && attack >= 30) {
         playMusic('/extra/audios/Abomination-Encounter1.mp3');
         clearText();
         typeText(`Você decide investigar a árvore caída e descobre uma enorme abominação escura emergindo dela.\n\n${pronoun.charAt(0).toUpperCase() + pronoun.slice(1)} ${weapon} emite uma luz brilhante como antes, enfraquecendo a abominação.\n\nPrepare-se para lutar e digite 'a' para atacar. (chance de acerto: 40%)`);
         currentRPGState = 'battleBoss';
-    } else if (input.toLowerCase() === 's' || input.toLowerCase() === 'sim' || input.toLowerCase() === 'claro' || input.toLowerCase() === 'com certeza' || input.toLowerCase() === 'óbvio' || input.toLowerCase() === 'óbvio que sim' || input.toLowerCase() === 'claro que sim' || input.toLowerCase() === 'yes') {
+    } else if (isYes) {
         playMusic('/extra/audios/Abomination-Encounter2.mp3');
         clearText();
         typeText(`Você decide investigar a árvore caída e descobre uma enorme abominação escura emergindo dela.\n\nPrepare-se para lutar e digite 'a' para atacar. (chance de acerto: 30%)`);
         currentRPGState = 'battleBoss2';
-    } else if (input.toLowerCase() !== 's' & weapon.includes('Brilhante') || input.toLowerCase() !== 'sim' & weapon.includes('Brilhante') || input.toLowerCase() !== 'claro' & weapon.includes('Brilhante') || input.toLowerCase() !== 'com certeza' & weapon.includes('Brilhante') || input.toLowerCase() !== 'óbvio' & weapon.includes('Brilhante') || input.toLowerCase() !== 'óbvio que sim' & weapon.includes('Brilhante') || input.toLowerCase() !== 'yes' & weapon.includes('Brilhante')) {
+    } else if (!isYes && weapon.includes('Brilhante')) {
         document.querySelector('html').style.setProperty('filter', 'hue-rotate(60deg)');
         document.querySelector('html').style.setProperty('background-color', '#001e11');
         playMusic('/extra/audios/Lake-Encounter1.mp3');
@@ -192,7 +196,9 @@ function investigateTree(input) {
 
 function exploreLake(input) {
     const { pronoun } = getArticleAndPronoun(weapon);
-    if (input.toLowerCase() === 's' & attack >= 30 || input.toLowerCase() === 'sim' & attack >= 30 || input.toLowerCase() === 'claro' & attack >= 30 || input.toLowerCase() === 'com certeza' & attack >= 30 || input.toLowerCase() === 'óbvio' & attack >= 30 || input.toLowerCase() === 'óbvio que sim' & attack >= 30 || input.toLowerCase() === 'yes' & attack >= 30) {
+    const answer = input.toLowerCase();
+    const isYes = ['s', 'sim', 'claro', 'com certeza', 'óbvio', 'óbvio que sim', 'claro que sim', 'yes'].includes(answer);
+    if (isYes && attack >= 30) {
         hp += 40;
         document.querySelector('html').style.setProperty('filter', 'sepia(2)');
         document.querySelector('html').style.setProperty('background-color', '#1e1900');
@@ -200,7 +206,7 @@ function exploreLake(input) {
         clearText();
         typeText(`Você olha para o seu reflexo no lago e se vê, com ${pronoun} incrível ${weapon} que brilha com baixa intensidade, cansado e machucado após uma aventura intensa.\n\nDepois de se sentir determinado ao ver seu reflexo, você bebe um pouco da água do lago, isso lhe traz uma onda de vitalidade. Você recupera 40 HP. Agora você tem ${hp} HP.\n\nSentindo-se aliviado, você continua sua jornada e logo se encontra em frente a um templo abandonado em uma selva próxima à floresta. Lá dentro, você encontra um golem de pedra, que desperta assim que você se aproxima dele.\n\n|| !! BATALHA DO CHEFE !! ||\n\nPrepare-se para lutar e digite 'a' para atacar. (chance de acerto: 20%)`);
         currentRPGState = 'battleGolem';
-    } else if (input.toLowerCase() === 's' || input.toLowerCase() === 'sim' || input.toLowerCase() === 'claro' || input.toLowerCase() === 'com certeza' || input.toLowerCase() === 'óbvio' || input.toLowerCase() === 'óbvio que sim' || input.toLowerCase() === 'claro que sim' || input.toLowerCase() === 'yes') {
+    } else if (isYes) {
         hp += 40;
         document.querySelector('html').style.setProperty('filter', 'grayscale(2)');
         document.querySelector('html').style.setProperty('background-color', '#191919');
@@ -208,7 +214,7 @@ function exploreLake(input) {
         clearText();
         typeText(`Você olha para o seu reflexo no lago e se vê, com ${pronoun} incrível ${weapon}, cansado e machucado após uma aventura intensa.\n\nDepois de se sentir determinado ao ver seu reflexo, você bebe um pouco da água do lago, isso lhe traz uma onda de vitalidade. Você recupera 40 HP. Agora você tem ${hp} HP.\n\nSentindo-se aliviado, você continua sua jornada e logo se encontra em frente a um templo abandonado em uma selva próxima à floresta. Lá dentro, você encontra um golem de pedra, que desperta furiosamente assim que você se aproxima dele.\n\n|| !! BATALHA DO CHEFE !! ||\n\nPrepare-se para lutar e digite 'a' para atacar. (chance de acerto: 10%)`);
         currentRPGState = 'battleGolem2';
-    } else if (input.toLowerCase() !== 's' & weapon.includes('Brilhante') || input.toLowerCase() !== 'sim' & weapon.includes('Brilhante') || input.toLowerCase() !== 'claro' & weapon.includes('Brilhante') || input.toLowerCase() !== 'com certeza' & weapon.includes('Brilhante') || input.toLowerCase() !== 'óbvio' & weapon.includes('Brilhante') || input.toLowerCase() !== 'óbvio que sim' & weapon.includes('Brilhante') || input.toLowerCase() !== 'yes' & weapon.includes('Brilhante')) {
+    } else if (!isYes && weapon.includes('Brilhante')) {
         document.querySelector('html').style.setProperty('filter', 'sepia(2)');
         document.querySelector('html').style.setProperty('background-color', '#1e1900');
         playMusic('/extra/audios/Golem-Encounter1.mp3');
@@ -309,6 +315,7 @@ function battleBoss2(input) {
 
 function battleGolem(input) {
     const { pronoun } = getArticleAndPronoun(weapon);
+    const hitThreshold = weapon.includes('Brilhante') ? 0.2 : 0.1;
     if (input === '/execute') {
         document.querySelector('html').style.setProperty('filter', 'hue-rotate(330deg)');
         document.querySelector('html').style.setProperty('background-color', '#1e1800');
@@ -318,7 +325,6 @@ function battleGolem(input) {
         currentRPGState = '';
     } else if (input.toLowerCase() === 'a' || input.toLowerCase() === 'ataque' || input.toLowerCase() === 'atacar') {
         const hitChance = Math.random();
-        const hitThreshold = weapon.includes('Brilhante') ? 0.2 : 0.1;
 
         if (hitChance <= hitThreshold) {
             document.querySelector('html').style.setProperty('filter', 'hue-rotate(330deg)');
@@ -348,7 +354,8 @@ function battleGolem(input) {
 
 function battleGolem2(input) {
     const { pronoun } = getArticleAndPronoun(weapon);
-    if (input === '/execute' & attack >= 40) {
+    const hitThreshold = weapon.includes('Sombras') ? 0.3 : 0.1;
+    if (input === '/execute' && attack >= 40) {
         document.querySelector('html').style.setProperty('filter', 'hue-rotate(330deg)');
         document.querySelector('html').style.setProperty('background-color', '#1e1800');
         playMusic('/extra/audios/Final-Boss-Victory2.mp3');
@@ -362,7 +369,7 @@ function battleGolem2(input) {
         clearText();
         typeText(`Você se concentra no golem de pedra e usa ${pronoun} ${weapon} para atacá-lo.\n\nO golem é lento, mas poderoso, e você consegue se esquivar de seus ataques com sucesso.\n\nVocê acertou o golem com ${pronoun} ${weapon}, o golem é muito forte, então você precisou atacá-lo várias vezes, e então ele começou a rachar e desmoronar, finalmente dando a você a oportunidade de derrubá-lo.\n\nCom um golpe final poderoso, você quebra o golem em pedaços e o todo o lugar fica tranquilo, já está quase amanhecendo então você vai ficar aqui por um tempo.\n\nChefe ELIMINADO!! Parabéns, ${userName}!\n\nFinalmente você decidiu ficar no templo, agora o templo servirá como um lugar para você chamar de "casa", como uma lembrança de todas as suas vitórias e aventuras épicas até agora, sendo reconhecido por todos como o grande herói da terra desconhecida, onde não só existe o caos, mas também maravilhas.\n\nFIM`);
         currentRPGState = '';
-    } else if (input.toLowerCase() === 'a' & attack >= 40 || input.toLowerCase() === 'ataque' & attack >= 40 || input.toLowerCase() === 'atacar' & attack >= 40) {
+    } else if ((input.toLowerCase() === 'a' || input.toLowerCase() === 'ataque' || input.toLowerCase() === 'atacar') && attack >= 40) {
         const hitChance = Math.random();
         const hitThreshold = weapon.includes('Sombras') ? 0.3 : 0.1;
 
@@ -378,7 +385,7 @@ function battleGolem2(input) {
                 if (hp <= 0) {
                     document.querySelector('html').style.setProperty('filter', 'hue-rotate(270deg)');
                     document.querySelector('html').style.setProperty('background-color', '#1e0000');
-                    playMusic('audios/Golem-Death2.mp3');
+                    playMusic('/extra/audios/Golem-Death2.mp3');
                     clearText();
                     typeText(`O golem de pedra atinge você com um golpe poderoso e você cai no chão. Enquanto você está tonto com o impacto, o golem se aproxima de você e te esmaga como se você fosse um inseto.\n\nVocê morreu.`);
                     showTryAgainButton();
@@ -403,7 +410,7 @@ function battleGolem2(input) {
                 if (hp <= 0) {
                     document.querySelector('html').style.setProperty('filter', 'hue-rotate(270deg)');
                     document.querySelector('html').style.setProperty('background-color', '#1e0000');
-                    playMusic('audios/Golem-Death2.mp3');
+                    playMusic('/extra/audios/Golem-Death2.mp3');
                     clearText();
                     typeText(`O golem de pedra atinge você com um golpe poderoso e você cai no chão. Enquanto você está tonto com o impacto, o golem se aproxima de você e te esmaga como se você fosse um inseto.\n\nVocê morreu.`);
                     showTryAgainButton();

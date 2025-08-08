@@ -43,26 +43,26 @@ function handleKeyPress(event) {
 }
 
 // Enhanced enter button handling
-function handleEnterPress() {
-    if (!isTyping) {
-        const userInput = botInput.value.trim();
-        
-        if (userInput) {
-            addUserMessage(userInput);
-            botInput.value = '';
-            
-            // Button press animation
-            const enterBtn = event.target;
-            enterBtn.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                enterBtn.style.transform = 'scale(1)';
-            }, 100);
-            
-            setTimeout(() => {
-                processInput(userInput);
-            }, 200);
-        }
+function handleEnterPress(evt) {
+    if (isTyping) return;
+    const userInput = botInput.value.trim();
+    if (!userInput) return;
+
+    addUserMessage(userInput);
+    botInput.value = '';
+
+    // Button press animation if event provided
+    if (evt && evt.currentTarget) {
+        const enterBtn = evt.currentTarget;
+        enterBtn.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            enterBtn.style.transform = 'scale(1)';
+        }, 100);
     }
+
+    setTimeout(() => {
+        processInput(userInput);
+    }, 200);
 }
 
 // Enhanced input processing with loading states
@@ -242,7 +242,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // Auto-focus when not typing
         setInterval(focusInput, 1000);
     }
-    
     // Enhanced container animations
     if (botContainer) {
         botContainer.style.transform = 'translateY(20px)';

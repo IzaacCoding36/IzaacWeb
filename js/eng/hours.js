@@ -1,24 +1,29 @@
 // IzaacWeb V5 - Hours //
 
-function displayTime(){
-    var dateTime = new Date();
-    var hrs = dateTime.getHours();
-    var min = dateTime.getMinutes();
-    var sec = dateTime.getSeconds();
-    var session = document.getElementById('period');
+function displayTime() {
+    const dateTime = new Date();
+    let hrs = dateTime.getHours();
+    const min = dateTime.getMinutes();
+    const sec = dateTime.getSeconds();
+    const session = document.getElementById('period');
 
-    if(hrs >= 12){
-        session.innerHTML = 'PM';
-    }else{
-        session.innerHTML = 'AM';
+    if (session) {
+        session.innerHTML = hrs >= 12 ? 'PM' : 'AM';
     }
 
-    if(hrs > 12){
-        hrs = hrs - 12;
+    if (hrs === 0) {
+        hrs = 12; // 12 AM
+    } else if (hrs > 12) {
+        hrs -= 12;
     }
 
-    document.getElementById('hours').innerHTML = hrs;
-    document.getElementById('minutes').innerHTML = min;
-    document.getElementById('seconds').innerHTML = sec;
+    const pad = (n) => String(n).padStart(2, '0');
+    const elH = document.getElementById('hours');
+    const elM = document.getElementById('minutes');
+    const elS = document.getElementById('seconds');
+    if (elH) elH.innerHTML = pad(hrs);
+    if (elM) elM.innerHTML = pad(min);
+    if (elS) elS.innerHTML = pad(sec);
 }
-setInterval(displayTime, 10);
+setInterval(displayTime, 1000);
+displayTime();

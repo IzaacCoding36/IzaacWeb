@@ -152,17 +152,19 @@ function ignoreLight(input) {
 }
 
 function investigateTree(input) {
-    if (input.toLowerCase() === 'y' & attack >= 30 || input.toLowerCase() === 'yes' & attack >= 30 || input.toLowerCase() === 'yep' & attack >= 30 || input.toLowerCase() === 'yeah' & attack >= 30 || input.toLowerCase() === 'sure' & attack >= 30 || input.toLowerCase() === 'of course' & attack >= 30) {
+    const answer = input.toLowerCase();
+    const isYes = ['y', 'yes', 'yep', 'yeah', 'sure', 'of course'].includes(answer);
+    if (isYes && attack >= 30) {
         playMusic('/extra/audios/Abomination-Encounter1.mp3');
         clearText();
         typeText(`You decide to investigate the fallen tree and discover a huge dark abomination emerging from it.\n\nYour ${weapon} emits a bright light just like before, weakening the abomination.\n\nGet ready to fight and type 'a' to attack. (chance of success: 40%)`);
         currentRPGState = 'battleBoss';
-    } else if (input.toLowerCase() === 'y' || input.toLowerCase() === 'yes' || input.toLowerCase() === 'yep' || input.toLowerCase() === 'yeah' || input.toLowerCase() === 'sure' || input.toLowerCase() === 'of course') {
+    } else if (isYes) {
         playMusic('/extra/audios/Abomination-Encounter2.mp3');
         clearText();
         typeText(`You decide to investigate the fallen tree and discover a huge dark abomination emerging from it.\n\nGet ready to fight and type 'a' to attack. (chance of success: 30%)`);
         currentRPGState = 'battleBoss2';
-    } else if (input.toLowerCase() !== 'y' & weapon.includes('Shiny') || input.toLowerCase() !== 'yes' & weapon.includes('Shiny') || input.toLowerCase() !== 'yep' & weapon.includes('Shiny') || input.toLowerCase() !== 'yeah' & weapon.includes('Shiny') || input.toLowerCase() !== 'sure' & weapon.includes('Shiny') || input.toLowerCase() !== 'of course' & weapon.includes('Shiny')) {
+    } else if (!isYes && weapon.includes('Shiny')) {
         document.querySelector('html').style.setProperty('filter', 'hue-rotate(60deg)');
         document.querySelector('html').style.setProperty('background-color', '#001e11');
         playMusic('/extra/audios/Lake-Encounter1.mp3');
@@ -180,7 +182,9 @@ function investigateTree(input) {
 }
 
 function exploreLake(input) {
-    if (input.toLowerCase() === 'y' & attack >= 30 || input.toLowerCase() === 'yes' & attack >= 30 || input.toLowerCase() === 'yep' & attack >= 30 || input.toLowerCase() === 'yeah' & attack >= 30 || input.toLowerCase() === 'sure' & attack >= 30 || input.toLowerCase() === 'of course' & attack >= 30) {
+    const answer = input.toLowerCase();
+    const isYes = ['y', 'yes', 'yep', 'yeah', 'sure', 'of course'].includes(answer);
+    if (isYes && attack >= 30) {
         hp += 40;
         document.querySelector('html').style.setProperty('filter', 'sepia(2)');
         document.querySelector('html').style.setProperty('background-color', '#1e1900');
@@ -188,7 +192,7 @@ function exploreLake(input) {
         clearText();
         typeText(`You look at your reflection in the lake and see yourself, with your incredible ${weapon} that glows with a low intensity, tired and bruised after an intense adventure.\n\nAfter feeling determined at the sight of your reflection, you drink some of the water in the lake, this brings you a surge of vitality. You recover 40 HP. Now you have ${hp} HP.\n\nFeeling relieved, you continue your journey and soon find yourself in front of an abandoned temple in a jungle next to the forest. Inside, you encounter a stone golem, which awakens as soon as you approach it.\n\n|| !! BOSS BATTLE !! ||\n\nGet ready to fight and type 'a' to attack. (chance of success: 20%)`);
         currentRPGState = 'battleGolem';
-    } else if (input.toLowerCase() === 'y' || input.toLowerCase() === 'yes' || input.toLowerCase() === 'yep' || input.toLowerCase() === 'yeah' || input.toLowerCase() === 'sure' || input.toLowerCase() === 'of course') {
+    } else if (isYes) {
         hp += 40;
         document.querySelector('html').style.setProperty('filter', 'grayscale(2)');
         document.querySelector('html').style.setProperty('background-color', '#191919');
@@ -196,7 +200,7 @@ function exploreLake(input) {
         clearText();
         typeText(`You look at your reflection in the lake and see yourself, with your incredible ${weapon}, tired and bruised after an intense adventure.\n\nAfter feeling determined at the sight of your reflection, you drink some of the water in the lake, this brings you a surge of vitality. You recover 40 HP. Now you have ${hp} HP.\n\nFeeling relieved, you continue your journey and soon find yourself in front of an abandoned temple in a jungle next to the forest. Inside, you encounter a stone golem, which awakens furiously as soon as you approach it.\n\n|| !! BOSS BATTLE !! ||\n\nGet ready to fight and type 'a' to attack. (chance of success: 10%)`);
         currentRPGState = 'battleGolem2';
-    } else if (input.toLowerCase() !== 'y' & attack >= 30 || input.toLowerCase() !== 'yes' & attack >= 30 || input.toLowerCase() !== 'yep' & attack >= 30 || input.toLowerCase() !== 'yeah' & attack >= 30 || input.toLowerCase() !== 'sure' & attack >= 30 || input.toLowerCase() !== 'of course' & attack >= 30) {
+    } else if (!isYes && attack >= 30) {
         document.querySelector('html').style.setProperty('filter', 'sepia(2)');
         document.querySelector('html').style.setProperty('background-color', '#1e1900');
         playMusic('/extra/audios/Golem-Encounter1.mp3');
@@ -294,6 +298,7 @@ function battleBoss2(input) {
 }
 
 function battleGolem(input) {
+    const hitThreshold = weapon.includes('Shiny') ? 0.2 : 0.1;
     if (input === '/execute') {
         document.querySelector('html').style.setProperty('filter', 'hue-rotate(330deg)');
         document.querySelector('html').style.setProperty('background-color', '#1e1800');
@@ -302,8 +307,7 @@ function battleGolem(input) {
         typeText(`You focus on the stone golem and use your ${weapon} to attack it.\n\nThe golem is slow but powerful, and you manage to dodge its attacks successfully.\n\nYou hit the golem with your ${weapon}, then the light from your ${weapon} causes the golem to lose control because of the strange force keeping it alive, and then it starts to crack and crumble as an annoying noise starts to arise out of it.\n\nWith a powerful final blow, you shatter the golem into pieces and the whole place goes quiet, it's almost dawn so you'll be here for a while.\n\nBoss ELIMINATED!! Congrats, ${userName}!\n\nAfter a hard, exhausting, and threatening adventure, you brought peace to the jungle, to the forest and to yourself, being recognized as a hero everywhere beyond the woods.\n\nTHE END`);
         currentRPGState = '';
     } else if (input.toLowerCase() === 'a' || input.toLowerCase() === 'attack') {
-        const hitChance = Math.random();
-        const hitThreshold = weapon.includes('Shiny') ? 0.2 : 0.1;
+    const hitChance = Math.random();
 
         if (hitChance <= hitThreshold) {
             document.querySelector('html').style.setProperty('filter', 'hue-rotate(330deg)');
@@ -332,7 +336,7 @@ function battleGolem(input) {
 }
 
 function battleGolem2(input) {
-   if (input === '/execute' & attack >= 40) {
+   if (input === '/execute' && attack >= 40) {
         document.querySelector('html').style.setProperty('filter', 'hue-rotate(330deg)');
         document.querySelector('html').style.setProperty('background-color', '#1e1800');
         playMusic('/extra/audios/Final-Boss-Victory2.mp3');
@@ -344,9 +348,9 @@ function battleGolem2(input) {
         document.querySelector('html').style.setProperty('background-color', '#1e1800');
         playMusic('/extra/audios/Final-Boss-Victory2.mp3');
         clearText();
-        typeText(`You focus on the stone golem and use your ${weapon} to attack it.\n\nThe golem is slow but powerful, and you manage to dodge its attacks successfully.\n\nYou hit the golem with your ${weapon}, the golem is really strong, so you needed to attack it several times, and then it started to crack and crumble, finally giving you an opportunity to take it down.\n\nWith a powerful final blow, you shatter the golem into pieces and the whole place turns peaceful, it's almost dawn so you'll be here for a while.\n\nBoss ELIMINATED!! Congrats, ${userName}!\n\nFinally you decided to stay in the temple, now the temple will serve as a place for you to call "home", as a reminder of all your epic victories and adventures so far, being recognized by everyone as the great hero of the unknown land, where not only chaos exists, but also wonders.\n\nTHE END`);
+    typeText(`You focus on the stone golem and use your ${weapon} to attack it.\n\nThe golem is slow but powerful, and you manage to dodge its attacks successfully.\n\nYou hit the golem with your ${weapon}, the golem is really strong, so you needed to attack it several times, and then it started to crack and crumble, finally giving you an opportunity to take it down.\n\nWith a powerful final blow, you shatter the golem into pieces and the whole place turns peaceful, it's almost dawn so you'll be here for a while.\n\nBoss ELIMINATED!! Congrats, ${userName}!\n\nFinally you decided to stay in the temple, now the temple will serve as a place for you to call \"home\", as a reminder of all your epic victories and adventures so far, being recognized by everyone as the great hero of the unknown land, where not only chaos exists, but also wonders.\n\nTHE END`);
         currentRPGState = '';
-    } else if (input.toLowerCase() === 'a' & attack >= 40 || input.toLowerCase() === 'attack' & attack >= 40) {
+    } else if ((input.toLowerCase() === 'a' || input.toLowerCase() === 'attack') && attack >= 40) {
         const hitChance = Math.random();
         const hitThreshold = weapon.includes('Shadow') ? 0.3 : 0.1;
 
@@ -380,7 +384,7 @@ function battleGolem2(input) {
             document.querySelector('html').style.setProperty('background-color', '#1e1800');
             playMusic('/extra/audios/Final-Boss-Victory2.mp3');
             clearText();
-            typeText(`You focus on the stone golem and use your ${weapon} to attack it.\n\nThe golem is slow but powerful, and you manage to dodge its attacks successfully.\n\nYou hit the golem with your ${weapon}, the golem is really strong, so you needed to attack it several times, and then it started to crack and crumble, finally giving you an opportunity to take it down.\n\nWith a powerful final blow, you shatter the golem into pieces and the whole place turns peaceful, it's almost dawn so you'll be here for a while.\n\nBoss ELIMINATED!! Congrats, ${userName}!\n\nFinally you decided to stay in the temple, now the temple will serve as a place for you to call "home", as a reminder of all your epic victories and adventures so far, being recognized by everyone as the great hero of the unknown land, where not only chaos exists, but also wonders.\n\nTHE END`);
+            typeText(`You focus on the stone golem and use your ${weapon} to attack it.\n\nThe golem is slow but powerful, and you manage to dodge its attacks successfully.\n\nYou hit the golem with your ${weapon}, the golem is really strong, so you needed to attack it several times, and then it started to crack and crumble, finally giving you an opportunity to take it down.\n\nWith a powerful final blow, you shatter the golem into pieces and the whole place turns peaceful, it's almost dawn so you'll be here for a while.\n\nBoss ELIMINATED!! Congrats, ${userName}!\n\nFinally you decided to stay in the temple, now the temple will serve as a place for you to call \"home\", as a reminder of all your epic victories and adventures so far, being recognized by everyone as the great hero of the unknown land, where not only chaos exists, but also wonders.\n\nTHE END`);
             currentRPGState = '';
             } else {
                 hp -= 30;
