@@ -1,7 +1,5 @@
 // IzaacWeb V5 - Bot Encryption/Decryption Module  //
 
-let encryptDecryptButtonAdded = false;
-
 function encryptText(text, shift) {
     return text.split('').map(char => {
         if (char.match(/[a-z]/i)) {

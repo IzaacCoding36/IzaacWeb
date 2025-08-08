@@ -62,12 +62,12 @@ function addUserMessage(message) {
     const userMsg = document.createElement('div');
     userMsg.className = 'user-message';
     userMsg.style.cssText = `
-        color: #00ff88;
+        color: var(--bot-primary);
         text-align: right;
         margin: 10px 0;
         padding: 8px 12px;
-        background: rgba(0, 255, 136, 0.1);
-        border-right: 3px solid #00ff88;
+        background: var(--bot-shadow);
+        border-right: 3px solid var(--bot-primary);
         border-radius: 5px 0 0 5px;
         font-style: italic;
         animation: slideInRight 0.3s ease;
@@ -108,7 +108,7 @@ function createStyledButton(text, action, className = '') {
             height: ${size}px;
             left: ${x}px;
             top: ${y}px;
-            background: rgba(102, 255, 102, 0.4);
+            background: var(--bot-shadow);
             border-radius: 50%;
             transform: scale(0);
             animation: ripple 0.6s ease-out;
@@ -135,7 +135,7 @@ function showLoading(message = 'Processando...') {
         justify-content: center;
         gap: 10px;
         margin: 15px 0;
-        color: #66ff66;
+        color: var(--bot-primary);
         font-style: italic;
     `;
     
@@ -143,8 +143,8 @@ function showLoading(message = 'Processando...') {
     spinner.style.cssText = `
         width: 20px;
         height: 20px;
-        border: 2px solid rgba(102, 255, 102, 0.3);
-        border-top: 2px solid #66ff66;
+        border: 2px solid var(--bot-shadow);
+        border-top: 2px solid var(--bot-primary);
         border-radius: 50%;
         animation: spin 1s linear infinite;
     `;
