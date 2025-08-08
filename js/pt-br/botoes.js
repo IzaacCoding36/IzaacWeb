@@ -26,3 +26,7 @@ document.querySelector('.maislang').addEventListener('click', () => {
 document.querySelector('.aqui').addEventListener('click', () => {
     alert("Você já está nesta página.");
 });
+
+document.querySelector('.tema').addEventListener('click', () => {
+    alert("Você já está utilizando este tema.");
+});

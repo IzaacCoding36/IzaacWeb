@@ -26,3 +26,7 @@ document.querySelector('.morelang').addEventListener('click', () => {
 document.querySelector('.here').addEventListener('click', () => {
     alert("You're already on this page.");
 });
+
+document.querySelector('.theme').addEventListener('click', () => {
+    alert("You're already using this theme.");
+});
