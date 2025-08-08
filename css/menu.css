@@ -1,114 +1,249 @@
-/* IzaacWeb V4 - Menu */
+/* IzaacWeb V5 */
 
-ul {margin: 0;}
+/*-------------------------------------------*/
 
-#logo {font-size: 10px;
-       font-weight: bold;
-       background-color: black;
-       color: lime; 
-       width: 100px;
-       box-shadow: 0px 0px 15px lime;
-       text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
-       padding: 3px;
-       z-index: 3;
-       border-radius: 50%;
-       font-style: italic;
-       cursor: default;}
+ul {
+  margin: 0;
+  padding: 0;
+}
 
-#header {box-sizing: border-box;
-         height: 10px;
-         width: 100%;
-         padding: 1rem;
-         display: flex;
-         box-shadow: 0px 0px 3px lime;
-         align-items: center;
-         justify-content: space-between;
-         background: linear-gradient(90deg, darkgreen 0%, #001403ff 50%, #001403ff 100%);
-         position: fixed;
-         z-index: 2;}
+#logo {
+  font-size: 18px;
+  font-weight: 700;
+  background: var(--title-primary);
+  backdrop-filter: blur(10px);
+  color: var(--primary-yellow);
+  text-shadow: 0 0 15px var(--primary-yellow);
+  padding: 12px 20px;
+  border-radius: 25px;
+  border: 2px solid var(--primary-yellow);
+  box-shadow: 0 0 25px var(--primary-yellow);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+}
 
-#menu {display: flex;
-       list-style: none;
-       gap: .5rem;}
+#logo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px var(--primary-yellow);
+}
 
-#menu a {display: block;
-         font-size: 15px;
-         color: #e7e7e7e7;
-         text-decoration: none;
-         transition: color 0.3s;
-         font-weight: bold;
-         transition: all 0.3s ease;
-         position: relative;
-         padding: .5rem;}
+#header {
+  box-sizing: border-box;
+  height: 70px;
+  width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, var(--background-primary), var(--title-primary));
+  backdrop-filter: blur(15px);
+  border-bottom: 2px solid var(--primary-yellow);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
 
-#menu a:hover {color: lime; text-shadow: 0 0 5px lime; transition: color 0.3s;}
+#header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(7, 0, 74, 0.1), transparent);
+  animation: shimmer 3s infinite;
+  pointer-events: none;
+}
 
-#menu a::after {content: '';
-                position: absolute;
-                width: 0;
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background: lime;
-                transition: width 0.3s ease;}
+@keyframes shimmer {
+  0%, 100% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+}
 
-#menu a:hover::after {width: 100%;}
+#menu {
+  display: flex;
+  list-style: none;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+}
 
-#btn-mobile {display: none;
-             color: lime;
-             border: .1rem solid black;
-             padding: .1rem;}
+#menu a {
+  display: block;
+  font-size: 16px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
-@media (max-width: 900px) {
-    #btn-mobile {display: block;}
+#menu a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #00FFFF33, #32CD32);
+  border-radius: 20px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  z-index: -1;
+}
 
-    #menu {position: absolute;
-           width: 100%;
-           top: 40px;
-           right: 0;
-           display: block;
-           background-color: #313131c0;
-           height: 0;
-           z-index: 1000;
-           transition: .6s;
-           visibility: hidden;
-           overflow-y: hidden;}
+#menu a:hover {
+  color: var(--text-light);
+  transform: translateY(-2px);
+}
 
-    #nav.active #menu {display: block;
-                       visibility: visible;
-                       height: calc(150vh - 30px);
-                       overflow-y: auto;}
+#menu a:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
 
-    #menu a {padding: 1rem 0;
-             font-size: 15px;
-             text-decoration: none;
-             box-shadow: 0px 0px 5px black; background: linear-gradient(to right, transparent, black, transparent);
-             border-top: 2px outset teal;
-             border-bottom: 2px outset teal;}
+#menu a.aqui, #menu a.here {
+  background: linear-gradient(135deg, #00FFFF33, #32CD32);
+  color: var(--text-light);
+  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+}
 
-    #menu a:hover {border-top: 2px outset lime; border-bottom: 2px outset lime;}
+#btn-mobile {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
 
-    #btn-mobile {display: flex;
-                 padding: .5rem 1rem;
-                 font-size: 1rem;
-                 border: none;
-                 cursor: pointer;
-                 gap: .5rem;}
+#btn-mobile:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: scale(1.1);
+}
 
-    #hambuguer {border-top: 2px solid; width: 20px;}
+#hambuguer {
+  width: 25px;
+  height: 2px;
+  background: var(--primary-yellow);
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
 
-    #hambuguer::before, #hambuguer::after {content: '';
-                                           display: block;
-                                           width: 20px;
-                                           height: 2px;
-                                           background-color: currentColor;
-                                           margin-top: 5px;
-                                           transition: .3s;
-                                           position: relative;}
+#hambuguer::before,
+#hambuguer::after {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 2px;
+  background: var(--primary-yellow);
+  position: absolute;
+  transition: all 0.3s ease;
+}
 
-    #nav.active #hambuguer {border-top-color: transparent;}
+#hambuguer::before {
+  top: -8px;
+}
 
-    #nav.active #hambuguer::before {transform: rotate(135deg);}
+#hambuguer::after {
+  top: 8px;
+}
 
-    #nav.active #hambuguer::after {transform: rotate(-135deg); top: -7px;}
+/* Mobile menu animations */
+#nav.active #hambuguer {
+  background: transparent;
+}
+
+#nav.active #hambuguer::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+#nav.active #hambuguer::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/*-------------------------------------------*/
+
+/* Mobile responsive design */
+@media screen and (max-width: 900px) {
+  #header {
+    padding: 0 1rem;
+    height: 60px;
+  }
+  
+  #logo {
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 15px;
+  }
+  
+  #btn-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #menu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.95), var(--title-primary));
+    backdrop-filter: blur(15px);
+    flex-direction: column;
+    gap: 0;
+    height: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    border-bottom: 2px solid var(--primary-yellow);
+  }
+  
+  #nav.active #menu {
+    height: auto;
+    min-height: 200px;
+    visibility: visible;
+  }
+  
+  #menu a {
+    padding: 20px 30px;
+    font-size: 18px;
+    border-radius: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideInDown 0.3s ease forwards;
+  }
+  
+  #menu li:nth-child(1) a { animation-delay: 0.1s; }
+  #menu li:nth-child(2) a { animation-delay: 0.2s; }
+  #menu li:nth-child(3) a { animation-delay: 0.3s; }
+  
+  @keyframes slideInDown {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #menu a:hover {
+    background: linear-gradient(135deg, #00FFFF33, #32CD32);
+    transform: translateY(0) scale(1.05);
+  }
 }

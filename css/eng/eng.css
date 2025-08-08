@@ -1,269 +1,504 @@
-/* IzaacWeb V4 */
+/* IzaacWeb V5 */
 
-html {background: radial-gradient(farthest-corner at right top,#000000,#00030C,#001403);
-      background-repeat: no-repeat;
-      background-color: #001403;
-      font-family:'Poppins', sans-serif;
-      display: flex;
-      filter: none;
-      transition: filter 2s ease, background-color 2s;
-      font-size: 20px;}
+/*-------------------------------------------*/
 
-body {margin: 0px; padding: 0px;}
-
-button {background: none;}
-
-a {color: #e7e7e7e7; transition: color 0.3s;}
-
-a:hover {color: lime; transition: color 0.3s;}
-
-@keyframes glow { 0% {box-shadow: 0px 0px 15px magenta;}
-                  25% {box-shadow: 0px 0px 15px purple;}
-                  50% {box-shadow: 0px 0px 15px lime;}
-                  75% {box-shadow: 0px 0px 15px purple;}
-                  100% {box-shadow: 0px 0px 15px magenta;}
+/* CSS Variables for consistent color palette */
+:root {
+  --primary-cyan: #00FFFF;
+  --primary-yellow: #FFFF00;
+  --primary-lime: #00FF00;
+  --primary-blue: #0000FF;
+  --dark-blue: #040492;
+  --title-primary: #000333;
+  --background-primary: #c2eea9e7;
+  --background-dark: #000333aa;
+  --text-primary: #000000;
+  --text-light: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --border-radius: 20px;
+  --transition: all 0.3s ease;
 }
 
-.Background {width: 100%; height: 300px; filter: hue-rotate(270deg); box-shadow: 0px 0px 50px #004646;}
+* {
+  box-sizing: border-box;
+}
 
-.dropbtn {background-color: black;
-          color: white;
-          padding: 7px;
-          font-size: 14px;
-          font-weight: bold;
-          box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-          transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;
-          border: outset 2px yellowgreen;}
+html {
+  background: var(--background-primary);
+  background-repeat: repeat;
+  background-color: var(--background-primary);
+  background-image: url("/img/Principal/background2.png");
+  background-size: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: filter 1s ease;
+  font-size: 16px;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  filter: hue-rotate(30deg);
+}
 
-.dropdown {position: relative;
-           display: inline-block;
-           cursor: default;}
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-.dropdown-content {display: none;
-                   position: absolute;
-                   background-color: black;
-                   min-width: 100px;
-                   box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-                   z-index: 1;}
+/* Modern container and layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px 20px;
+  flex: 1;
+}
 
-.dropdown-content a {color: white;
-                     padding: 1px 1px;
-                     font-size: 13px;
-                     font-weight: bold;
-                     text-decoration: none;
-                     border: solid 1px yellowgreen;
-                     display: block;
-                     transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
+/* Hero section */
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
 
-.dropdown-content a:hover {background-color: yellowgreen; box-shadow: 0px 0px 10px yellowgreen; color: black; transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
+.controls-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
 
-.dropdown:hover .dropdown-content {display: block;}
+.intro {
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+/* Content sections */
+.content-section {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.content-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: var(--border-radius);
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 32px var(--shadow-color);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: var(--transition);
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+.text-content {
+  max-width: 100%;
+}
+
+/* Modern section dividers */
+.section-divider {
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--primary-yellow), transparent);
+  border: none;
+  margin: 40px auto;
+  max-width: 600px;
+  border-radius: 2px;
+  box-shadow: 0 0 10px var(--primary-yellow);
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px var(--primary-yellow);
+    opacity: 0.7;
+  }
+  50% { 
+    box-shadow: 0 0 20px var(--primary-yellow);
+    opacity: 1;
+  }
+}
+
+/* Modern dropdown styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.dropbtn {
+  background: linear-gradient(135deg, var(--title-primary), #333);
+  color: var(--text-light);
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--border-radius);
+  box-shadow: 0 4px 15px var(--primary-yellow);
+  transition: var(--transition);
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Orbitron', sans-serif;
+  border: 1px solid rgba(0, 255, 26, 0.3);
+}
+
+.dropbtn:hover {
+  background: linear-gradient(135deg, #00AA00, var(--primary-yellow));
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
+  color: var(--title-primary);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--background-dark);
+  backdrop-filter: blur(10px);
+  min-width: 200px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 32px var(--shadow-color);
+  z-index: 1000;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.dropdown-content a {
+  color: var(--text-light);
+  padding: 15px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  transition: var(--transition);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background: linear-gradient(135deg, #32CD32, #00FFFF33);
+  color: var(--text-light) !important;
+  transform: translateX(5px);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}
+
+/* Modern button styling */
+button, .cta-button {
+  background: linear-gradient(135deg, var(--title-primary), #333);
+  color: var(--text-light);
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 15px 25px;
+  margin: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+button:hover, .cta-button:hover {
+  background: linear-gradient(135deg, var(--primary-yellow), #66ff66);
+  color: var(--text-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px var(--shadow-color);
+}
+
+.external-link {
+  text-decoration: none;
+}
+
+/* Typography improvements */
+.T1 {
+  color: var(--primary-yellow);
+  background: var(--title-primary);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px var(--primary-yellow);
+  text-shadow: 0 0 20px var(--primary-yellow);
+  padding: 25px 40px;
+  margin: 0 auto 40px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--primary-yellow);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.T2, .T3, .T4, .T5 {
+  padding: 20px 30px;
+  margin: 0 auto 30px;
+  width: 80%;
+  max-width: 700px;
+  border-radius: var(--border-radius);
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.T2, .T3, .T4, .T5 {
+  color: var(--primary-yellow);
+  background: var(--title-primary);
+  box-shadow: 0 8px 25px var(--primary-yellow);
+  text-shadow: 0 0 15px var(--primary-yellow);
+  border: 2px solid var(--primary-yellow);
+}
+
+.extra-title {
+  color: var(--primary-yellow);
+  background: var(--title-primary);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px var(--primary-yellow);
+  text-shadow: 0 0 20px var(--primary-yellow);
+  padding: 25px 40px;
+  margin: 0 auto 40px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--primary-yellow);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.extra-subtitle {
+  color: var(--primary-yellow);
+  background: var(--title-primary);
+  padding: 20px 30px;
+  margin: 40px auto 30px;
+  width: 80%;
+  max-width: 700px;
+  border-radius: var(--border-radius);
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  box-shadow: 0 8px 25px var(--primary-yellow);
+  text-shadow: 0 0 15px var(--primary-yellow);
+  border: 2px solid var(--primary-yellow);
+}
+
+/* Text styling */
+#A1, #Te1 {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 20px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+#A1 {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* List styling */
+.benefits-list {
+  text-align: left;
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 0;
+}
+
+.Topicos {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 20px 0;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-yellow);
+  backdrop-filter: blur(5px);
+  transition: var(--transition);
+}
+
+.Topicos:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(5px);
+}
+
+/* Image styling */
+#I1, #I2, #I3, #I4 {
+  width: min(400px, 80%);
+  height: auto;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border: 3px solid var(--text-primary);
+  margin: 30px auto;
+  filter: hue-rotate(330deg);
+  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.4);
+  display: block;
+}
+
+#I1:hover, #I2:hover, #I3:hover, #I4:hover {
+  filter: brightness(1.1) contrast(1.1) hue-rotate(330deg);
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+/* Device styling */
+#D1, #D2, #D3 {
+  width: min(200px, 40%);
+  height: auto;
+  background: var(--background-dark);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  border: 3px solid var(--text-primary);
+  margin: 30px auto;
+  filter: hue-rotate(330deg);
+  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.4);
+  display: block;
+}
+
+#D1:hover, #D2:hover, #D3:hover {
+  filter: brightness(1.1) contrast(1.1) hue-rotate(330deg);
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+#E1, #E2, #E3 {
+  float: right;
+  height: 25px;
+  width: 25px;
+  padding-left: var(--spacing-lg);
+  position: relative;
+  border-radius: var(--radius-small);
+  transition: transform var(--transition-fast);
+  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.4);
+  filter: hue-rotate(330deg);
+}
+
+#E1:hover, #E2:hover, #E3:hover {
+  filter: brightness(1.1) contrast(1.1) hue-rotate(330deg);
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+/* Link styling */
+a {
+  color: var(--primary-blue);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--primary-yellow);
+  text-shadow: 0 0 5px currentColor;
+}
+
+.links {
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+.links:hover {
+  color: var(--primary-yellow);
+}
+
+/* Footer */
+.site-footer {
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(4, 146, 32, 0.8));
+  backdrop-filter: blur(10px);
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: auto;
+  border-top: 2px solid var(--primary-yellow);
+}
+
+#Te2 {
+  color: var(--text-light);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 10px auto;
+  max-width: 900px;
+  text-align: center;
+}
+
+#seconds, #minutes, #hours, #separation, #period {
+  color: var(--primary-yellow);
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  html {
+    background-size: 200%;
+    font-size: 14px;
+  }
   
-.dropdown:hover .dropbtn {background-color: yellowgreen; box-shadow: 0px 0px 10px yellowgreen; color: black; transition: background-color 0.3s, box-shadow 0.3s, color 0.3s;}
+  .container {
+    padding: 80px 15px 15px;
+  }
+  
+  .controls-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .dropbtn {
+    padding: 10px 15px;
+    font-size: 12px;
+    width: 200px;
+  }
+  
+  .T1, .T2, .T3, .T4, .T5, .extra-title, .extra-subtitle {
+    border-radius: 10px;
+    padding: 15px 20px;
+  }
+  
+  .content-card {
+    padding: 20px;
+    margin: 20px 10px;
+  }
 
-.Title {color: lime; background-color: #000000aa;
-        box-shadow: 0px 0px 15px lime;
-        text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
-        border-radius: 50%;
-        font-style: italic;
-        cursor: default;
-        width: 75%; position: relative;
-        top: -250px; font-size: 25px;}
-
-.Projects_img {width: 75%; height: 75%; position: relative; top: -50px;}
-
-.Github {color: white; text-decoration: none;
-         border: 2px outset yellowgreen; border-radius: 50px;
-         background-color: black;
-         margin-bottom: 1em; display: block;
-         text-align: center; padding: 3px;
-         font-weight: bold;
-         box-shadow: 0px 2px 5px lime, -2px 0px 5px yellow;
-         width: 200px; font-size: 10px;
-         transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-         position: relative; top: -150px;}
-
-.Github:hover {color: black; background-color: yellowgreen; box-shadow: 0px 0px 10px yellowgreen; transition: background-color 0.3s, color 0.3, box-shadow 0.3;}
-.Github:active {color: black; background-color: yellowgreen; box-shadow: 0px 0px 10px yellowgreen; transition: background-color 0.3s, color 0.3, box-shadow 0.3;}
-
-.Devices_list {display: flex;
-               justify-content: center;
-               list-style-type: none;
-               margin: 5em 0;}
-
-#hours {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#minutes {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#seconds {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#period {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-#separation {color: white; width: 0px; position: relative; top: -100px; text-shadow: 0px 0px 15px cyan; cursor: default;}
-
-/* A= Presentations, P= Profiles, S= Websites, T= Títles, I= Images, Te= Texts */
-
-#A1 {color: white; position: relative;
-     top: -75px; cursor: default;}
-
-#A2 {color: lime; display: block; background: #2c2c3e55; width: 250px; height: 135px;
-     border-radius: 50px;
-     cursor: default;
-     padding: 5px;
-     border-top: 2px outset lime;
-     border-bottom: 2px outset lime;
-     text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
-     box-shadow: 0px 0px 50px  rgba(102, 255, 102, 0.5);}
-
-#P1,#P2,#P3 {color: white; text-decoration: none;
-             border: 2px outset yellowgreen; border-radius: 50px;
-             background-color: black;
-             margin-bottom: 1em; display: block;
-             text-align: center; padding: 3px;
-             font-weight: bold;
-             box-shadow: 0px 2px 5px black, -2px 0px 5px black;
-             width: 200px; font-size: 10px;
-             transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;
-             position: relative; top: -135px;}
-
-#P1:hover {border: 2px outset #0b061f; background-color: #0b061f; box-shadow: 0px 2px 5px #0b061f, -2px 0px 5px #0b061f; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#P1:active {border: 2px outset #0b061f; background-color: #0b061f; box-shadow: 0px 2px 5px #0b061f, -2px 0px 5px #0b061f; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#P2:hover {border: 2px outset #03064f; background-color: #03064f; box-shadow: 0px 2px 5px #03064f, -2px 0px 5px blue; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#P2:active {border: 2px outset #03064f; background-color: #03064f; box-shadow: 0px 2px 5px #03064f, -2px 0px 5px blue; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#P3:hover {border: 2px outset darkslateblue; background-color: darkslateblue; box-shadow: 0px 2px 5px darkslateblue, -2px 0px 5px blue; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#P3:active {border: 2px outset darkslateblue; background-color: darkslateblue; box-shadow: 0px 2px 5px darkslateblue, -2px 0px 5px blue; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#A3 {color: lime; display: block; background: #2c2c3e55; width: 250px; height: 275px;
-     box-shadow: 0px 0px 50px  rgba(102, 255, 102, 0.5);
-     border-top: 2px outset lime;
-     border-bottom: 2px outset lime;
-     text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
-     border-radius: 50px;
-     cursor: default;
-     padding: 5px;
-     position: relative; top: -75px;}
-
-#S1,#S2,#S3,#S5,#S6 {color: white; text-decoration: none;
-                     border: 2px outset yellowgreen; border-radius: 50px;
-                     background-color: black;
-                     margin-bottom: 1em; display: block;
-                     text-align: center; padding: 3px;
-                     font-weight: bold;
-                     box-shadow: 0px 2px 5px black, -2px 0px 5px black;
-                     width: 200px; font-size: 10px;
-                     transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;
-                     position: relative; top: -345px;}
-
-#S4,#S7 {color: white; text-decoration: none;
-         border: 2px outset yellowgreen; border-radius: 50px;
-         background-color: black;
-         margin-bottom: 1em; display: block;
-         text-align: center; padding: 3px;
-         font-weight: bold;
-         box-shadow: 0px 2px 5px black, -2px 0px 5px black;
-         width: 200px; font-size: 10px;
-         transition: color 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;
-         position: relative; top: -345px;}
-
-#S1:hover {border: 2px outset grey; background-color: grey; box-shadow: 0px 2px 5px grey, -2px 0px 5px white; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S1:active {border: 2px outset grey; background-color: grey; box-shadow: 0px 2px 5px grey, -2px 0px 5px white; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S2:hover {border: 2px outset #3e036b; background-color: #3e036b; box-shadow: 0px 2px 5px #3e036b, -2px 0px 5px purple; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S2:active {border: 2px outset #3e036b; background-color: #3e036b; box-shadow: 0px 2px 5px #3e036b, -2px 0px 5px purple; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S3:hover {border: 2px outset teal; background-color: teal; box-shadow: 0px 2px 5px teal, -2px 0px 5px cyan; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S3:active {border: 2px outset teal; background-color: teal; box-shadow: 0px 2px 5px teal, -2px 0px 5px cyan; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S4:hover {color: black; border: 2px outset yellowgreen; background-color: yellowgreen; box-shadow: 0px 2px 5px yellowgreen, -2px 0px 5px lime; transition: color 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S4:active {color: black; border: 2px outset yellowgreen; background-color: yellowgreen; box-shadow: 0px 2px 5px yellowgreen, -2px 0px 5px lime; transition: color 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S5:hover {border: 2px outset crimson; background-color: crimson; box-shadow: 0px 2px 5px crimson, -2px 0px 5px red; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S5:active {border: 2px outset crimson; background-color: crimson; box-shadow: 0px 2px 5px crimson, -2px 0px 5px red; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S6:hover {border: 2px outset purple; background-color: purple; box-shadow: 0px 2px 5px purple, -2px 0px 5px magenta; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S6:active {border: 2px outset purple; background-color: purple; box-shadow: 0px 2px 5px purple, -2px 0px 5px magenta; transition: border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#S7:hover {color: black; border: 2px outset orange; background-color: orange; box-shadow: 0px 2px 5px orange, -2px 0px 5px yellow; transition: color 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-#S7:active {color: black; border: 2px outset orange; background-color: orange; box-shadow: 0px 2px 5px orange, -2px 0px 5px yellow; transition: color 0.3s, border 0.3s, background-color 0.3s, box-shadow 0.3s;}
-
-#A4 {color: grey; position: relative;
-     top: -275px; cursor: default;
-     font-size: 10px;}
-
-#T1 {color: white; position: relative;
-     top: -150px; cursor: default;
-     text-shadow: 0px 0px 15px cyan;
-     text-decoration: underline;}
-
-#I1 {position: relative; top: -150px; width: 70%;
-     box-shadow: 0px 0px 15px magenta;
-     border-radius: 20px;
-     height: 70%; border: solid 2px grey;
-     transition: filter 1s;
-     animation-name: glow; animation-duration: 4s; animation-delay: 1.5s; animation-iteration-count: infinite;}
-
-#I1:hover,#I2:hover,#I3:hover {filter: brightness(1.2); transition: filter 1s;}
-
-#Te1 {color: #e7e7e7e7; position: relative;
-      top: -150px; cursor: default; width: 90%;}
-
-#T2 {color: white; position: relative;
-     top: 50px; cursor: default;
-     text-shadow: 0px 0px 15px cyan;
-     text-decoration: underline;}
-
-#I2 {position: relative; top: 5px; left: -20px;
-     width: 100%;
-     background-color: #e7e7e711;
-     transition: filter 1s;
-     height: 50%; box-shadow: 0px 0px 2px #efefefef;}
-
-#T3 {color: red; position: relative;
-     top: -15px; cursor: default;
-     text-shadow: 0px 0px 15px orange;
-     left: -20px;}
-
-#T4 {color: yellow; position: relative;
-     top: -15px; cursor: default;
-     text-shadow: 0 0 5px red, 0 0 10px red, 0 0 15px red;
-     left: -20px;}
-
-#T5 {color: blue; position: relative;
-     top: -15px; cursor: default;
-     text-shadow: 0px 0px 15px cyan;
-     left: -20px;}
-
-#I3 {position: relative; top: -100px; width: 25%;
-     box-shadow: 0px 0px 15px magenta;
-     height: 25%; border: solid 2px green;
-     transition: filter 1s;
-     border-radius: 50%;}
-
-#T6 {color: #0ab10a; position: relative;
-     text-shadow: 0 0 5px green, 0 0 10px green, 0 0 15px green;
-     top: -130px; cursor: default;}
-
-#Te2 {color: #e7e7e7e7; position: relative;
-      top: -100px; cursor: default;
-      font-size: 9px; width: 90%;}
-
-/* Extra Proportions */
-
-@media screen and (min-width: 900px){
-   .Background {height: 550px;}
-   .Title {font-size: 30px; top: -450px;}
-   .Projects_img {height: 50%; width: 50%;}
-   .Github {font-size: 15px; width: 300px;}
-   #S1,#S2,#S3,#S4,#S5,#S6,#S7 {font-size: 12px; top: -395px;}
-   #P1,#P2,#P3 {font-size: 12px; top: -170px;}
-   #A1 {font-size: 22px;}
-   #A3 {font-size: 22px; width: 300px; height: 300px;}
-   #A2 {font-size: 22px; width: 300px; height: 150px}
-   #T1,#T2 {font-size: 35px; font-weight: bold;}
-   #A4 {font-size: 15px;}
-   #Te1,#T3,#T4,#T5,#T6 {font-size: 18px;}
-   #I1,#I2 {height: 50%; width: 50%;}
-   #I1 {border-radius: 50px;}
-   #I2 {border-radius: 20px;}
-   #I3 {height: 15%; width: 15%;}
-   #Te2 {font-size: 14px;}
-   #menu a {font-weight: bold;}
+  #I1, #I2, #I3, #I4 {
+    width: 90%;
+    border-radius: 10px;
+  }
+  
+  .Topicos {
+    padding: 15px;
+    margin: 15px 0;
+  }
 }
