@@ -1,8 +1,8 @@
-// IzaacWeb V4 - Botões //
+// IzaacWeb V5 - Botões //
 
 document.querySelector('.filtro').addEventListener('click', () => {
     document.querySelector('html').style.setProperty('filter', 'hue-rotate(30deg)');
-    document.querySelector('html').style.setProperty('background-color', 'var(--background-color)');
+    document.querySelector('html').style.setProperty('background-color', 'var(--background-primary)');
 });
 
 document.querySelector('.filtro2').addEventListener('click', () => {

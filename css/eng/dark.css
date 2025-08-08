@@ -1,4 +1,4 @@
-/* AgroTech - Modern Design */
+/* IzaacWeb V5 */
 
 /*-------------------------------------------*/
 
@@ -9,12 +9,13 @@
   --primary-lime: #00FF00;
   --primary-blue: #0000FF;
   --dark-blue: #040492;
-  --background-primary: #000000;
+  --title-primary: #111111aa;
+  --background-primary: #001403;
   --background-dark: #111111aa;
   --text-primary: #ffffff;
   --text-light: #ffffff;
   --text-secondary: #cccccc;
-  --shadow-color: rgba(0, 255, 255, 0.3);
+  --shadow-color: #FFFF0077;
   --border-radius: 20px;
   --transition: all 0.3s ease;
 }
@@ -27,9 +28,9 @@ html {
   background: var(--background-primary);
   background-repeat: repeat;
   background-color: var(--background-primary);
-  background-image: url("background.png");
+  background-image: url("/img/Principal/background.png");
   background-size: 100%;
-  font-family: 'Orbitron', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 500;
   transition: filter 1s ease;
   font-size: 16px;
@@ -88,14 +89,14 @@ body {
   margin: 30px auto;
   max-width: 900px;
   box-shadow: 0 8px 32px var(--shadow-color);
-  border: 1px solid rgba(0, 255, 255, 0.2);
+  border: 1px solid var(--shadow-color);
   transition: var(--transition);
 }
 
 .content-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 40px var(--shadow-color);
-  border-color: rgba(0, 255, 255, 0.4);
+  border-color: var(--shadow-color);
 }
 
 .text-content {
@@ -105,22 +106,22 @@ body {
 /* Modern section dividers */
 .section-divider {
   height: 2px;
-  background: linear-gradient(to right, transparent, var(--primary-cyan), transparent);
+  background: linear-gradient(to right, transparent, var(--primary-yellow), transparent);
   border: none;
   margin: 40px auto;
   max-width: 600px;
   border-radius: 2px;
-  box-shadow: 0 0 10px var(--primary-cyan);
+  box-shadow: 0 0 10px var(--primary-yellow);
   animation: pulse 3s infinite;
 }
 
 @keyframes pulse {
   0%, 100% { 
-    box-shadow: 0 0 5px var(--primary-cyan);
+    box-shadow: 0 0 5px var(--primary-yellow);
     opacity: 0.7;
   }
   50% { 
-    box-shadow: 0 0 20px var(--primary-cyan);
+    box-shadow: 0 0 20px var(--primary-yellow);
     opacity: 1;
   }
 }
@@ -133,27 +134,27 @@ body {
 }
 
 .dropbtn {
-  background: linear-gradient(135deg, #333, #555);
+  background: linear-gradient(135deg, var(--title-primary), #333);
   color: var(--text-light);
   padding: 12px 20px;
   font-size: 14px;
   font-weight: 600;
   border: none;
   border-radius: var(--border-radius);
-  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3), 0 2px 8px rgba(255, 255, 0, 0.2);
+  box-shadow: 0 4px 15px var(--primary-yellow);
   transition: var(--transition);
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-family: 'Orbitron', sans-serif;
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid rgba(0, 255, 26, 0.3);
 }
 
 .dropbtn:hover {
-  background: linear-gradient(135deg, var(--primary-cyan), #00AAAA);
-  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.6);
+  background: linear-gradient(135deg, #00AA00, var(--primary-yellow));
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
-  color: var(--background-primary);
+  color: var(--title-primary);
 }
 
 .dropdown-content {
@@ -170,7 +171,7 @@ body {
   z-index: 1000;
   overflow: hidden;
   margin-top: 10px;
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  border: 1px solid var(--shadow-color);
 }
 
 .dropdown-content a {
@@ -181,7 +182,7 @@ body {
   text-decoration: none;
   display: block;
   transition: var(--transition);
-  border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+  border-bottom: 1px solid var(--shadow-color);
   cursor: pointer;
 }
 
@@ -218,20 +219,21 @@ button, .cta-button {
   border: none;
   border-radius: var(--border-radius);
   padding: 15px 25px;
+  margin: 5px;
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
   transition: var(--transition);
   text-decoration: none;
   display: inline-block;
-  box-shadow: 0 4px 15px var(--shadow-color);
+  box-shadow: 0 4px 15px #00FFFF33;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
 
 button:hover, .cta-button:hover {
   background: linear-gradient(135deg, var(--primary-lime), #66ff66);
-  color: var(--background-dark);
+  color: var(--background-primary);
   transform: translateY(-3px);
   box-shadow: 0 8px 25px var(--shadow-color);
 }
@@ -242,24 +244,24 @@ button:hover, .cta-button:hover {
 
 /* Typography improvements */
 .T1 {
-  color: var(--primary-cyan);
-  background: var(--background-dark);
+  color: var(--primary-yellow);
+  background: var(--title-primary);
   backdrop-filter: blur(10px);
-  box-shadow: 0 0 30px var(--primary-cyan);
-  text-shadow: 0 0 20px var(--primary-blue);
+  box-shadow: 0 0 30px var(--primary-yellow);
+  text-shadow: 0 0 20px var(--primary-yellow);
   padding: 25px 40px;
   margin: 0 auto 40px;
   width: 90%;
   max-width: 900px;
   border-radius: var(--border-radius);
-  border: 2px solid var(--primary-cyan);
+  border: 2px solid var(--primary-yellow);
   font-size: clamp(24px, 4vw, 36px);
   font-weight: 700;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-.T2, .T3, .T4 {
+.T2, .T3, .T4, .T5 {
   padding: 20px 30px;
   margin: 0 auto 30px;
   width: 80%;
@@ -271,28 +273,49 @@ button:hover, .cta-button:hover {
   letter-spacing: 1px;
 }
 
-.T2 {
+.T2, .T3, .T4, .T5 {
   color: var(--primary-yellow);
-  background: var(--dark-blue);
-  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.3);
-  text-shadow: 0 0 15px orange;
+  background: var(--title-primary);
+  box-shadow: 0 8px 25px var(--primary-yellow);
+  text-shadow: 0 0 15px var(--primary-yellow);
   border: 2px solid var(--primary-yellow);
 }
 
-.T3 {
-  color: var(--text-light);
-  background: var(--dark-blue);
-  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
-  text-shadow: 0 0 15px var(--primary-cyan);
-  border: 2px solid var(--text-light);
+.extra-title {
+  color: var(--primary-yellow);
+  background: var(--title-primary);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px var(--primary-yellow);
+  text-shadow: 0 0 20px var(--primary-yellow);
+  padding: 25px 40px;
+  margin: 0 auto 40px;
+  width: 90%;
+  max-width: 900px;
+  border-radius: var(--border-radius);
+  border: 2px solid var(--primary-yellow);
+  font-size: clamp(24px, 4vw, 36px);
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
-.T4 {
-  color: var(--primary-lime);
-  background: var(--dark-blue);
-  box-shadow: 0 8px 25px rgba(0, 255, 0, 0.3);
-  text-shadow: 0 0 15px var(--text-light);
-  border: 2px solid var(--primary-lime);
+.extra-subtitle {
+  color: var(--primary-yellow);
+  background: var(--title-primary);
+  padding: 20px 30px;
+  margin: 40px auto 30px;
+  width: 80%;
+  max-width: 700px;
+  border-radius: var(--border-radius);
+  font-size: clamp(18px, 3vw, 24px);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  box-shadow: 0 8px 25px var(--primary-yellow);
+  text-shadow: 0 0 15px var(--primary-yellow);
+  border: 2px solid var(--primary-yellow);
 }
 
 /* Text styling */
@@ -327,7 +350,7 @@ button:hover, .cta-button:hover {
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  border-left: 4px solid var(--primary-cyan);
+  border-left: 4px solid var(--primary-yellow);
   backdrop-filter: blur(5px);
   transition: var(--transition);
 }
@@ -338,30 +361,56 @@ button:hover, .cta-button:hover {
 }
 
 /* Image styling */
-#I1, #I2, #I3 {
+#I1, #I2, #I3, #I4 {
   width: min(400px, 80%);
   height: auto;
   border-radius: var(--border-radius);
   transition: var(--transition);
-  border: 3px solid var(--text-light);
   margin: 30px auto;
+  filter: hue-rotate(330deg);
+  box-shadow: 0 8px 25px #00FFFF33;
   display: block;
 }
 
-#I1 {
+#I1:hover, #I2:hover, #I3:hover, #I4:hover {
+  filter: brightness(1.1) contrast(1.1) hue-rotate(330deg);
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+/* Device styling */
+#D1, #D2, #D3 {
+  width: min(200px, 40%);
+  height: auto;
+  background: var(--background-dark);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  margin: 30px auto;
+  filter: hue-rotate(330deg);
+  box-shadow: 0 8px 25px #00FFFF33;
+  display: block;
+}
+
+#D1:hover, #D2:hover, #D3:hover {
+  filter: brightness(1.1) contrast(1.1) hue-rotate(330deg);
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
+
+#E1, #E2, #E3 {
+  float: right;
+  height: 25px;
+  width: 25px;
+  padding-left: var(--spacing-lg);
+  position: relative;
+  border-radius: var(--radius-small);
+  transition: transform var(--transition-fast);
   box-shadow: 0 8px 25px rgba(255, 255, 0, 0.4);
+  filter: hue-rotate(330deg);
 }
 
-#I2 {
-  box-shadow: 0 8px 25px rgba(0, 255, 255, 0.4);
-}
-
-#I3 {
-  box-shadow: 0 8px 25px rgba(0, 255, 0, 0.4);
-}
-
-#I1:hover, #I2:hover, #I3:hover {
-  filter: brightness(1.1) contrast(1.1);
+#E1:hover, #E2:hover, #E3:hover {
+  filter: brightness(1.1) contrast(1.1) hue-rotate(330deg);
   transform: scale(1.02);
   box-shadow: 0 12px 40px var(--shadow-color);
 }
@@ -379,7 +428,7 @@ a:hover {
 }
 
 .links {
-  color: var(--primary-blue);
+  color: var(--primary-cyan);
   font-weight: 500;
 }
 
@@ -389,12 +438,12 @@ a:hover {
 
 /* Footer */
 .site-footer {
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(4, 146, 32, 0.8));
+  background: linear-gradient(135deg, var(--shadow-color), var(--background-primary));
   backdrop-filter: blur(10px);
   padding: 40px 20px;
   text-align: center;
   margin-top: auto;
-  border-top: 2px solid var(--primary-cyan);
+  border-top: 2px solid var(--primary-yellow);
 }
 
 #Te2 {
@@ -404,6 +453,13 @@ a:hover {
   margin: 10px auto;
   max-width: 900px;
   text-align: center;
+}
+
+#seconds, #minutes, #hours, #separation, #period {
+  color: var(--primary-yellow);
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0 5px;
 }
 
 /* Responsive design */
@@ -429,7 +485,7 @@ a:hover {
     width: 200px;
   }
   
-  .T1, .T2, .T3, .T4 {
+  .T1, .T2, .T3, .T4, .T5, .extra-title, .extra-subtitle {
     border-radius: 10px;
     padding: 15px 20px;
   }
@@ -438,8 +494,8 @@ a:hover {
     padding: 20px;
     margin: 20px 10px;
   }
-  
-  #I1, #I2, #I3 {
+
+  #I1, #I2, #I3, #I4 {
     width: 90%;
     border-radius: 10px;
   }

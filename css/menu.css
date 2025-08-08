@@ -1,4 +1,4 @@
-/* Header AgroTech - Modern Design */
+/* IzaacWeb V5 */
 
 /*-------------------------------------------*/
 
@@ -123,7 +123,7 @@ ul {
   background: none;
   border: none;
   color: var(--text-light);
-  padding: 10px;
+  padding: 15px;
   cursor: pointer;
   border-radius: 8px;
   transition: all 0.3s ease;
