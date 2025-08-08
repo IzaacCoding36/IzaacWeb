@@ -1,4 +1,5 @@
-<!-- IzaacWeb Portfolio - Modern Layout -->
+<!-- IzaacWeb V5 - Portfolio -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,12 +9,12 @@
   <meta name="description" content="In this page, I will talk more about who I am and show my goals, skills and what I do.">
   <meta name="keywords" content="HTML, CSS, JavaScript, Portfolio, Development, Website.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/menu.css">
+  <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+  <link rel="stylesheet" href="/css/eng/eng.css">
+  <link rel="stylesheet" href="/css/menu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <title>Izaac Web - Portfolio</title>
 </head>
 <body>
@@ -24,12 +25,12 @@
         <span id="hambuguer"></span>
       </button>
       <ul id="menu" role="menu">
-        <li><a href="eng.html">Main Page</a></li>
-        <li><a href="extra/bot_eng.html">Terminal Bot</a></li>
-        <li><a href="extra/info_eng.html">Info</a></li>
+        <li><a href="/eng.html">Main Page</a></li>
+        <li><a href="/extra/bot_eng.html">Terminal Bot</a></li>
+        <li><a href="/extra/info_eng.html">Info</a></li>
         <li><a href="https://www.privacypolicies.com/live/16e91d15-f967-41a3-be67-329c6c180384">Privacy Policy</a></li>
         <li><a class="here">Portfolio</a></li>
-        <li><a href="extra/contato_eng.html">Contacts</a></li>
+        <li><a href="/extra/contato_eng.html">Contacts</a></li>
       </ul>
     </nav>
   </header>
@@ -40,7 +41,7 @@
         <div class="dropdown">
           <button class="dropbtn">Languages</button>
           <div class="dropdown-content">
-            <a href="portfolio.html">Brazilian Portuguese</a>
+            <a href="/portfolio.html">Brazilian Portuguese</a>
             <a class="eng">English</a>
             <a class="morelang">More languages</a>
           </div>
@@ -54,6 +55,8 @@
           </div>
         </div>
       </div>
+      <div class="section-divider"></div>
+      <div class="content-card">
       <div class="intro">
         <img id="I1" src="img/Principal/Eu.jpg" alt="Me (IzaacCoding36)"/>
         <p id="A1">Hello! I'm Izaac Colodel de Oliveira, I'm 17 years old and I am from Curitiba, Paraná, Brazil. Digitally I identify myself as IzaacCoding36.</p>
@@ -61,6 +64,7 @@
         <p id="A1">All this interest I have in technology started in 2020, the year in which the COVID-19 virus emerged, which led everyone to learn and adapt to new technologies. In 2022 I made my first contact with programming by taking a course on the <a href="https://www.alura.com.br/">Alura</a> platform, from then on, I went deep into this area.</p>
         <p id="A1">Some of my favorite hobbies are: Programming, drawing, playing games, reading news, listening to music and studying.</p>
         <p id="A1">At this moment, I want to continue studying cybersecurity and machine learning to improve my knowledge.</p>
+      </div>
       </div>
     </section>
     <section class="content-section">
@@ -85,8 +89,11 @@
         <ul class="benefits-list">
           <li class="Topicos"><a href="https://www.alura.com.br/"><strong>Alura:</strong></a> 249h of Programming || 18h of Front-end || 55h of Data Science</li>
           <li class="Topicos"><a href="https://englishlive.ef.com/en/"><strong>EF English Live:</strong></a> Intermediate and advanced level English</li>
-          <li class="Topicos"><a href="https://hackersdobem.org.br/"><strong>Hackers do Bem:</strong></a> Leveling and Basic level cybersecurity course (144h) <img class="Emblem" src="img/Emblemas/Cibersegurança-básico.png" alt="basic level cybersecurity emblem"/> <img class="Emblem2" src="img/Emblemas/Cibersegurança-nivelamento.png" alt="Leveling cybersecurity emblem"/></li>
-          <li class="Topicos"><a href="https://skillsbuild.org/"><strong>IBM SkillsBuild:</strong></a> Fundamental cybersecurity course <img class="Emblem3" src="img/Emblemas/Cybersecurity-fundamentals.png" alt="Fundamental cybersecurity credential"></li>
+          <li class="Topicos"><a href="https://hackersdobem.org.br/"><strong>Hackers do Bem:</strong></a> Cibersegurança nívelamento e básico (144h) 
+          <img id="E1" src="/img/Emblemas/Cibersegurança-básico.png" alt="Emblema de cibersegurança nível básico"/> 
+          <img id="E2" src="/img/Emblemas/Cibersegurança-nivelamento.png" alt="Emblema de cibersegurança nível nivelamento"/></li>
+          <li class="Topicos"><a href="https://skillsbuild.org/"><strong>IBM SkillsBuild:</strong></a> Curso fundamental de cibersegurança 
+          <img id="E3" src="/img/Emblemas/Cybersecurity-fundamentals.png" alt="Credencial fundamental de cibersegurança"></li>
         </ul>
       </div>
     </section>
@@ -122,25 +129,22 @@
         <p id="Te1">Check out all my projects and updates on my <a href="https://github.com/IzaacCoding36">Github</a> and share your ideas via my email:</p>
         <p id="Te1">izaaccoding36@gmail.com</p>
       </div>
-    </section>
-    <section class="content-section">
       <div class="section-divider"></div>
-      <div class="content-card clock-container">
+    </section>
+  </main>
+  <footer class="site-footer">
         <span id="hours">00</span>
         <span id="separation">:</span>
         <span id="minutes">00</span>
         <span id="separation">:</span>
         <span id="seconds">00</span>
-        <span id="period">AM</span>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <p id="Te2">®2025 IzaacWeb, <a href="https://github.com/IzaacCoding36">@IzaacCoding36</a>. All rights reserved. Content subject to availability.</p>
-    <p id="Te2">IzaacWeb is a website where I present my developed projects. This website is powered by Github Pages and Vercel.</p>
+        <span id="period"></span>
+        <p id="Te2">Current time</p>
+    <p id="Te2">®2025 IzaacWeb, <a class="links" href="https://github.com/IzaacCoding36">@IzaacCoding36</a>. All rights reserved. Content subject to availability.</p>
+    <p id="Te2">IzaacWeb is a website where I showcase my developed projects. The site is hosted on Github Pages and Vercel.</p>
   </footer>
-  <script src="js/menu.js"></script>
-  <script src="js/eng/hours.js"></script>
-  <script src="js/eng/buttons.js"></script>
 </body>
+<script src="/js/menu.js"></script>
+<script src="/js/eng/buttons.js"></script>
+<script src="/js/eng/hours.js"></script>
 </html>

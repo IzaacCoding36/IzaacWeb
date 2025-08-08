@@ -327,11 +327,8 @@ button:hover, .cta-button:hover {
   border: 3px solid var(--text-primary);
   margin: 30px auto;
   filter: hue-rotate(330deg);
-  display: block;
-}
-
-#I1, #I2, #I3, #I4 {
   box-shadow: 0 8px 25px rgba(255, 255, 0, 0.4);
+  display: block;
 }
 
 #I1:hover, #I2:hover, #I3:hover, #I4:hover {
@@ -350,11 +347,8 @@ button:hover, .cta-button:hover {
   border: 3px solid var(--text-primary);
   margin: 30px auto;
   filter: hue-rotate(330deg);
-  display: block;
-}
-
-#D1, #D2, #D3 {
   box-shadow: 0 8px 25px rgba(255, 255, 0, 0.4);
+  display: block;
 }
 
 #D1:hover, #D2:hover, #D3:hover {
@@ -363,6 +357,23 @@ button:hover, .cta-button:hover {
   box-shadow: 0 12px 40px var(--shadow-color);
 }
 
+#E1, #E2, #E3 {
+  float: right;
+  height: 25px;
+  width: 25px;
+  padding-left: var(--spacing-lg);
+  position: relative;
+  border-radius: var(--radius-small);
+  transition: transform var(--transition-fast);
+  box-shadow: 0 8px 25px rgba(255, 255, 0, 0.4);
+  filter: hue-rotate(330deg);
+}
+
+#E1:hover, #E2:hover, #E3:hover {
+  filter: brightness(1.1) contrast(1.1) hue-rotate(330deg);
+  transform: scale(1.02);
+  box-shadow: 0 12px 40px var(--shadow-color);
+}
 
 /* Link styling */
 a {

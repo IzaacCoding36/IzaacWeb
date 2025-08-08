@@ -112,7 +112,7 @@ ul {
   transform: scale(1);
 }
 
-#menu a.aqui {
+#menu a.aqui, #menu a.here {
   background: linear-gradient(135deg, #00FFFF33, #32CD32);
   color: var(--text-light);
   box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
@@ -137,7 +137,7 @@ ul {
 #hambuguer {
   width: 25px;
   height: 2px;
-  background: var(--text-light);
+  background: var(--primary-yellow);
   display: block;
   position: relative;
   transition: all 0.3s ease;
@@ -149,7 +149,7 @@ ul {
   display: block;
   width: 25px;
   height: 2px;
-  background: var(--text-light);
+  background: var(--primary-yellow);
   position: absolute;
   transition: all 0.3s ease;
 }
