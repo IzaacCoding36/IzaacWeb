@@ -9,7 +9,7 @@
 - _**[Projetos:](https://izaacweb.vercel.app)** Aqui, você verá alguns dos meus melhores projetos desenvolvidos_
 - _**[Portifólio:](https://izaacweb.vercel.app/portfolio-dark.html)** Você também pode conferir o meu portifólio, onde eu compartilho mais sobre quem eu sou (IzaacCoding36), o que gosto de fazer, e todos os meus conhecimentos adquiridos até este momento_
 - _**[Terminal Bot:](https://izaacweb.vercel.app/extra/bot-dark.html)** Você também pode conferir o bot criado no meu site que realiza algumas funções bacanas como checkup de sites, criação de senhas, encriptação/decriptação de texto com cifra de césar, e um pequeno rpg para você se divertir_
-- _**[Wiki:](https://github.com/IzaacCoding36/IzaacWeb/wiki)** Quer conhecer a minha história e a história da Izaacweb e seu desenvolvimento? Então confira também a IzaacWeb Wiki, disponível para acesso aqui na página do github_
+- _**[Wiki:](https://github.com/IzaacCoding36/IzaacWeb/wiki/Início)** Quer conhecer a minha história e a história da Izaacweb e seu desenvolvimento? Então confira também a IzaacWeb Wiki, disponível para acesso aqui na página do github_
 
 ***
 
