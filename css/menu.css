@@ -207,43 +207,55 @@ ul {
     backdrop-filter: blur(15px);
     flex-direction: column;
     gap: 0;
-    height: 0;
+    /* animação suave de abrir/fechar */
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-8px);
     visibility: hidden;
+    pointer-events: none;
     overflow: hidden;
-    transition: all 0.2s ease;
+    transition: max-height 0.4s ease, opacity 0.25s ease, transform 0.25s ease;
     border-bottom: 2px solid var(--primary-yellow);
   }
   
   #nav.active #menu {
-    height: auto;
-    min-height: 200px;
+    max-height: 80vh; /* suficiente para caber todos os itens */
+    opacity: 1;
+    transform: translateY(0);
     visibility: visible;
+    pointer-events: auto;
   }
   
+  /* Itens: transição por item para efeito cascata */
+  #menu li {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+  }
+
+  #nav.active #menu li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
   #menu a {
     padding: 20px 30px;
     font-size: 18px;
     border-radius: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     text-align: center;
-    opacity: 0;
-    transform: translateY(-20px);
-    animation: slideInDown 0.3s ease forwards;
   }
-  
-  #menu li:nth-child(1) a { animation-delay: 0.1s; }
-  #menu li:nth-child(2) a { animation-delay: 0.2s; }
-  #menu li:nth-child(3) a { animation-delay: 0.3s; }
-  
-  @keyframes slideInDown {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+
+  /* Delays em cascata (6 itens no menu atual) */
+  #nav.active #menu li:nth-child(1) { transition-delay: 0.05s; }
+  #nav.active #menu li:nth-child(2) { transition-delay: 0.10s; }
+  #nav.active #menu li:nth-child(3) { transition-delay: 0.15s; }
+  #nav.active #menu li:nth-child(4) { transition-delay: 0.20s; }
+  #nav.active #menu li:nth-child(5) { transition-delay: 0.25s; }
+  #nav.active #menu li:nth-child(6) { transition-delay: 0.30s; }
   
   #menu a:hover {
     background: linear-gradient(135deg, #00FFFF33, #32CD32);
-    transform: translateY(0) scale(1.05);
+    transform: scale(1.05);
   }
 }
