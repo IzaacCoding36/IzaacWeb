@@ -73,6 +73,7 @@ function addUserMessage(message) {
         animation: slideInRight 0.3s ease;
     `;
     userMsg.textContent = `> ${message}`;
+    userMsg.setAttribute('role', 'note');
     
     // Insert before the bot message
     botMessage.parentNode.insertBefore(userMsg, botMessage);

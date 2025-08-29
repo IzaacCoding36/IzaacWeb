@@ -16,7 +16,7 @@ function decryptText(texto, deslocamento) {
 }
 
 function fileEncrypterDecrypter() {
-    typeText("Encriptador/Decriptador de Texto\nDigite 'e' para encriptar ou 'd' para decriptar:");
+    typeText("Encriptador/Decriptador de Texto\n\nDigite 'e' para encriptar ou 'd' para decriptar:\n\nModos disponíveis: cesar, base64\n\nEx.: após escolher, informe o texto e o deslocamento (no caso de césar).");
     currentRPGState = 'encrypterDecrypterAction';
 }
 
@@ -34,20 +34,34 @@ async function handleEncrypterDecrypterAction(input) {
         return;
     }
 
-    const deslocamento = prompt("Digite o valor do deslocamento (0-25):");
-    const deslocamentoInt = parseInt(deslocamento, 10);
-    if (isNaN(deslocamentoInt) || deslocamentoInt < 0 || deslocamentoInt > 25) {
-        typeText("Valor de deslocamento inválido. Por favor, escolha um número entre 0 e 25.");
-        return;
-    }
-
+    const modo = prompt("Escolha o modo (cesar/base64):").toLowerCase().trim();
     let resultado;
-    if (acao === 'e') {
-        resultado = encryptText(texto, deslocamentoInt);
-        setTimeout(() => typeText(`Texto Encriptado: ${resultado}`), 2000);
-    } else if (acao === 'd') {
-        resultado = decryptText(texto, deslocamentoInt);
-        setTimeout(() => typeText(`Texto Decriptado: ${resultado}`), 2000);
+    if (modo === 'base64') {
+        try {
+            if (acao === 'e') {
+                resultado = btoa(unescape(encodeURIComponent(texto)));
+                setTimeout(() => typeText(`Texto Encriptado (Base64): ${resultado}`), 500);
+            } else {
+                resultado = decodeURIComponent(escape(atob(texto)));
+                setTimeout(() => typeText(`Texto Decriptado (Base64): ${resultado}`), 500);
+            }
+        } catch (e) {
+            typeText('Erro ao processar Base64. Texto inválido para decodificação.');
+        }
+    } else {
+        const deslocamento = prompt("Digite o valor do deslocamento (0-25):");
+        const deslocamentoInt = parseInt(deslocamento, 10);
+        if (isNaN(deslocamentoInt) || deslocamentoInt < 0 || deslocamentoInt > 25) {
+            typeText("Valor de deslocamento inválido. Por favor, escolha um número entre 0 e 25.");
+            return;
+        }
+        if (acao === 'e') {
+            resultado = encryptText(texto, deslocamentoInt);
+            setTimeout(() => typeText(`Texto Encriptado (César): ${resultado}`), 500);
+        } else if (acao === 'd') {
+            resultado = decryptText(texto, deslocamentoInt);
+            setTimeout(() => typeText(`Texto Decriptado (César): ${resultado}`), 500);
+        }
     }
 
     addEncryptDecryptButton();

@@ -9,22 +9,27 @@ async function checkup() {
 }
 
 async function handleWebsiteCheckup(input) {
-    const website = input.trim();
-
-    if (!website.startsWith('http://') && !website.startsWith('https://')) {
-        typeText("Invalid URL. Please make sure the URL starts with 'http://' or 'https://'.");
-        return;
+    let website = input.trim();
+    if (!/^https?:\/\//i.test(website)) {
+        website = 'https://' + website;
     }
 
     try {
-        const response = await fetch(website);
-        if (response.ok) {
-            typeText(`The website ${website} is up and running.`);
+        let response;
+        try {
+            response = await fetch(website, { method: 'GET' });
+        } catch (e) {
+            response = await fetch(website, { method: 'GET', mode: 'no-cors' });
+        }
+        if (!response || (response.type === 'opaque')) {
+            typeText(`Received a response (restricted by the browser). The website ${website} seems to respond, but status can't be confirmed due to CORS.`);
+        } else if (response.ok) {
+            typeText(`The website ${website} is up (status ${response.status}).`);
         } else {
-            typeText(`The website ${website} is down. Status Code: ${response.status}`);
+            typeText(`The website ${website} might be down. Status Code: ${response.status}`);
         }
     } catch (error) {
-        typeText(`An error occurred while checking the website: ${error.message}`);
+        typeText(`An error occurred while checking the website: ${error.message}. Note: Some websites block direct requests from the browser (CORS).`);
     }
 
     addCheckAnotherSiteButton();

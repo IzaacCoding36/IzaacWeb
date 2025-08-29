@@ -79,6 +79,7 @@ center {
   pointer-events: none;
 }
 
+
 @keyframes fadeInOn {
   to {
     opacity: 1;
@@ -266,6 +267,7 @@ center {
     padding: var(--bot-spacing-md);
     margin: var(--bot-spacing-sm) auto;
   }
+
   
   .bot-title {
     font-size: 20px;

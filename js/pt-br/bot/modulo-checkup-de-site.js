@@ -9,22 +9,29 @@ async function checkup() {
 }
 
 async function handleWebsiteCheckup(input) {
-    const website = input.trim();
-
-    if (!website.startsWith('http://') && !website.startsWith('https://')) {
-        typeText("URL inválida. Por favor, certifique-se de que a URL começa com 'http://' ou 'https://'.");
-        return;
+    let website = input.trim();
+    if (!/^https?:\/\//i.test(website)) {
+        website = 'https://' + website;
     }
 
     try {
-        const response = await fetch(website);
-        if (response.ok) {
-            typeText(`O site ${website} está funcionando.`);
+        // Tenta um fetch simples; em caso de CORS, usa no-cors
+        let response;
+        try {
+            response = await fetch(website, { method: 'GET' });
+        } catch (e) {
+            response = await fetch(website, { method: 'GET', mode: 'no-cors' });
+        }
+        // Com no-cors o status pode ser 0; assumimos que respondeu
+        if (!response || (response.type === 'opaque')) {
+            typeText(`Recebida resposta do site (modo restrito pelo navegador). O site ${website} parece responder, mas não é possível confirmar o status por CORS.`);
+        } else if (response.ok) {
+            typeText(`O site ${website} está funcionando (status ${response.status}).`);
         } else {
-            typeText(`O site ${website} está fora do ar. Código de Status: ${response.status}`);
+            typeText(`O site ${website} pode estar fora do ar. Código de Status: ${response.status}`);
         }
     } catch (error) {
-        typeText(`Ocorreu um erro ao verificar o site: ${error.message}`);
+        typeText(`Ocorreu um erro ao verificar o site: ${error.message}. Observação: Alguns sites bloqueiam solicitações diretas do navegador (CORS).`);
     }
 
     addCheckAnotherSiteButton();

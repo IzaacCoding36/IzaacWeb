@@ -4,6 +4,7 @@ const botContainer = document.getElementById('botContainer');
 const botMessage = document.getElementById('botMessage');
 const botInput = document.getElementById('botInput');
 const buttonContainer = document.querySelector('.button-container');
+// Toolbar removida
 
 let step = 0;
 let userName = "usuário";
@@ -16,6 +17,8 @@ let currentRPGState = '';
 let attack = 0;
 let weapon = '';
 let hp = 0;
+// Global sound and history state
+let soundEnabled = true;
 
 // Enhanced keyboard handling with better responsiveness
 function handleKeyPress(event) {
@@ -123,10 +126,10 @@ function greetUser() {
         emoji = "🌅";
     } else if (hours < 19) {
         greeting = "Boa Tarde";
-        emoji = "☀️";
+        emoji = "🌇";
     } else {
         greeting = "Boa Noite";
-        emoji = "🌙";
+        emoji = "🌌";
     }
 
     // Enhanced greeting with better formatting
@@ -221,6 +224,30 @@ Por favor, escolha uma das opções disponíveis (1-5).
     }
 }
 
+function setSound(enabled) {
+    soundEnabled = !!enabled;
+    if (typeof currentMusic !== 'undefined' && currentMusic) {
+        try {
+            if (soundEnabled) {
+                currentMusic.play();
+            } else {
+                currentMusic.pause();
+            }
+        } catch {}
+    }
+}
+
+function showHelp() {
+    const help = `📚 Ajuda Rápida
+
+• Use os botões da barra acima para som, ajuda e limpar.
+• Selecione funcionalidades digitando 1-5.
+• No RPG, use 'a' para atacar quando solicitado.
+• No gerador, informe um número (0-100). Ex.: 16 simbolos
+• Em encriptação, use 'e' (encriptar) ou 'd' (decriptar), depois escolha o modo.`;
+    typeText(help);
+}
+
 // Enhanced input focus management
 function focusInput() {
     if (botInput && !isTyping) {
@@ -238,8 +265,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             botInput.style.borderColor = botInput.value.trim() ? '#00ff88' : '#66ff66';
         });
         
-        // Auto-focus when not typing
-        setInterval(focusInput, 1000);
+    // Não focar automaticamente o input para evitar abrir o teclado no mobile
     }
     // Enhanced container animations
     if (botContainer) {
@@ -257,4 +283,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     setTimeout(() => {
         greetUser();
     }, 1500);
+
+    // Toolbar removida
 });

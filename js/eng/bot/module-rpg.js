@@ -4,12 +4,16 @@ let currentMusic;
 
 function playMusic(src) {
     if (currentMusic) {
-        currentMusic.pause();
+        try { currentMusic.pause(); } catch {}
         currentMusic.currentTime = 0;
     }
     currentMusic = new Audio(src);
     currentMusic.loop = true;
-    currentMusic.play();
+    try {
+        if (typeof soundEnabled === 'undefined' || soundEnabled) {
+            currentMusic.play();
+        }
+    } catch {}
 }
 
 function terminalRPG() {

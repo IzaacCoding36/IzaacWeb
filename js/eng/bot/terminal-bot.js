@@ -209,8 +209,11 @@ function handleActions(input) {
             break;
         case '5':
             typeText("👋 Thank you for using the Terminal Bot! See you next time! ✨");
-            // Add restart button after exit
-            setTimeout(() => {}, 2000);
+            // Add restart button after exit (match pt-br behavior)
+            setTimeout(() => {
+                const restartBtn = createStyledButton('🔄 Restart Bot', resetPage, 'restart-btn');
+                buttonContainer.appendChild(restartBtn);
+            }, 2000);
             break;
         default:
             typeText(`❌ Option "${option}" not recognized.
@@ -219,13 +222,6 @@ Please choose one of the available options (1-5).
 💡 Example: type "1" for Website Checkup`);
             step--;
             break;
-    }
-}
-
-// Enhanced input focus management
-function focusInput() {
-    if (botInput && !isTyping) {
-        botInput.focus();
     }
 }
 
@@ -238,9 +234,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
             // Visual feedback on typing
             botInput.style.borderColor = botInput.value.trim() ? '#00ff88' : '#66ff66';
         });
-        
-        // Auto-focus when not typing
-        setInterval(focusInput, 1000);
     }
     // Enhanced container animations
     if (botContainer) {
