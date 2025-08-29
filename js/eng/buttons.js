@@ -27,6 +27,61 @@ document.querySelector('.here').addEventListener('click', () => {
     alert("You're already on this page.");
 });
 
-document.querySelector('.theme').addEventListener('click', () => {
-    alert("You're already using this theme.");
-});
+// Removed direct fixed alert; handled within toggle below
+
+// Theme toggle (Dark/Light) for English pages (unified persistence)
+(function setupThemeToggle() {
+  const themeLink = document.querySelector('#theme-css');
+  if (!themeLink) return;
+
+  const DARK = themeLink.dataset.dark;
+  const LIGHT = themeLink.dataset.light;
+  const STORAGE_KEY = 'theme'; // use same key across site
+
+  function getInUseMsg() {
+    const html = document.documentElement;
+    return html.dataset.themeInUseMsg || "You're already using this theme.";
+  }
+
+  function applyTheme(theme) {
+    if (theme === 'light') {
+      themeLink.href = LIGHT;
+      localStorage.setItem(STORAGE_KEY, 'light');
+    } else {
+      themeLink.href = DARK;
+      localStorage.setItem(STORAGE_KEY, 'dark');
+    }
+  }
+
+  function getCurrentTheme() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved === 'light' || saved === 'dark') return saved;
+    const href = themeLink.href || '';
+    return href.includes(LIGHT) ? 'light' : 'dark';
+  }
+
+  // Restore persisted preference
+  const saved = localStorage.getItem(STORAGE_KEY);
+  if (saved === 'light' || saved === 'dark') {
+    applyTheme(saved);
+  }
+
+  const darkBtn = document.querySelector('.theme');
+  const lightBtn = document.querySelector('.theme-light');
+  if (darkBtn) darkBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (getCurrentTheme() === 'dark') {
+  alert(getInUseMsg());
+      return;
+    }
+    applyTheme('dark');
+  });
+  if (lightBtn) lightBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (getCurrentTheme() === 'light') {
+  alert(getInUseMsg());
+      return;
+    }
+    applyTheme('light');
+  });
+})();

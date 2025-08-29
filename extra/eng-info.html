@@ -1,7 +1,7 @@
 <!-- IzaacWeb V5 - Info -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme-in-use-msg="You're already using this theme.">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="edge">
@@ -10,7 +10,7 @@
   <meta name="keywords" content="Development, Info.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" type="image/x-icon" href="/img/Principal/favicon.ico">
-  <link rel="stylesheet" href="/css/eng/dark.css">
+  <link id="theme-css" rel="stylesheet" href="/css/eng/dark.css" data-dark="/css/eng/dark.css" data-light="/css/eng/eng.css">
   <link rel="stylesheet" href="/css/menu.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,12 +33,12 @@
         <span id="hambuguer"></span>
       </button>
       <ul id="menu" role="menu">
-        <li><a href="/eng-dark.html">Main Page</a></li>
-        <li><a href="/extra/eng-bot-dark.html">Terminal Bot</a></li>
+        <li><a href="/eng.html">Main Page</a></li>
+        <li><a href="/extra/eng-bot.html">Terminal Bot</a></li>
         <li><a class="here">Info</a></li>
         <li><a href="https://www.privacypolicies.com/live/16e91d15-f967-41a3-be67-329c6c180384">Privacy Policy</a></li>
-        <li><a href="/eng-portfolio-dark.html">Portfolio</a></li>
-        <li><a href="/extra/contact-dark.html">Contacts</a></li>
+        <li><a href="/eng-portfolio.html">Portfolio</a></li>
+        <li><a href="/extra/contact.html">Contacts</a></li>
       </ul>
     </nav>
   </header>
@@ -49,7 +49,7 @@
         <div class="dropdown">
           <button class="dropbtn">Languages</button>
           <div class="dropdown-content">
-            <a href="/extra/info-dark.html">Brazilian Portuguese</a>
+            <a href="/extra/info.html">Brazilian Portuguese</a>
             <a class="eng">English</a>
             <a class="morelang">More languages</a>
           </div>
@@ -62,11 +62,11 @@
             <a class="filter3">Gray</a>
           </div>
         </div>
-        <div class="dropdown">
+    <div class="dropdown">
           <button class="dropbtn">Themes</button>
           <div class="dropdown-content">
-            <a class="theme">Dark</a>
-            <a href="/extra/eng-info-light.html">Light</a>
+      <a class="theme">Dark</a>
+      <a class="theme-light">Light</a>
           </div>
         </div>
       </div>
@@ -105,6 +105,7 @@
         <ul class="benefits-list">
           <li class="Topicos">New mobile menu animation added</li>
           <li class="Topicos">Terminal Bot updated</li>
+          <li class="Topicos">Website theme system updated (enhancing user experience and optimizing overall usage)</li>
         </ul>
       </div>
       <div class="section-divider"></div>
