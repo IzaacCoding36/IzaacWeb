@@ -1,19 +1,39 @@
 // IzaacWeb V5 - Botões //
 
-document.querySelector('.filtro').addEventListener('click', () => {
-    document.querySelector('html').style.setProperty('filter', 'hue-rotate(30deg)');
-    document.querySelector('html').style.setProperty('background-color', 'var(--background-primary)');
-});
+// Filtro: persistir filtro atual no localStorage e restaurar
+(function setupFilterPersistence() {
+    const html = document.documentElement;
+    const STORAGE_KEY = 'filter';
 
-document.querySelector('.filtro2').addEventListener('click', () => {
-    document.querySelector('html').style.setProperty('filter', 'sepia(2)');
-    document.querySelector('html').style.setProperty('background-color', '#3e3d26ff');
-});
+    function applyFilter(name) {
+        switch (name) {
+            case 'sepia':
+                html.style.setProperty('filter', 'sepia(2)');
+                html.style.setProperty('background-color', '#3e3d26ff');
+                break;
+            case 'gray':
+                html.style.setProperty('filter', 'grayscale(2)');
+                html.style.setProperty('background-color', '#262626ff');
+                break;
+            default:
+                html.style.setProperty('filter', 'hue-rotate(30deg)');
+                html.style.setProperty('background-color', 'var(--background-primary)');
+                name = 'normal';
+        }
+        try { localStorage.setItem(STORAGE_KEY, name); } catch {}
+    }
 
-document.querySelector('.filtro3').addEventListener('click', () => {
-    document.querySelector('html').style.setProperty('filter', 'grayscale(2)');
-    document.querySelector('html').style.setProperty('background-color', '#262626ff');
-});
+    // Restaurar filtro salvo
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) applyFilter(saved);
+
+    const normalBtn = document.querySelector('.filtro');
+    const sepiaBtn = document.querySelector('.filtro2');
+    const grayBtn = document.querySelector('.filtro3');
+    if (normalBtn) normalBtn.addEventListener('click', (e) => { e.preventDefault?.(); applyFilter('normal'); });
+    if (sepiaBtn) sepiaBtn.addEventListener('click', (e) => { e.preventDefault?.(); applyFilter('sepia'); });
+    if (grayBtn) grayBtn.addEventListener('click', (e) => { e.preventDefault?.(); applyFilter('gray'); });
+})();
 
 document.querySelector('.pt-br').addEventListener('click', () => {
     alert("Você já está utilizando esta linguagem.");
