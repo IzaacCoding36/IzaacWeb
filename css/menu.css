@@ -259,3 +259,21 @@ ul {
     transform: scale(1.05);
   }
 }
+
+/* Global filter classes (to be toggled on <html>) */
+html.filter-normal {
+  filter: hue-rotate(30deg);
+  background-color: var(--background-primary);
+}
+html.filter-sepia {
+  filter: sepia(2);
+  background-color: #3e3d26ff;
+}
+html.filter-gray {
+  filter: grayscale(2);
+  background-color: #262626ff;
+}
+html.filter-none {
+  filter: none !important;
+  background-color: var(--background-primary);
+}

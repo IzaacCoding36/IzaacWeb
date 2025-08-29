@@ -5,19 +5,20 @@
     const html = document.documentElement;
     const STORAGE_KEY = 'filter';
 
-    function applyFilter(name) {
+    function setFilterClass(name) {
+        html.classList.remove('filter-normal', 'filter-sepia', 'filter-gray', 'filter-none');
         switch (name) {
             case 'sepia':
-                html.style.setProperty('filter', 'sepia(2)');
-                html.style.setProperty('background-color', '#3e3d26ff');
+                html.classList.add('filter-sepia');
                 break;
             case 'gray':
-                html.style.setProperty('filter', 'grayscale(2)');
-                html.style.setProperty('background-color', '#262626ff');
+                html.classList.add('filter-gray');
+                break;
+            case 'none':
+                html.classList.add('filter-none');
                 break;
             default:
-                html.style.setProperty('filter', 'hue-rotate(30deg)');
-                html.style.setProperty('background-color', 'var(--background-primary)');
+                html.classList.add('filter-normal');
                 name = 'normal';
         }
         try { localStorage.setItem(STORAGE_KEY, name); } catch {}
@@ -25,14 +26,14 @@
 
     // Restaurar filtro salvo
     const saved = localStorage.getItem(STORAGE_KEY);
-    if (saved) applyFilter(saved);
+    if (saved) setFilterClass(saved);
 
     const normalBtn = document.querySelector('.filtro');
     const sepiaBtn = document.querySelector('.filtro2');
     const grayBtn = document.querySelector('.filtro3');
-    if (normalBtn) normalBtn.addEventListener('click', (e) => { e.preventDefault?.(); applyFilter('normal'); });
-    if (sepiaBtn) sepiaBtn.addEventListener('click', (e) => { e.preventDefault?.(); applyFilter('sepia'); });
-    if (grayBtn) grayBtn.addEventListener('click', (e) => { e.preventDefault?.(); applyFilter('gray'); });
+    if (normalBtn) normalBtn.addEventListener('click', (e) => { e.preventDefault?.(); setFilterClass('normal'); });
+    if (sepiaBtn) sepiaBtn.addEventListener('click', (e) => { e.preventDefault?.(); setFilterClass('sepia'); });
+    if (grayBtn) grayBtn.addEventListener('click', (e) => { e.preventDefault?.(); setFilterClass('gray'); });
 })();
 
 document.querySelector('.pt-br').addEventListener('click', () => {
