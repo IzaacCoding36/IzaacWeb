@@ -1,3 +1,7 @@
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Orbitron&weight=500&size=17&pause=1000&color=2CF11E&background=041402FB&center=true&vCenter=true&width=1000&height=100&lines=Pol%C3%ADtica+de+Privacidade;IzaacWeb)](https://git.io/typing-svg)
+
+---
+
 # Privacy Policy
 
 Last updated: September 04, 2025
