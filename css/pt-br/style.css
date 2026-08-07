@@ -394,7 +394,7 @@ button:hover, .cta-button:hover {
   box-shadow: 0 12px 40px var(--shadow-color);
 }
 
-#E1, #E2, #E3, #E4 {
+#E1, #E2, #E3, #E4, #E5, #E6, #E7 {
   float: right;
   height: 25px;
   width: 25px;
@@ -406,7 +406,7 @@ button:hover, .cta-button:hover {
   filter: hue-rotate(330deg);
 }
 
-#E1:hover, #E2:hover, #E3:hover, #E4:hover {
+#E1:hover, #E2:hover, #E3:hover, #E4:hover, #E5:hover, #E6:hover, #E7:hover {
   filter: brightness(1.1) contrast(1.1) hue-rotate(330deg);
   transform: scale(1.02);
   box-shadow: 0 12px 40px var(--shadow-color);
