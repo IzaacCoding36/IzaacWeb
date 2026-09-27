@@ -113,7 +113,7 @@ ul {
 }
 
 #menu a.aqui, #menu a.here {
-  background: linear-gradient(135deg, #00FFFF33, #32CD32);
+  background: linear-gradient(135deg, #00ffff1c, #32cd3285);
   color: var(--text-light);
   box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
 }
